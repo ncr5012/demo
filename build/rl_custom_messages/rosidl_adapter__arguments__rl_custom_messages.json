@@ -1,0 +1,6 @@
+{
+  "package_name": "rl_custom_messages",
+  "non_idl_tuples": [
+    "/home/rlagent/jay_ws/rl_custom_messages:msg/RangeArray.msg"
+  ]
+}

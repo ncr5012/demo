@@ -1,0 +1,8 @@
+source;share/jaybot/hook/cmake_prefix_path.ps1
+source;share/jaybot/hook/cmake_prefix_path.dsv
+source;share/jaybot/hook/cmake_prefix_path.sh
+source;share/jaybot/local_setup.bash
+source;share/jaybot/local_setup.dsv
+source;share/jaybot/local_setup.ps1
+source;share/jaybot/local_setup.sh
+source;share/jaybot/local_setup.zsh

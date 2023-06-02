@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[ 50%] Built target range_subscriber
+[ 75%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable range_publisher[0m
+[100%] Built target range_publisher
+-- Install configuration: ""
+-- Installing: /home/rlagent/jay_ws/install/jaybot/lib/jaybot/range_publisher
+-- Set runtime path of "/home/rlagent/jay_ws/install/jaybot/lib/jaybot/range_publisher" to ""
+-- Installing: /home/rlagent/jay_ws/install/jaybot/lib/jaybot/range_subscriber
+-- Set runtime path of "/home/rlagent/jay_ws/install/jaybot/lib/jaybot/range_subscriber" to ""
+-- Installing: /home/rlagent/jay_ws/install/jaybot/include
+-- Installing: /home/rlagent/jay_ws/install/jaybot/include/jaybot
+-- Installing: /home/rlagent/jay_ws/install/jaybot/include/jaybot/RangeSensor (copy).h
+-- Installing: /home/rlagent/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/package.dsv
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+-- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/package.xml

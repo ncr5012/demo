@@ -1,0 +1,69 @@
+[0.016s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2
+[0.093s] [35m[1mConsolidate compiler generated dependencies of target range_subscriber[0m
+[0.094s] [35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[0.138s] [ 20%] [32mBuilding CXX object CMakeFiles/range_subscriber.dir/src/range_subscriber.cpp.o[0m
+[0.141s] [ 40%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[3.556s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:[m[K In constructor ‘[01m[KRangePublisher::RangePublisher()[m[K’:
+[3.556s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.556s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.557s]       |                           [01;31m[K^[m[K
+[3.557s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.557s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.558s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.558s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.558s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.559s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.559s]    15 | class [01;36m[KRangesensor[m[K
+[3.559s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.560s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.560s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.560s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.561s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.561s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.562s]       |                           [01;31m[K^[m[K
+[3.562s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.562s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.562s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.563s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.563s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.563s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.564s]    15 | class [01;36m[KRangesensor[m[K
+[3.564s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.564s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.565s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.565s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.565s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.566s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.566s]       |                           [01;31m[K^[m[K
+[3.566s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.567s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.567s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.568s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.568s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.569s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.579s]    15 | class [01;36m[KRangesensor[m[K
+[3.579s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.579s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.580s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.580s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.580s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.580s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.580s]       |                           [01;31m[K^[m[K
+[3.580s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.580s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.581s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.581s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.581s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.581s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.581s]    15 | class [01;36m[KRangesensor[m[K
+[3.581s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.581s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.582s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.582s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[4.644s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:90: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+[4.644s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+[4.645s] gmake[1]: *** Waiting for unfinished jobs....
+[10.252s] [ 60%] [32m[1mLinking CXX executable range_subscriber[0m
+[10.796s] [ 60%] Built target range_subscriber
+[10.798s] gmake: *** [Makefile:146: all] Error 2
+[10.801s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '2': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2

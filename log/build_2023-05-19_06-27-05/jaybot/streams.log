@@ -1,0 +1,93 @@
+[0.010s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2
+[0.036s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.159s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[0.185s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.187s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.196s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.206s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.220s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.270s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.272s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.365s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.503s] -- Found rl_custom_messages: 0.0.0 (/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake)
+[0.574s] -- Configuring done
+[0.586s] -- Generating done
+[0.588s] -- Build files have been written to: /home/rlagent/jay_ws/build/jaybot
+[0.613s] [35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[0.614s] [35m[1mConsolidate compiler generated dependencies of target range_subscriber[0m
+[0.630s] [ 50%] [32mBuilding CXX object CMakeFiles/range_subscriber.dir/src/range_subscriber.cpp.o[0m
+[0.630s] [ 50%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[0.856s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10:10:[m[K [01;31m[Kfatal error: [m[KRangesensor.h: No such file or directory
+[0.856s]    10 | #include [01;31m[K"Rangesensor.h"[m[K // Assuming this is the correct include for Rangesensor
+[0.856s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.856s] compilation terminated.
+[0.859s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+[0.859s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+[0.859s] gmake[1]: *** Waiting for unfinished jobs....
+[2.771s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_package[m[K’ does not name a type
+[2.771s]    20 |   void topic_callback(const [01;31m[Kmy_package[m[K::msg::RangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[2.771s]       |                             [01;31m[K^~~~~~~~~~[m[K
+[2.771s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:44:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+[2.771s]    20 |   void topic_callback(const my_package::msg[01;31m[K::[m[KRangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[2.771s]       |                                            [01;31m[K^~[m[K
+[2.772s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[2.772s]    20 |   void topic_callback[34m[K([m[Kconst my_package::msg[01;31m[K:[m[K[32m[K:[m[KRangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[2.772s]       |                      [34m[K~[m[K                     [01;31m[K^[m[K[32m[K~[m[K
+[2.772s]       |                                            [32m[K)[m[K
+[2.772s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.772s]    20 |   void topic_callback(const my_package::[01;31m[Kmsg[m[K::RangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[2.772s]       |                                         [01;31m[K^~~[m[K
+[2.772s]       |                                            [32m[K;[m[K
+[2.774s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:46:[m[K [01;31m[Kerror: [m[K‘[01m[KRangeArray[m[K’ in namespace ‘[01m[K::[m[K’ does not name a type
+[2.774s]    20 |   void topic_callback(const my_package::msg::[01;31m[KRangeArray[m[K::SharedPtr & msg) const // replace "my_package" with your package name
+[2.774s]       |                                              [01;31m[K^~~~~~~~~~[m[K
+[2.779s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_package[m[K’ was not declared in this scope
+[2.779s]    24 |   rclcpp::Subscription<[01;31m[Kmy_package[m[K::msg::RangeArray>::SharedPtr subscription_; // replace "my_package" with your package name
+[2.779s]       |                        [01;31m[K^~~~~~~~~~[m[K
+[2.779s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.779s]    24 |   rclcpp::Subscription<my_package::msg::RangeArray[01;31m[K>[m[K::SharedPtr subscription_; // replace "my_package" with your package name
+[2.779s]       |                                                   [01;31m[K^[m[K
+[2.779s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[2.779s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[2.779s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[2.780s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.780s]    24 |   rclcpp::Subscription<my_package::msg::RangeArray>::[01;31m[KSharedPtr[m[K subscription_; // replace "my_package" with your package name
+[2.780s]       |                                                      [01;31m[K^~~~~~~~~[m[K
+[2.780s]       |                                                               [32m[K;[m[K
+[2.781s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:64:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ does not name a type; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[2.781s]    24 |   rclcpp::Subscription<my_package::msg::RangeArray>::SharedPtr [01;31m[Ksubscription_[m[K; // replace "my_package" with your package name
+[2.781s]       |                                                                [01;31m[K^~~~~~~~~~~~~[m[K
+[2.781s]       |                                                                [32m[Krmw_subscription_t[m[K
+[2.787s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:[m[K In constructor ‘[01m[KRangeSubscriber::RangeSubscriber()[m[K’:
+[2.787s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[2.788s]    15 |     [01;31m[Ksubscription_[m[K = this->create_subscription<my_package::msg::RangeArray>( // replace "my_package" with your package name
+[2.788s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[2.788s]       |     [32m[Krmw_subscription_t[m[K
+[2.792s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_package[m[K’ was not declared in this scope
+[2.792s]    15 |     subscription_ = this->create_subscription<[01;31m[Kmy_package[m[K::msg::RangeArray>( // replace "my_package" with your package name
+[2.792s]       |                                               [01;31m[K^~~~~~~~~~[m[K
+[2.792s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[2.792s]    15 |     subscription_ = this->[01;31m[Kcreate_subscription<my_package::msg::RangeArray>[m[K( // replace "my_package" with your package name
+[2.792s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.797s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangeSubscriber::create_subscription<<expression error> >(const char [11], int, std::_Bind_helper<false, void (RangeSubscriber::*)(...), RangeSubscriber*, const std::_Placeholder<1>&>::type)[m[K’
+[2.797s]    15 |     subscription_ = [01;31m[Kthis->create_subscription<my_package::msg::RangeArray>( // replace "my_package" with your package name[m[K
+[2.797s]       |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.797s]    16 | [01;31m[K      "range_data", 10, std::bind(&RangeSubscriber::topic_callback, this, _1))[m[K;
+[2.797s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.797s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.798s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[2.798s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.798s]                  from [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:4[m[K:
+[2.798s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[2.798s]   219 |   [01;36m[Kcreate_subscription[m[K(
+[2.798s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.798s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.798s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.798s]    15 |     subscription_ = [01;31m[Kthis->create_subscription<my_package::msg::RangeArray>( // replace "my_package" with your package name[m[K
+[2.798s]       |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.798s]    16 | [01;31m[K      "range_data", 10, std::bind(&RangeSubscriber::topic_callback, this, _1))[m[K;
+[2.798s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.229s] gmake[2]: *** [CMakeFiles/range_subscriber.dir/build.make:76: CMakeFiles/range_subscriber.dir/src/range_subscriber.cpp.o] Error 1
+[3.229s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/range_subscriber.dir/all] Error 2
+[3.230s] gmake: *** [Makefile:146: all] Error 2
+[3.232s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '2': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2

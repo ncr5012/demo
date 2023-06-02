@@ -1,0 +1,25 @@
+[0.017s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2
+[0.105s] [35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[0.137s] [ 50%] Built target range_subscriber
+[0.143s] [ 75%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[3.329s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:[m[K In member function ‘[01m[Kvoid RangePublisher::timer_callback()[m[K’:
+[3.329s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:36:26:[m[K [01;31m[Kerror: [m[K‘[01m[Krangesensorl[m[K’ was not declared in this scope; did you mean ‘[01m[KRangesensor[m[K’?
+[3.329s]    36 |     message.range_left = [01;31m[Krangesensorl[m[K.Range();
+[3.329s]       |                          [01;31m[K^~~~~~~~~~~~[m[K
+[3.329s]       |                          [32m[KRangesensor[m[K
+[3.334s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:37:27:[m[K [01;31m[Kerror: [m[K‘[01m[Krangesensorf[m[K’ was not declared in this scope; did you mean ‘[01m[KRangesensor[m[K’?
+[3.334s]    37 |     message.range_front = [01;31m[Krangesensorf[m[K.Range();
+[3.334s]       |                           [01;31m[K^~~~~~~~~~~~[m[K
+[3.334s]       |                           [32m[KRangesensor[m[K
+[3.339s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:38:27:[m[K [01;31m[Kerror: [m[K‘[01m[Krangesensorr[m[K’ was not declared in this scope; did you mean ‘[01m[KRangesensor[m[K’?
+[3.339s]    38 |     message.range_right = [01;31m[Krangesensorr[m[K.Range();
+[3.339s]       |                           [01;31m[K^~~~~~~~~~~~[m[K
+[3.340s]       |                           [32m[KRangesensor[m[K
+[3.344s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:39:26:[m[K [01;31m[Kerror: [m[K‘[01m[Krangesensorb[m[K’ was not declared in this scope; did you mean ‘[01m[KRangesensor[m[K’?
+[3.345s]    39 |     message.range_back = [01;31m[Krangesensorb[m[K.Range();
+[3.345s]       |                          [01;31m[K^~~~~~~~~~~~[m[K
+[3.345s]       |                          [32m[KRangesensor[m[K
+[4.338s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+[4.341s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+[4.341s] gmake: *** [Makefile:146: all] Error 2
+[4.344s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '2': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2

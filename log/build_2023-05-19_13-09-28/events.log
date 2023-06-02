@@ -1,0 +1,235 @@
+[0.000000] (-) TimerEvent: {}
+[0.000204] (rl_custom_messages) JobQueued: {'identifier': 'rl_custom_messages', 'dependencies': OrderedDict()}
+[0.000255] (jaybot) JobQueued: {'identifier': 'jaybot', 'dependencies': OrderedDict([('rl_custom_messages', '/home/rlagent/jay_ws/install/rl_custom_messages')])}
+[0.000301] (rl_custom_messages) JobStarted: {'identifier': 'rl_custom_messages'}
+[0.015467] (rl_custom_messages) JobProgress: {'identifier': 'rl_custom_messages', 'progress': 'cmake'}
+[0.017848] (rl_custom_messages) JobProgress: {'identifier': 'rl_custom_messages', 'progress': 'build'}
+[0.019282] (rl_custom_messages) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rlagent/jay_ws/build/rl_custom_messages', '--', '-j2', '-l2'], 'cwd': '/home/rlagent/jay_ws/build/rl_custom_messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rlagent'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rlagent'), ('OLDPWD', '/home/rlagent'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3392'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rlagent'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rlagent'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rlagent:@/tmp/.ICE-unix/1780,unix/rlagent:/tmp/.ICE-unix/1780'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6bb936c5_bf28_4ac5_be34_dc23e1ab7d19'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IHID51'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rlagent/jay_ws/build/rl_custom_messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.096805] (-) TimerEvent: {}
+[0.115097] (rl_custom_messages) StdoutLine: {'line': b'[  3%] Built target rl_custom_messages__cpp\n'}
+[0.121438] (rl_custom_messages) StdoutLine: {'line': b'[ 12%] Built target rl_custom_messages__rosidl_generator_c\n'}
+[0.163944] (rl_custom_messages) StdoutLine: {'line': b'[ 22%] Built target rl_custom_messages__rosidl_typesupport_cpp\n'}
+[0.172141] (rl_custom_messages) StdoutLine: {'line': b'[ 22%] Built target ament_cmake_python_copy_rl_custom_messages\n'}
+[0.197001] (-) TimerEvent: {}
+[0.202243] (rl_custom_messages) StdoutLine: {'line': b'[ 32%] Built target rl_custom_messages__rosidl_typesupport_fastrtps_c\n'}
+[0.209946] (rl_custom_messages) StdoutLine: {'line': b'[ 41%] Built target rl_custom_messages__rosidl_typesupport_introspection_c\n'}
+[0.241562] (rl_custom_messages) StdoutLine: {'line': b'[ 51%] Built target rl_custom_messages__rosidl_typesupport_c\n'}
+[0.251649] (rl_custom_messages) StdoutLine: {'line': b'[ 61%] Built target rl_custom_messages__rosidl_typesupport_fastrtps_cpp\n'}
+[0.279991] (rl_custom_messages) StdoutLine: {'line': b'[ 70%] Built target rl_custom_messages__rosidl_typesupport_introspection_cpp\n'}
+[0.297164] (-) TimerEvent: {}
+[0.314975] (rl_custom_messages) StdoutLine: {'line': b'[ 70%] Built target rl_custom_messages\n'}
+[0.355987] (rl_custom_messages) StdoutLine: {'line': b'[ 74%] Built target rl_custom_messages__py\n'}
+[0.394782] (rl_custom_messages) StdoutLine: {'line': b'[ 80%] Built target rl_custom_messages__rosidl_generator_py\n'}
+[0.397350] (-) TimerEvent: {}
+[0.433305] (rl_custom_messages) StdoutLine: {'line': b'[ 87%] Built target rl_custom_messages__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.475770] (rl_custom_messages) StdoutLine: {'line': b'[ 93%] Built target rl_custom_messages__rosidl_typesupport_introspection_c__pyext\n'}
+[0.497510] (-) TimerEvent: {}
+[0.513935] (rl_custom_messages) StdoutLine: {'line': b'[100%] Built target rl_custom_messages__rosidl_typesupport_c__pyext\n'}
+[0.584656] (rl_custom_messages) StdoutLine: {'line': b'running egg_info\n'}
+[0.586496] (rl_custom_messages) StdoutLine: {'line': b'writing rl_custom_messages.egg-info/PKG-INFO\n'}
+[0.587332] (rl_custom_messages) StdoutLine: {'line': b'writing dependency_links to rl_custom_messages.egg-info/dependency_links.txt\n'}
+[0.587870] (rl_custom_messages) StdoutLine: {'line': b'writing top-level names to rl_custom_messages.egg-info/top_level.txt\n'}
+[0.591102] (rl_custom_messages) StdoutLine: {'line': b"reading manifest file 'rl_custom_messages.egg-info/SOURCES.txt'\n"}
+[0.592227] (rl_custom_messages) StdoutLine: {'line': b"writing manifest file 'rl_custom_messages.egg-info/SOURCES.txt'\n"}
+[0.597702] (-) TimerEvent: {}
+[0.628415] (rl_custom_messages) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_rl_custom_messages_egg\n'}
+[0.651679] (rl_custom_messages) CommandEnded: {'returncode': 0}
+[0.698004] (-) TimerEvent: {}
+[0.798535] (-) TimerEvent: {}
+[0.820179] (rl_custom_messages) JobProgress: {'identifier': 'rl_custom_messages', 'progress': 'install'}
+[0.836877] (rl_custom_messages) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rlagent/jay_ws/build/rl_custom_messages'], 'cwd': '/home/rlagent/jay_ws/build/rl_custom_messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rlagent'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rlagent'), ('OLDPWD', '/home/rlagent'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3392'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rlagent'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rlagent'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rlagent:@/tmp/.ICE-unix/1780,unix/rlagent:/tmp/.ICE-unix/1780'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6bb936c5_bf28_4ac5_be34_dc23e1ab7d19'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IHID51'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rlagent/jay_ws/build/rl_custom_messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.853130] (rl_custom_messages) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.853467] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/ament_index/resource_index/rosidl_interfaces/rl_custom_messages\n'}
+[0.853811] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages\n'}
+[0.854035] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg\n'}
+[0.854363] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/range_array.h\n'}
+[0.854609] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail\n'}
+[0.855010] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__functions.h\n'}
+[0.855245] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__type_support.h\n'}
+[0.855484] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__struct.h\n'}
+[0.855820] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__functions.c\n'}
+[0.856024] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.856202] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/library_path.sh\n'}
+[0.856572] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/library_path.dsv\n'}
+[0.857489] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_generator_c.so\n'}
+[0.858310] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages\n'}
+[0.858614] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg\n'}
+[0.858875] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.859126] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail\n'}
+[0.859447] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h\n'}
+[0.860216] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_typesupport_fastrtps_c.so\n'}
+[0.860993] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages\n'}
+[0.861293] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg\n'}
+[0.861846] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.862003] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail\n'}
+[0.862245] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_c.h\n'}
+[0.862503] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__type_support.c\n'}
+[0.863227] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_typesupport_introspection_c.so\n'}
+[0.864436] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_typesupport_c.so\n'}
+[0.865099] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages\n'}
+[0.865485] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg\n'}
+[0.865685] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/range_array.hpp\n'}
+[0.866075] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail\n'}
+[0.866430] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__struct.hpp\n'}
+[0.866688] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__builder.hpp\n'}
+[0.866887] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__traits.hpp\n'}
+[0.867066] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages\n'}
+[0.867429] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg\n'}
+[0.867632] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.867814] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail\n'}
+[0.868088] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/dds_fastrtps\n'}
+[0.868462] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.869234] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.870062] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages\n'}
+[0.870365] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg\n'}
+[0.870576] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail\n'}
+[0.870951] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__type_support.cpp\n'}
+[0.871186] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/include/rl_custom_messages/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.871914] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_typesupport_introspection_cpp.so\n'}
+[0.873160] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_typesupport_cpp.so\n'}
+[0.874039] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/pythonpath.sh\n'}
+[0.874570] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/pythonpath.dsv\n'}
+[0.874793] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages-0.0.0-py3.10.egg-info\n'}
+[0.874916] (rl_custom_messages) StdoutLine: {'line': b'-- Installing: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.875240] (rl_custom_messages) StdoutLine: {'line': b'-- Installing: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.875625] (rl_custom_messages) StdoutLine: {'line': b'-- Installing: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.876005] (rl_custom_messages) StdoutLine: {'line': b'-- Installing: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.876407] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages\n'}
+[0.876629] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/rl_custom_messages_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.876867] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_c.c\n'}
+[0.877110] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.877420] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/rl_custom_messages_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.877685] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so\n'}
+[0.877975] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/msg\n'}
+[0.878139] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/msg/_range_array.py\n'}
+[0.878335] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/msg/_range_array_s.c\n'}
+[0.878643] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/msg/__init__.py\n'}
+[0.878831] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/rl_custom_messages_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.879321] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/__init__.py\n'}
+[0.879464] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.898811] (-) TimerEvent: {}
+[0.918550] (rl_custom_messages) StdoutLine: {'line': b"Listing '/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages'...\n"}
+[0.918806] (rl_custom_messages) StdoutLine: {'line': b"Listing '/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/msg'...\n"}
+[0.922791] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/rl_custom_messages_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.924103] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/rl_custom_messages_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.926073] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages/rl_custom_messages/rl_custom_messages_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.926789] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/lib/librl_custom_messages__rosidl_generator_py.so\n'}
+[0.927565] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/msg/RangeArray.idl\n'}
+[0.927936] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/msg/RangeArray.msg\n'}
+[0.928166] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/ament_index/resource_index/package_run_dependencies/rl_custom_messages\n'}
+[0.928489] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/ament_index/resource_index/parent_prefix_path/rl_custom_messages\n'}
+[0.928773] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/ament_prefix_path.sh\n'}
+[0.928983] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/ament_prefix_path.dsv\n'}
+[0.929408] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/path.sh\n'}
+[0.929631] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/environment/path.dsv\n'}
+[0.929941] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/local_setup.bash\n'}
+[0.930166] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/local_setup.sh\n'}
+[0.930369] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/local_setup.zsh\n'}
+[0.930612] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/local_setup.dsv\n'}
+[0.930937] (rl_custom_messages) StdoutLine: {'line': b'-- Installing: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.dsv\n'}
+[0.931370] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/ament_index/resource_index/packages/rl_custom_messages\n'}
+[0.931840] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_generator_cExport.cmake\n'}
+[0.932150] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.932475] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.932821] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.933178] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.933729] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.934083] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_cExport.cmake\n'}
+[0.934422] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.934741] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_generator_cppExport.cmake\n'}
+[0.935053] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.935715] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.935929] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.936128] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.936428] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_cppExport.cmake\n'}
+[0.936616] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messages__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.936930] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_generator_pyExport.cmake\n'}
+[0.937291] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/export_rl_custom_messages__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.937663] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rosidl_cmake-extras.cmake\n'}
+[0.937876] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.939194] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.939683] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.940156] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.940445] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.940755] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.941056] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messagesConfig.cmake\n'}
+[0.941177] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake/rl_custom_messagesConfig-version.cmake\n'}
+[0.941353] (rl_custom_messages) StdoutLine: {'line': b'-- Up-to-date: /home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.xml\n'}
+[0.944737] (rl_custom_messages) CommandEnded: {'returncode': 0}
+[0.999179] (-) TimerEvent: {}
+[1.099757] (-) TimerEvent: {}
+[1.145089] (rl_custom_messages) JobEnded: {'identifier': 'rl_custom_messages', 'rc': 0}
+[1.148853] (jaybot) JobStarted: {'identifier': 'jaybot'}
+[1.162516] (jaybot) JobProgress: {'identifier': 'jaybot', 'progress': 'cmake'}
+[1.163188] (jaybot) JobProgress: {'identifier': 'jaybot', 'progress': 'build'}
+[1.164683] (jaybot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rlagent/jay_ws/build/jaybot', '--', '-j2', '-l2'], 'cwd': '/home/rlagent/jay_ws/build/jaybot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rlagent'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/rlagent/jay_ws/install/rl_custom_messages/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rlagent'), ('OLDPWD', '/home/rlagent'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3392'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rlagent'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rlagent'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rlagent:@/tmp/.ICE-unix/1780,unix/rlagent:/tmp/.ICE-unix/1780'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6bb936c5_bf28_4ac5_be34_dc23e1ab7d19'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IHID51'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rlagent/jay_ws/build/jaybot'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble')]), 'shell': False}
+[1.200050] (-) TimerEvent: {}
+[1.254033] (jaybot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target range_publisher\x1b[0m\n'}
+[1.286111] (jaybot) StdoutLine: {'line': b'[ 50%] Built target range_subscriber\n'}
+[1.291786] (jaybot) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o\x1b[0m\n'}
+[1.300237] (-) TimerEvent: {}
+[1.400600] (-) TimerEvent: {}
+[1.501019] (-) TimerEvent: {}
+[1.601422] (-) TimerEvent: {}
+[1.701834] (-) TimerEvent: {}
+[1.802350] (-) TimerEvent: {}
+[1.902806] (-) TimerEvent: {}
+[2.003306] (-) TimerEvent: {}
+[2.103811] (-) TimerEvent: {}
+[2.204279] (-) TimerEvent: {}
+[2.304696] (-) TimerEvent: {}
+[2.405076] (-) TimerEvent: {}
+[2.505526] (-) TimerEvent: {}
+[2.605950] (-) TimerEvent: {}
+[2.706376] (-) TimerEvent: {}
+[2.806787] (-) TimerEvent: {}
+[2.907216] (-) TimerEvent: {}
+[3.007706] (-) TimerEvent: {}
+[3.108092] (-) TimerEvent: {}
+[3.208522] (-) TimerEvent: {}
+[3.309055] (-) TimerEvent: {}
+[3.409418] (-) TimerEvent: {}
+[3.509834] (-) TimerEvent: {}
+[3.610292] (-) TimerEvent: {}
+[3.710816] (-) TimerEvent: {}
+[3.811286] (-) TimerEvent: {}
+[3.911752] (-) TimerEvent: {}
+[4.012173] (-) TimerEvent: {}
+[4.112704] (-) TimerEvent: {}
+[4.213228] (-) TimerEvent: {}
+[4.313849] (-) TimerEvent: {}
+[4.414296] (-) TimerEvent: {}
+[4.477167] (jaybot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RangePublisher::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.477494] (jaybot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:36:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krangesensorl\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRangesensor\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.477652] (jaybot) StderrLine: {'line': b'   36 |     message.range_left = \x1b[01;31m\x1b[Krangesensorl\x1b[m\x1b[K.Range();\n'}
+[4.477794] (jaybot) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.477933] (jaybot) StderrLine: {'line': b'      |                          \x1b[32m\x1b[KRangesensor\x1b[m\x1b[K\n'}
+[4.482662] (jaybot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:37:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krangesensorf\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRangesensor\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.482840] (jaybot) StderrLine: {'line': b'   37 |     message.range_front = \x1b[01;31m\x1b[Krangesensorf\x1b[m\x1b[K.Range();\n'}
+[4.482979] (jaybot) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.483114] (jaybot) StderrLine: {'line': b'      |                           \x1b[32m\x1b[KRangesensor\x1b[m\x1b[K\n'}
+[4.487885] (jaybot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:38:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krangesensorr\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRangesensor\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.488058] (jaybot) StderrLine: {'line': b'   38 |     message.range_right = \x1b[01;31m\x1b[Krangesensorr\x1b[m\x1b[K.Range();\n'}
+[4.488202] (jaybot) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.488341] (jaybot) StderrLine: {'line': b'      |                           \x1b[32m\x1b[KRangesensor\x1b[m\x1b[K\n'}
+[4.493179] (jaybot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:39:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krangesensorb\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRangesensor\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.493406] (jaybot) StderrLine: {'line': b'   39 |     message.range_back = \x1b[01;31m\x1b[Krangesensorb\x1b[m\x1b[K.Range();\n'}
+[4.493551] (jaybot) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.493688] (jaybot) StderrLine: {'line': b'      |                          \x1b[32m\x1b[KRangesensor\x1b[m\x1b[K\n'}
+[4.514485] (-) TimerEvent: {}
+[4.615159] (-) TimerEvent: {}
+[4.715899] (-) TimerEvent: {}
+[4.816639] (-) TimerEvent: {}
+[4.917384] (-) TimerEvent: {}
+[5.017868] (-) TimerEvent: {}
+[5.118407] (-) TimerEvent: {}
+[5.218895] (-) TimerEvent: {}
+[5.319289] (-) TimerEvent: {}
+[5.419844] (-) TimerEvent: {}
+[5.486593] (jaybot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1\n'}
+[5.489434] (jaybot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2\n'}
+[5.489650] (jaybot) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.492245] (jaybot) CommandEnded: {'returncode': 2}
+[5.520017] (-) TimerEvent: {}
+[5.572062] (jaybot) JobEnded: {'identifier': 'jaybot', 'rc': 2}
+[5.582963] (-) EventReactorShutdown: {}

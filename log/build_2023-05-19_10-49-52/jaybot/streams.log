@@ -1,0 +1,143 @@
+[0.020s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[0.099s] [35m[1mConsolidate compiler generated dependencies of target range_subscriber[0m
+[0.141s] [ 20%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[0.144s] [ 40%] [32mBuilding CXX object CMakeFiles/range_subscriber.dir/src/range_subscriber.cpp.o[0m
+[3.670s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_package[m[K’ does not name a type
+[3.671s]    20 |   void topic_callback(const [01;31m[Kmy_package[m[K::msg::RangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[3.671s]       |                             [01;31m[K^~~~~~~~~~[m[K
+[3.671s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:44:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+[3.671s]    20 |   void topic_callback(const my_package::msg[01;31m[K::[m[KRangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[3.671s]       |                                            [01;31m[K^~[m[K
+[3.671s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[3.671s]    20 |   void topic_callback[34m[K([m[Kconst my_package::msg[01;31m[K:[m[K[32m[K:[m[KRangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[3.672s]       |                      [34m[K~[m[K                     [01;31m[K^[m[K[32m[K~[m[K
+[3.672s]       |                                            [32m[K)[m[K
+[3.672s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[3.672s]    20 |   void topic_callback(const my_package::[01;31m[Kmsg[m[K::RangeArray::SharedPtr & msg) const // replace "my_package" with your package name
+[3.672s]       |                                         [01;31m[K^~~[m[K
+[3.672s]       |                                            [32m[K;[m[K
+[3.673s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:20:46:[m[K [01;31m[Kerror: [m[K‘[01m[KRangeArray[m[K’ in namespace ‘[01m[K::[m[K’ does not name a type
+[3.673s]    20 |   void topic_callback(const my_package::msg::[01;31m[KRangeArray[m[K::SharedPtr & msg) const // replace "my_package" with your package name
+[3.673s]       |                                              [01;31m[K^~~~~~~~~~[m[K
+[3.678s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_package[m[K’ was not declared in this scope
+[3.678s]    24 |   rclcpp::Subscription<[01;31m[Kmy_package[m[K::msg::RangeArray>::SharedPtr subscription_; // replace "my_package" with your package name
+[3.679s]       |                        [01;31m[K^~~~~~~~~~[m[K
+[3.679s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.679s]    24 |   rclcpp::Subscription<my_package::msg::RangeArray[01;31m[K>[m[K::SharedPtr subscription_; // replace "my_package" with your package name
+[3.679s]       |                                                   [01;31m[K^[m[K
+[3.679s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[3.679s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[3.680s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[3.680s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[3.680s]    24 |   rclcpp::Subscription<my_package::msg::RangeArray>::[01;31m[KSharedPtr[m[K subscription_; // replace "my_package" with your package name
+[3.680s]       |                                                      [01;31m[K^~~~~~~~~[m[K
+[3.680s]       |                                                               [32m[K;[m[K
+[3.680s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:24:64:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ does not name a type; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[3.681s]    24 |   rclcpp::Subscription<my_package::msg::RangeArray>::SharedPtr [01;31m[Ksubscription_[m[K; // replace "my_package" with your package name
+[3.681s]       |                                                                [01;31m[K^~~~~~~~~~~~~[m[K
+[3.681s]       |                                                                [32m[Krmw_subscription_t[m[K
+[3.685s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:[m[K In constructor ‘[01m[KRangePublisher::RangePublisher()[m[K’:
+[3.685s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.686s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.686s]       |                           [01;31m[K^[m[K
+[3.686s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.686s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.686s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.687s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.687s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.687s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.687s]    15 | class [01;36m[KRangesensor[m[K
+[3.687s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.688s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.688s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.688s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.689s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.689s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.689s]       |                           [01;31m[K^[m[K
+[3.689s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:[m[K In constructor ‘[01m[KRangeSubscriber::RangeSubscriber()[m[K’:
+[3.690s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[3.690s]    15 |     [01;31m[Ksubscription_[m[K = this->create_subscription<my_package::msg::RangeArray>( // replace "my_package" with your package name
+[3.690s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.690s]       |     [32m[Krmw_subscription_t[m[K
+[3.690s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.691s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.691s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.691s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.692s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.692s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.692s]    15 | class [01;36m[KRangesensor[m[K
+[3.693s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.693s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.693s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.694s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.694s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.694s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.695s]       |                           [01;31m[K^[m[K
+[3.695s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.695s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.696s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.696s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.696s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_package[m[K’ was not declared in this scope
+[3.696s]    15 |     subscription_ = this->create_subscription<[01;31m[Kmy_package[m[K::msg::RangeArray>( // replace "my_package" with your package name
+[3.696s]       |                                               [01;31m[K^~~~~~~~~~[m[K
+[3.697s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[3.697s]    15 |     subscription_ = this->[01;31m[Kcreate_subscription<my_package::msg::RangeArray>[m[K( // replace "my_package" with your package name
+[3.697s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.699s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.699s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.699s]    15 | class [01;36m[KRangesensor[m[K
+[3.699s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.699s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.699s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.700s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.700s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:18:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangesensor::Rangesensor()[m[K’
+[3.700s]    18 |   : Node("range_publisher"[01;31m[K)[m[K
+[3.700s]       |                           [01;31m[K^[m[K
+[3.700s] In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[3.700s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’
+[3.700s]    19 |     [01;36m[KRangesensor[m[K(int trigpin, int echopin);
+[3.701s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[3.701s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.701s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(const Rangesensor&)[m[K’
+[3.701s]    15 | class [01;36m[KRangesensor[m[K
+[3.710s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[3.710s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.711s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KRangesensor::Rangesensor(Rangesensor&&)[m[K’
+[3.711s] [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:15:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.711s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRangeSubscriber::create_subscription<<expression error> >(const char [11], int, std::_Bind_helper<false, void (RangeSubscriber::*)(...), RangeSubscriber*, const std::_Placeholder<1>&>::type)[m[K’
+[3.711s]    15 |     subscription_ = [01;31m[Kthis->create_subscription<my_package::msg::RangeArray>( // replace "my_package" with your package name[m[K
+[3.711s]       |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.712s]    16 | [01;31m[K      "range_data", 10, std::bind(&RangeSubscriber::topic_callback, this, _1))[m[K;
+[3.712s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.712s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[3.712s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[3.712s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.712s]                  from [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:4[m[K:
+[3.712s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[3.712s]   219 |   [01;36m[Kcreate_subscription[m[K(
+[3.713s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.713s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.713s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_subscriber.cpp:15:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.713s]    15 |     subscription_ = [01;31m[Kthis->create_subscription<my_package::msg::RangeArray>( // replace "my_package" with your package name[m[K
+[3.713s]       |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.713s]    16 | [01;31m[K      "range_data", 10, std::bind(&RangeSubscriber::topic_callback, this, _1))[m[K;
+[3.713s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.720s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:[m[K In member function ‘[01m[Kvoid RangePublisher::timer_callback()[m[K’:
+[3.720s] [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:41:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing RangeArray = struct rl_custom_messages::msg::RangeArray_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::msg::RangeArray_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kdata[m[K’
+[3.720s]    41 |     message.[01;31m[Kdata[m[K = data;
+[3.721s]       |             [01;31m[K^~~~[m[K
+[4.236s] gmake[2]: *** [CMakeFiles/range_subscriber.dir/build.make:76: CMakeFiles/range_subscriber.dir/src/range_subscriber.cpp.o] Error 1
+[4.237s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/range_subscriber.dir/all] Error 2
+[4.237s] gmake[1]: *** Waiting for unfinished jobs....
+[4.260s] [ 60%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/RangeSensor.cc.o[0m
+[4.281s] [01m[K/home/rlagent/jay_ws/jaybot/src/RangeSensor.cc:1:10:[m[K [01;31m[Kfatal error: [m[KRangeSensor.h: No such file or directory
+[4.281s]     1 | #include [01;31m[K"RangeSensor.h"[m[K
+[4.281s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.281s] compilation terminated.
+[4.282s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:90: CMakeFiles/range_publisher.dir/src/RangeSensor.cc.o] Error 1
+[4.282s] gmake[2]: *** Waiting for unfinished jobs....
+[4.954s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+[4.954s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+[4.955s] gmake: *** [Makefile:146: all] Error 2
+[4.958s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '2': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2

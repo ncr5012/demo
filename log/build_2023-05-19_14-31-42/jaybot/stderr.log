@@ -1,0 +1,77 @@
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:[m[K In constructor ‘[01m[KRangesensor::Rangesensor(int, int)[m[K’:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:42:19:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint pigpio_start(const char*, const char*)[m[K’
+   42 |   if ([01;31m[Kpigpio_start()[m[K < 0) {
+      |       [01;31m[K~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:432:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  432 | int [01;36m[Kpigpio_start[m[K(const char *addrStr, const char *portStr);
+      |     [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:46:11:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint set_mode(int, unsigned int, unsigned int)[m[K’
+   46 |   [01;31m[Kset_mode(trig, PI_OUTPUT)[m[K;
+      |   [01;31m[K~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:467:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  467 | int [01;36m[Kset_mode[m[K(int pi, unsigned gpio, unsigned mode);
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:47:11:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint set_mode(int, unsigned int, unsigned int)[m[K’
+   47 |   [01;31m[Kset_mode(echo, PI_INPUT)[m[K;
+      |   [01;31m[K~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:467:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  467 | int [01;36m[Kset_mode[m[K(int pi, unsigned gpio, unsigned mode);
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:48:13:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint gpio_write(int, unsigned int, unsigned int)[m[K’
+   48 |   [01;31m[Kgpio_write(trig, 0)[m[K;
+      |   [01;31m[K~~~~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:524:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  524 | int [01;36m[Kgpio_write[m[K(int pi, unsigned gpio, unsigned level);
+      |     [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:[m[K In member function ‘[01m[Kdouble Rangesensor::Range()[m[K’:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:56:13:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint gpio_write(int, unsigned int, unsigned int)[m[K’
+   56 |   [01;31m[Kgpio_write(trig, 1)[m[K;
+      |   [01;31m[K~~~~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:524:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  524 | int [01;36m[Kgpio_write[m[K(int pi, unsigned gpio, unsigned level);
+      |     [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:58:13:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint gpio_write(int, unsigned int, unsigned int)[m[K’
+   58 |   [01;31m[Kgpio_write(trig, 0)[m[K;
+      |   [01;31m[K~~~~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:524:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  524 | int [01;36m[Kgpio_write[m[K(int pi, unsigned gpio, unsigned level);
+      |     [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:62:19:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint gpio_read(int, unsigned int)[m[K’
+   62 |   while ([01;31m[Kgpio_read(echo)[m[K == 0) {
+      |          [01;31m[K~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:511:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  511 | int [01;36m[Kgpio_read[m[K(int pi, unsigned gpio);
+      |     [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:71:19:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint gpio_read(int, unsigned int)[m[K’
+   71 |   while ([01;31m[Kgpio_read(echo)[m[K == 1) {
+      |          [01;31m[K~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/rlagent/jay_ws/jaybot/include/jaybot/RangeSensor.h:6[m[K,
+                 from [01m[K/home/rlagent/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[01m[K/usr/local/include/pigpiod_if2.h:511:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  511 | int [01;36m[Kgpio_read[m[K(int pi, unsigned gpio);
+      |     [01;36m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

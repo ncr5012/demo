@@ -1,0 +1,14 @@
+/usr/bin/ld: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o: in function `Rangesensor::Rangesensor(int, int)':
+range_publisher.cpp:(.text+0x7a): undefined reference to `gpioInitialise'
+/usr/bin/ld: range_publisher.cpp:(.text+0xc1): undefined reference to `gpioSetMode'
+/usr/bin/ld: range_publisher.cpp:(.text+0xd4): undefined reference to `gpioSetMode'
+/usr/bin/ld: range_publisher.cpp:(.text+0xe6): undefined reference to `gpioWrite'
+/usr/bin/ld: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o: in function `Rangesensor::Range()':
+range_publisher.cpp:(.text+0x1b7): undefined reference to `gpioWrite'
+/usr/bin/ld: range_publisher.cpp:(.text+0x1f2): undefined reference to `gpioWrite'
+/usr/bin/ld: range_publisher.cpp:(.text+0x290): undefined reference to `gpioRead'
+/usr/bin/ld: range_publisher.cpp:(.text+0x32c): undefined reference to `gpioRead'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:159: range_publisher] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
