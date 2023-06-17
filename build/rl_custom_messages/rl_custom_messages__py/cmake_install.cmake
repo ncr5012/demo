@@ -1,8 +1,8 @@
-# Install script for directory: /home/rlagent/jay_ws/build/rl_custom_messages/rl_custom_messages__py
+# Install script for directory: /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rlagent/jay_ws/install/rl_custom_messages")
+  set(CMAKE_INSTALL_PREFIX "/home/rlcontrol/jay_ws/install/rl_custom_messages")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

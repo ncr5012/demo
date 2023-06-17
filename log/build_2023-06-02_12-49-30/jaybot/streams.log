@@ -1,0 +1,51 @@
+[0.010s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake /home/rlcontrol/jay_ws/jaybot -DCMAKE_INSTALL_PREFIX=/home/rlcontrol/jay_ws/install/jaybot
+[0.058s] -- The C compiler identification is GNU 11.3.0
+[0.107s] -- The CXX compiler identification is GNU 11.3.0
+[0.114s] -- Detecting C compiler ABI info
+[0.169s] -- Detecting C compiler ABI info - done
+[0.175s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.175s] -- Detecting C compile features
+[0.176s] -- Detecting C compile features - done
+[0.178s] -- Detecting CXX compiler ABI info
+[0.245s] -- Detecting CXX compiler ABI info - done
+[0.252s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.253s] -- Detecting CXX compile features
+[0.253s] -- Detecting CXX compile features - done
+[0.255s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.405s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.479s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[0.514s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.518s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.526s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.536s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.552s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.610s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.612s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.700s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.728s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.778s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.791s] -- Looking for pthread.h
+[0.866s] -- Looking for pthread.h - found
+[0.867s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.935s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.936s] -- Found Threads: TRUE  
+[1.085s] -- Found rl_custom_messages: 0.0.0 (/home/rlcontrol/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake)
+[1.149s] -- Configuring done
+[1.160s] -- Generating done
+[1.162s] -- Build files have been written to: /home/rlcontrol/jay_ws/build/jaybot
+[1.169s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake /home/rlcontrol/jay_ws/jaybot -DCMAKE_INSTALL_PREFIX=/home/rlcontrol/jay_ws/install/jaybot
+[1.170s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j2 -l2
+[1.218s] [ 25%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[1.220s] [ 50%] [32mBuilding CXX object CMakeFiles/range_subscriber.dir/src/range_subscriber.cpp.o[0m
+[1.442s] In file included from [01m[K/home/rlcontrol/jay_ws/jaybot/src/range_publisher.cpp:10[m[K:
+[1.442s] [01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/RangeSensor.h:6:10:[m[K [01;31m[Kfatal error: [m[Kpigpiod_if2.h: No such file or directory
+[1.443s]     6 | #include [01;31m[K<pigpiod_if2.h>[m[K
+[1.443s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.443s] compilation terminated.
+[1.447s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+[1.448s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/range_publisher.dir/all] Error 2
+[1.448s] gmake[1]: *** Waiting for unfinished jobs....
+[9.395s] [ 75%] [32m[1mLinking CXX executable range_subscriber[0m
+[9.789s] [ 75%] Built target range_subscriber
+[9.790s] gmake: *** [Makefile:146: all] Error 2
+[9.793s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j2 -l2

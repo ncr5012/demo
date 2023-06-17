@@ -1,0 +1,6 @@
+[0.054s] Invoking command in '/home/rlcontrol/jay_ws/build/rl_custom_messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rlcontrol/jay_ws/build/rl_custom_messages -- -j2 -l2
+[0.141s] [0mCMake Error: The current CMakeCache.txt directory /home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeCache.txt is different than the directory /home/rlagent/jay_ws/build/rl_custom_messages where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.201s] [0mCMake Error: The source directory "/home/rlagent/jay_ws/rl_custom_messages" does not exist.
+[0.202s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.208s] gmake: *** [Makefile:747: cmake_check_build_system] Error 1
+[0.214s] Invoked command in '/home/rlcontrol/jay_ws/build/rl_custom_messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rlcontrol/jay_ws/build/rl_custom_messages -- -j2 -l2

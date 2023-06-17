@@ -923,7 +923,6 @@ def distr_projection(next_distr_v, rewards_v, dones_mask_t,
     return torch.FloatTensor(proj_distr).to(device)
 
 if __name__ == "__main__":
-
     save_path = os.path.join("saves", "a2c-" + "JayNetv1.0")
     os.makedirs(save_path, exist_ok=True)
 
@@ -931,7 +930,6 @@ if __name__ == "__main__":
 
     test_env = JayEnv()
     writer = SummaryWriter(comment="JayNetv1.0")
-
     net_actor = JayActor(test_env.observation_space,test_env.action_space).to(device)
     net_critic = JayCritic(test_env.observation_space,test_env.action_space, N_ATOMS, VMIN, VMAX).to(device)
     tgt_net_actor = TargetNet(net_actor)
@@ -945,7 +943,7 @@ if __name__ == "__main__":
 
     frame_idx = 0
     best_reward = None
-    
+
     with RewardTracker(writer, STOP_REWARD) as tracker:
         with TBMeanTracker(writer, batch_size=1) as tb_tracker:
             while True:
@@ -953,7 +951,6 @@ if __name__ == "__main__":
                 #gonna want to implement some kind of saving the of the replay buffer, so that 
                 #I can initialize a session with old data
                 buffer.populate(1)
-
                 rewards_steps = exp_source.pop_rewards_steps()
 
                 if rewards_steps:
@@ -966,8 +963,7 @@ if __name__ == "__main__":
 
             
                 batch = buffer.sample(BATCH_SIZE)
-                states_v, actions_v, rewards_v, dones_mask, last_states_v, critic_states_a_v= unpack_batch_ddqn(batch, device)  
-
+                states_v, actions_v, rewards_v, dones_mask, last_states_v, critic_states_a_v= unpack_batch_ddqn(batch, device)
                 #print("STATES_V", len(states_v), states_v)
                 #print("ACTIONS_V", len(actions_vA), actions_vA)
                 #print("REWARDS_V", len(rewards_vA),rewards_vA)
@@ -1004,3 +1000,4 @@ if __name__ == "__main__":
 
                 tgt_net_actor.alpha_sync(alpha=1 - 1e-3)
                 tgt_net_critic.alpha_sync(alpha=1 - 1e-3)
+                print("end")
