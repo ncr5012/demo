@@ -3,7 +3,8 @@
   "output_dir": "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_cpp/rl_custom_messages",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_cpp/resource",
   "idl_tuples": [
-    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/RangeArray.idl"
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/RangeArray.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:srv/ObservationService.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
@@ -12,6 +13,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
-    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/RangeArray.idl"
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/RangeArray.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl"
   ]
 }

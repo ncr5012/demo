@@ -1,10 +1,14 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/range_array__type_support.c.o"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/range_array__type_support.c.o.d"
+  "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/srv/detail/observation_service__type_support.c.o"
+  "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/srv/detail/observation_service__type_support.c.o.d"
   "librl_custom_messages__rosidl_typesupport_introspection_c.pdb"
   "librl_custom_messages__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/range_array__type_support.c"
+  "rosidl_typesupport_introspection_c/rl_custom_messages/srv/detail/observation_service__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rl_custom_messages/srv/detail/observation_service__type_support.c"
 )
 
 # Per-language clean rules from dependency scanning.

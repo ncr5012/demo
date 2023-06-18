@@ -1,2 +1,6 @@
 msg/RangeArray.idl
 msg/RangeArray.msg
+srv/ObservationService.idl
+srv/ObservationService.srv
+srv/ObservationService_Request.msg
+srv/ObservationService_Response.msg

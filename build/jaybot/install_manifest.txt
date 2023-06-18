@@ -1,7 +1,10 @@
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
-/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_subscriber
-/home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor (copy).h
+/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_mind.py
 /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+/home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/rl_mind.py
+/home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/__init___.py
+/home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/setup.py
 /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
 /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
 /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh

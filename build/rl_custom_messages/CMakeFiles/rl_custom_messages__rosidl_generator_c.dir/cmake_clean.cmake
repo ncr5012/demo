@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.o"
   "CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.o.d"
+  "CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o"
+  "CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o.d"
   "librl_custom_messages__rosidl_generator_c.pdb"
   "librl_custom_messages__rosidl_generator_c.so"
   "rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c"
@@ -8,6 +10,11 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/rl_custom_messages/msg/detail/range_array__struct.h"
   "rosidl_generator_c/rl_custom_messages/msg/detail/range_array__type_support.h"
   "rosidl_generator_c/rl_custom_messages/msg/range_array.h"
+  "rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c"
+  "rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.h"
+  "rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__struct.h"
+  "rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__type_support.h"
+  "rosidl_generator_c/rl_custom_messages/srv/observation_service.h"
 )
 
 # Per-language clean rules from dependency scanning.

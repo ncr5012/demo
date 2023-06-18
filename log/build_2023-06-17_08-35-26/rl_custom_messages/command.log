@@ -1,0 +1,2 @@
+Invoking command in '/home/rlcontrol/jay_ws/build/rl_custom_messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/rl_custom_messages -- -j6 -l6
+Invoked command in '/home/rlcontrol/jay_ws/build/rl_custom_messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/rl_custom_messages -- -j6 -l6

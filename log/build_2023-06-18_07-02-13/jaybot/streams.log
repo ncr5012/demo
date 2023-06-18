@@ -1,0 +1,88 @@
+[0.009s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake /home/rlcontrol/jay_ws/jaybot -DCMAKE_INSTALL_PREFIX=/home/rlcontrol/jay_ws/install/jaybot
+[0.070s] -- The C compiler identification is GNU 11.3.0
+[0.118s] -- The CXX compiler identification is GNU 11.3.0
+[0.127s] -- Detecting C compiler ABI info
+[0.176s] -- Detecting C compiler ABI info - done
+[0.185s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.185s] -- Detecting C compile features
+[0.186s] -- Detecting C compile features - done
+[0.189s] -- Detecting CXX compiler ABI info
+[0.246s] -- Detecting CXX compiler ABI info - done
+[0.256s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.256s] -- Detecting CXX compile features
+[0.256s] -- Detecting CXX compile features - done
+[0.258s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.566s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.638s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[0.676s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.681s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.688s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.702s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.721s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.796s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.798s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.900s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.925s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.965s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.977s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.032s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.033s] -- Found Threads: TRUE  
+[1.196s] -- Found rl_custom_messages: 0.0.0 (/home/rlcontrol/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake)
+[1.267s] -- Configuring done (1.2s)
+[1.278s] -- Generating done (0.0s)
+[1.279s] -- Build files have been written to: /home/rlcontrol/jay_ws/build/jaybot
+[1.292s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake /home/rlcontrol/jay_ws/jaybot -DCMAKE_INSTALL_PREFIX=/home/rlcontrol/jay_ws/install/jaybot
+[1.294s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[1.343s] [ 50%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[1.343s] [ 50%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[5.825s] [ 75%] [32m[1mLinking CXX executable range_publisher[0m
+[5.997s] [ 75%] Built target range_publisher
+[9.466s] [100%] [32m[1mLinking CXX executable rl_server[0m
+[9.800s] [100%] Built target rl_server
+[9.809s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[9.866s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
+[9.889s] -- Install configuration: ""
+[9.890s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+[9.891s] -- Set runtime path of "/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher" to ""
+[9.891s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+[9.894s] -- Set runtime path of "/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server" to ""
+[9.894s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/include
+[9.894s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot
+[9.894s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+[9.894s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot
+[9.895s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts
+[9.895s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/saves
+[9.895s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/saves/a2c-JayNetv1.0
+[9.895s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/rl_mind.py
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/__init___.py
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-12-01_rlcontrolJayNetv1.0
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-21-43_rlcontrolJayNetv1.0
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_06-47-55_rlcontrolJayNetv1.0
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-37-16_rlcontrolJayNetv1.0
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_06-46-33_rlcontrolJayNetv1.0
+[9.896s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-51-20_rlcontrolJayNetv1.0
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-53-46_rlcontrolJayNetv1.0
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-23-30_rlcontrolJayNetv1.0
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_06-45-01_rlcontrolJayNetv1.0
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/include
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/include/jaybot
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/setup.py
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/src
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+[9.897s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.dsv
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+[9.898s] -- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.xml
+[9.906s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
