@@ -1,0 +1,45 @@
+[ 50%] Built target range_publisher
+[100%] Built target rl_server
+-- Install configuration: ""
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+-- Installing: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_mind.py
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/include
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/saves
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/saves/a2c-JayNetv1.0
+-- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/rl_mind.py
+-- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/__init___.py
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-12-01_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-21-43_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_06-47-55_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-37-16_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_06-46-33_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-51-20_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-53-46_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_07-23-30_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/scripts/runs/Jun17_06-45-01_rlcontrolJayNetv1.0
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/include
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/include/jaybot
+-- Installing: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/setup.py
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/jaybot/src
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.dsv
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+-- Up-to-date: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.xml

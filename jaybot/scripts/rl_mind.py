@@ -30,7 +30,7 @@ from collections import namedtuple, deque
 
 import rclpy
 from rclpy.node import Node
-from rl_custom_messages.srv import RangeService
+from rl_custom_messages.srv import ObservationService
 
 
 CAMERA_RESOLUTION = (3,640,480)
@@ -70,18 +70,14 @@ HID_SIZE = 64
 
 device = torch.device("cpu")
 
-import rclpy
-from rclpy.node import Node
-from rl_custom_messages.srv import RangeService
-
 class ServiceClientNode(Node):
     def __init__(self):
         super().__init__("service_client")
-        self.client = self.create_client(RangeService, "get_range_data")
+        self.client = self.create_client(ObservationService, "get_range_data")
         self.response_deque = deque(maxlen=6)
 
     def send_request(self):
-        req = RangeService.Request()
+        req = ObservationService.Request()
         future = self.client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
@@ -176,7 +172,8 @@ class JayEnv(gymnasium.Env):
     
      def __init__(self):
             super(JayEnv, self).__init__()
-            rclpy.init(args=none)
+            if not rclpy.ok():
+                rclpy.init(args=None)
             self.service_client_node = ServiceClientNode()
             #Initializes the range of actions the robot can choose to take. format of the action space is <<(wheelfl)<In1><In2><PWM>><wheelfr...><wheelrl>...<wheelrr>...>
             #In's can be 0 or 1, the combinations of Ins tell if the motor is spinning clockwise or counterclockwise. PWM can be 0-100 floating point and tell the motor how fast to spin in a given direction
@@ -205,6 +202,7 @@ class JayEnv(gymnasium.Env):
 
      def step(self, action):
             
+            print("205 action", action)
             self.flat_action, self.flat_last_action = [], []
             self.steps_left -= 1
 
@@ -217,14 +215,16 @@ class JayEnv(gymnasium.Env):
             #this is where a middleware subscriber will pull the current observation
             #timing with observations is something to watch - presumably, middleware should 
             #match the timing of whatever is in this code so its all efficient
+            print("217 test")
             self.service_client_node.send_request()
 
             try: 
-                print(self.service_client_node.response_deque[-1])
+                response = self.service_client_node.response_deque[-1]
+                self.range_observations = [response.range_data.range_left, response.range_data.range_front, response.range_data.range_right, response.range_data.range_back]
             except IndexError:
                 self.get_logger().warning('No responses received yet')
 
-
+            print("226 test")
             self.current_observations = self.observation_space.sample()
 
             """
@@ -239,12 +239,18 @@ class JayEnv(gymnasium.Env):
                 for discrete_action in motor_action:
                     self.flat_last_action.append(discrete_action)
 
-            self.one_hot_observation_8 = torch.nn.functional.one_hot(torch.tensor(self.current_observations[8]), num_classes=13).numpy()    
+            self.one_hot_observation_8 = torch.nn.functional.one_hot(torch.tensor(self.current_observations[8]), num_classes=13).numpy()
 
+            self.x3_array_list = [np.array([self.range_observations[0]]), np.array([self.range_observations[1]]), \
+                np.array([self.range_observations[2]]), np.array([self.range_observations[3]])] \
+                + [np.array(action)] + [np.array([self.current_observations[7]])] + \
+                [np.array(self.one_hot_observation_8)]
+            """
             self.x3_array_list = [np.array([self.current_observations[2]]), np.array([self.current_observations[3]]), \
                 np.array([self.current_observations[4]]), np.array([self.current_observations[5]])] \
                 + [np.array(action)] + [np.array([self.current_observations[7]])] + \
                 [np.array(self.one_hot_observation_8)]
+            """
 
             # Now concatenate along the first axis
             self.x3_array = np.concatenate(self.x3_array_list)
@@ -986,6 +992,7 @@ def main():
                 frame_idx += 1
                 #gonna want to implement some kind of saving the of the replay buffer, so that 
                 #I can initialize a session with old data
+                print("987 test")
                 buffer.populate(1)
                 rewards_steps = exp_source.pop_rewards_steps()
 
@@ -997,14 +1004,14 @@ def main():
                 if len(buffer) < REPLAY_INITIAL:
                     continue
 
-            
+                    
                 batch = buffer.sample(BATCH_SIZE)
                 states_v, actions_v, rewards_v, dones_mask, last_states_v, critic_states_a_v= unpack_batch_ddqn(batch, device)
                 #print("STATES_V", len(states_v), states_v)
                 #print("ACTIONS_V", len(actions_vA), actions_vA)
                 #print("REWARDS_V", len(rewards_vA),rewards_vA)
                 #print("LAST STATES_V", len(last_states_v), last_states_v)  
-
+                print("1006 test")
                 actions = []
                 actions = actions_v
                 mean_actions = (torch.mean(actions_v))

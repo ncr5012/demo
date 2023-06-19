@@ -1,0 +1,6 @@
+setup.py
+jaybot/__init__.py
+jaybot.egg-info/PKG-INFO
+jaybot.egg-info/SOURCES.txt
+jaybot.egg-info/dependency_links.txt
+jaybot.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:90 (file):
+  file INSTALL cannot find
+  "/home/rlcontrol/jay_ws/jaybot/scripts/rl_mind.py": No such file or
+  directory.
+
+[0m

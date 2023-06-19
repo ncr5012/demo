@@ -8,16 +8,11 @@
   <license>No use is authorized for anybody</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-  
-  <build_depend>builtin_interfaces</build_depend>
-  <build_depend>rclpy</build_depend>
-  <build_depend>python3-ament-index-python</build_depend>
-  <exec_depend>builtin_interfaces</exec_depend>
-  <exec_depend>rclpy</exec_depend>
-  <exec_depend>python3-ament-index-python</exec_depend>
-  
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+ 
 
   <depend>rclcpp</depend>
+  <depend>rclpy</depend>
   <depend>std_msgs</depend>
   <depend>rl_custom_messages</depend>
 

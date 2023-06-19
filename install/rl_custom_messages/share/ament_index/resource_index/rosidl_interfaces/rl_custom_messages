@@ -1,6 +1,1 @@
-msg/RangeArray.idl
-msg/RangeArray.msg
-srv/ObservationService.idl
-srv/ObservationService.srv
-srv/ObservationService_Request.msg
-srv/ObservationService_Response.msg
+/home/rlcontrol/jay_ws/build/rl_custom_messages/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/rl_custom_messages

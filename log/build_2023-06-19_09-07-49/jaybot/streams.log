@@ -1,0 +1,29 @@
+[0.011s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.058s] [  0%] Built target ament_cmake_python_symlink_jaybot
+[0.060s] [ 50%] Built target range_publisher
+[0.065s] [ 75%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[0.357s] running egg_info
+[0.358s] writing jaybot.egg-info/PKG-INFO
+[0.358s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.358s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.360s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.361s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.380s] [ 75%] Built target ament_cmake_python_build_jaybot_egg
+[2.447s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid RangeSubscriber::service_callback(std::shared_ptr<rl_custom_messages::srv::ObservationService_Request_<std::allocator<void> > >, std::shared_ptr<rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> > >)[m[K’:
+[2.447s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:37:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Krange_left[m[K’
+[2.447s]    37 |     response->[01;31m[Krange_left[m[K = last_range_data_.range_left;
+[2.447s]       |               [01;31m[K^~~~~~~~~~[m[K
+[2.447s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:38:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Krange_front[m[K’
+[2.448s]    38 |     response->[01;31m[Krange_front[m[K = last_range_data_.range_front;
+[2.448s]       |               [01;31m[K^~~~~~~~~~~[m[K
+[2.448s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:39:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Krange_right[m[K’
+[2.448s]    39 |     response->[01;31m[Krange_right[m[K = last_range_data_.range_right;
+[2.448s]       |               [01;31m[K^~~~~~~~~~~[m[K
+[2.448s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:40:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Krange_back[m[K’; did you mean ‘[01m[Krange_data[m[K’?
+[2.448s]    40 |     response->[01;31m[Krange_back[m[K = last_range_data_.range_back;
+[2.448s]       |               [01;31m[K^~~~~~~~~~[m[K
+[2.448s]       |               [32m[Krange_data[m[K
+[5.182s] gmake[2]: *** [CMakeFiles/rl_server.dir/build.make:76: CMakeFiles/rl_server.dir/src/rl_server.cpp.o] Error 1
+[5.183s] gmake[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/rl_server.dir/all] Error 2
+[5.183s] gmake: *** [Makefile:146: all] Error 2
+[5.188s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

@@ -1,1 +1,1 @@
-from rl_custom_messages.msg._range_array import RangeArray  # noqa: F401
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/__init__.py

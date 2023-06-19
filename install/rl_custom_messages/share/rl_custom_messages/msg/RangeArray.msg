@@ -1,6 +1,1 @@
-# RangeArray.msg
-float64 range_left
-float64 range_front
-float64 range_right
-float64 range_back
-
+/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg

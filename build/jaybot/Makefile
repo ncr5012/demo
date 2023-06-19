@@ -223,6 +223,32 @@ rl_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rl_server.dir/build.make CMakeFiles/rl_server.dir/build
 .PHONY : rl_server/fast
 
+#=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_jaybot
+
+# Build rule for target.
+ament_cmake_python_symlink_jaybot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_jaybot
+.PHONY : ament_cmake_python_symlink_jaybot
+
+# fast build rule for target.
+ament_cmake_python_symlink_jaybot/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_jaybot.dir/build.make CMakeFiles/ament_cmake_python_symlink_jaybot.dir/build
+.PHONY : ament_cmake_python_symlink_jaybot/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_build_jaybot_egg
+
+# Build rule for target.
+ament_cmake_python_build_jaybot_egg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_build_jaybot_egg
+.PHONY : ament_cmake_python_build_jaybot_egg
+
+# fast build rule for target.
+ament_cmake_python_build_jaybot_egg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_jaybot_egg.dir/build.make CMakeFiles/ament_cmake_python_build_jaybot_egg.dir/build
+.PHONY : ament_cmake_python_build_jaybot_egg/fast
+
 src/range_publisher.o: src/range_publisher.cpp.o
 .PHONY : src/range_publisher.o
 
@@ -284,6 +310,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ament_cmake_python_build_jaybot_egg"
+	@echo "... ament_cmake_python_symlink_jaybot"
 	@echo "... jaybot_uninstall"
 	@echo "... uninstall"
 	@echo "... range_publisher"

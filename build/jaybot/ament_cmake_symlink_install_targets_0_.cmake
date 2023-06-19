@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/rlcontrol/jay_ws/build/jaybot/range_publisher" "/home/rlcontrol/jay_ws/build/jaybot/rl_server" "TARGETS" "range_publisher" "rl_server" "DESTINATION" "lib/jaybot")

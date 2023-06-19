@@ -1,1 +1,1 @@
-builtin_interfaces:python3-ament-index-python:rclcpp:rclpy:rl_custom_messages:std_msgs
+rclcpp:rclpy:rl_custom_messages:std_msgs

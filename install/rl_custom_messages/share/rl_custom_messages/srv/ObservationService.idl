@@ -1,16 +1,1 @@
-// generated from rosidl_adapter/resource/srv.idl.em
-// with input from rl_custom_messages/srv/ObservationService.srv
-// generated code does not contain a copyright notice
-
-#include "rl_custom_messages/msg/RangeArray.idl"
-
-module rl_custom_messages {
-  module srv {
-    struct ObservationService_Request {
-      uint8 structure_needs_at_least_one_member;
-    };
-    struct ObservationService_Response {
-      rl_custom_messages::msg::RangeArray range_data;
-    };
-  };
-};
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl

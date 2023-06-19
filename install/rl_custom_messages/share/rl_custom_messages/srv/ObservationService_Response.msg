@@ -1,3 +1,1 @@
-
-rl_custom_messages/RangeArray range_data
-
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ObservationService_Response.msg

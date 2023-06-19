@@ -315,17 +315,17 @@ rl_custom_messages__rosidl_typesupport_cpp/fast:
 .PHONY : rl_custom_messages__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_rl_custom_messages
+# Target rules for targets named ament_cmake_python_symlink_rl_custom_messages
 
 # Build rule for target.
-ament_cmake_python_copy_rl_custom_messages: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_rl_custom_messages
-.PHONY : ament_cmake_python_copy_rl_custom_messages
+ament_cmake_python_symlink_rl_custom_messages: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_rl_custom_messages
+.PHONY : ament_cmake_python_symlink_rl_custom_messages
 
 # fast build rule for target.
-ament_cmake_python_copy_rl_custom_messages/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_rl_custom_messages.dir/build.make CMakeFiles/ament_cmake_python_copy_rl_custom_messages.dir/build
-.PHONY : ament_cmake_python_copy_rl_custom_messages/fast
+ament_cmake_python_symlink_rl_custom_messages/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_rl_custom_messages.dir/build.make CMakeFiles/ament_cmake_python_symlink_rl_custom_messages.dir/build
+.PHONY : ament_cmake_python_symlink_rl_custom_messages/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_rl_custom_messages_egg
@@ -875,7 +875,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_rl_custom_messages_egg"
-	@echo "... ament_cmake_python_copy_rl_custom_messages"
+	@echo "... ament_cmake_python_symlink_rl_custom_messages"
 	@echo "... rl_custom_messages"
 	@echo "... rl_custom_messages__cpp"
 	@echo "... rl_custom_messages__py"

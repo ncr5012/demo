@@ -11,8 +11,12 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
 find_package(rl_custom_messages REQUIRED)
+
+include_directories(include)
 
 # After message generation
 add_executable(range_publisher src/range_publisher.cpp)
@@ -29,22 +33,18 @@ install(TARGETS
   rl_server
   DESTINATION lib/${PROJECT_NAME})
   
-install(PROGRAMS
-  scripts/rl_mind.py
-  DESTINATION lib/${PROJECT_NAME})
-  
 install(
   DIRECTORY include/
   DESTINATION include
   )
+  
+ament_python_install_package(${PROJECT_NAME})
 
-ament_export_dependencies(rclcpp rl_custom_messages)
-
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-  DESTINATION share/${PROJECT_NAME}
-  FILES_MATCHING PATTERN "*.py"
+install(PROGRAMS
+  scripts/rl_mind.py
+  DESTINATION lib/${PROJECT_NAME}
 )
-
+ament_export_dependencies(rclcpp rl_custom_messages)
 ament_package()
 
 

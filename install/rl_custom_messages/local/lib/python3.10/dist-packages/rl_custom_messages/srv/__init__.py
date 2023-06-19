@@ -1,1 +1,1 @@
-from rl_custom_messages.srv._observation_service import ObservationService  # noqa: F401
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/srv/__init__.py
