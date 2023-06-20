@@ -78,15 +78,22 @@ rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__
 rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em
 rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em
 rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/rl_custom_messages/msg/RangeArray.idl
+rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl
 rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/rl_custom_messages/srv/ObservationService.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp__arguments.json
+
+rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__rosidl_typesupport_introspection_cpp.hpp
 
 rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__rosidl_typesupport_introspection_cpp.hpp
 
 rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp
 
 rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp
@@ -105,10 +112,24 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp -o CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp.s
 
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o -MF CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o.d -o CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp
+
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp > CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.i
+
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp -o CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.s
+
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o: rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o -MF CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o.d -o CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp
 
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.i: cmake_force
@@ -122,12 +143,14 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_t
 # Object files for target rl_custom_messages__rosidl_typesupport_introspection_cpp
 rl_custom_messages__rosidl_typesupport_introspection_cpp_OBJECTS = \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp.o" \
+"CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o"
 
 # External object files for target rl_custom_messages__rosidl_typesupport_introspection_cpp
 rl_custom_messages__rosidl_typesupport_introspection_cpp_EXTERNAL_OBJECTS =
 
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp.o
+librl_custom_messages__rosidl_typesupport_introspection_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__type_support.cpp.o
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/build.make
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
@@ -135,7 +158,7 @@ librl_custom_messages__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librcutils.so
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 librl_custom_messages__rosidl_typesupport_introspection_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library librl_custom_messages__rosidl_typesupport_introspection_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library librl_custom_messages__rosidl_typesupport_introspection_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +169,8 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/clean
 
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/rl_custom_messages/srv/detail/observation_service__rosidl_typesupport_introspection_cpp.hpp

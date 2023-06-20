@@ -361,11 +361,17 @@ include("/home/rlcontrol/jay_ws/build/rl_custom_messages/ament_cmake_symlink_ins
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/RangeArray.idl" "DESTINATION" "share/rl_custom_messages/msg")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/RangeArray.idl" "DESTINATION" "share/rl_custom_messages/msg")
 
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl" "DESTINATION" "share/rl_custom_messages/msg")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl" "DESTINATION" "share/rl_custom_messages/msg")
+
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl" "DESTINATION" "share/rl_custom_messages/srv")
 
 # install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
+
+# install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/MotorCommands.msg" "DESTINATION" "share/rl_custom_messages/msg")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/MotorCommands.msg" "DESTINATION" "share/rl_custom_messages/msg")
 
 # install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/ObservationService.srv" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/ObservationService.srv" "DESTINATION" "share/rl_custom_messages/srv")

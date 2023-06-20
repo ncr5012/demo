@@ -24,17 +24,49 @@ inline void to_flow_style_yaml(
   const ObservationService_Request & msg,
   std::ostream & out)
 {
-  (void)msg;
-  out << "null";
+  out << "{";
+  // member: action
+  {
+    if (msg.action.size() == 0) {
+      out << "action: []";
+    } else {
+      out << "action: [";
+      size_t pending_items = msg.action.size();
+      for (auto item : msg.action) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const ObservationService_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  (void)msg;
-  (void)indentation;
-  out << "null\n";
+  // member: action
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.action.size() == 0) {
+      out << "action: []\n";
+    } else {
+      out << "action:\n";
+      for (auto item : msg.action) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const ObservationService_Request & msg, bool use_flow_style = false)

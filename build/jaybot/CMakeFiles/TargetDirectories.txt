@@ -1,6 +1,7 @@
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/uninstall.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/jaybot_uninstall.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/range_publisher.dir
+/home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/motor_controller.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/rl_server.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/ament_cmake_python_symlink_jaybot.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/ament_cmake_python_build_jaybot_egg.dir

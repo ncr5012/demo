@@ -4,6 +4,7 @@
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/RangeArray.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/MotorCommands.idl",
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:srv/ObservationService.idl"
   ],
   "target_dependencies": [
@@ -23,6 +24,7 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/RangeArray.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl",
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl"
   ]
 }

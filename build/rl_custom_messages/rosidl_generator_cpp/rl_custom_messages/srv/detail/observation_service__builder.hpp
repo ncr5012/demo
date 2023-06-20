@@ -18,6 +18,26 @@ namespace rl_custom_messages
 namespace srv
 {
 
+namespace builder
+{
+
+class Init_ObservationService_Request_action
+{
+public:
+  Init_ObservationService_Request_action()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::rl_custom_messages::srv::ObservationService_Request action(::rl_custom_messages::srv::ObservationService_Request::_action_type arg)
+  {
+    msg_.action = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::rl_custom_messages::srv::ObservationService_Request msg_;
+};
+
+}  // namespace builder
 
 }  // namespace srv
 
@@ -28,7 +48,7 @@ template<>
 inline
 auto build<::rl_custom_messages::srv::ObservationService_Request>()
 {
-  return ::rl_custom_messages::srv::ObservationService_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
+  return rl_custom_messages::srv::builder::Init_ObservationService_Request_action();
 }
 
 }  // namespace rl_custom_messages

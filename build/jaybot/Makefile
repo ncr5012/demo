@@ -211,6 +211,19 @@ range_publisher/fast:
 .PHONY : range_publisher/fast
 
 #=============================================================================
+# Target rules for targets named motor_controller
+
+# Build rule for target.
+motor_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor_controller
+.PHONY : motor_controller
+
+# fast build rule for target.
+motor_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller.dir/build.make CMakeFiles/motor_controller.dir/build
+.PHONY : motor_controller/fast
+
+#=============================================================================
 # Target rules for targets named rl_server
 
 # Build rule for target.
@@ -248,6 +261,30 @@ ament_cmake_python_build_jaybot_egg: cmake_check_build_system
 ament_cmake_python_build_jaybot_egg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_jaybot_egg.dir/build.make CMakeFiles/ament_cmake_python_build_jaybot_egg.dir/build
 .PHONY : ament_cmake_python_build_jaybot_egg/fast
+
+src/motor_controller.o: src/motor_controller.cpp.o
+.PHONY : src/motor_controller.o
+
+# target to build an object file
+src/motor_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller.dir/build.make CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o
+.PHONY : src/motor_controller.cpp.o
+
+src/motor_controller.i: src/motor_controller.cpp.i
+.PHONY : src/motor_controller.i
+
+# target to preprocess a source file
+src/motor_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller.dir/build.make CMakeFiles/motor_controller.dir/src/motor_controller.cpp.i
+.PHONY : src/motor_controller.cpp.i
+
+src/motor_controller.s: src/motor_controller.cpp.s
+.PHONY : src/motor_controller.s
+
+# target to generate assembly for a file
+src/motor_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller.dir/build.make CMakeFiles/motor_controller.dir/src/motor_controller.cpp.s
+.PHONY : src/motor_controller.cpp.s
 
 src/range_publisher.o: src/range_publisher.cpp.o
 .PHONY : src/range_publisher.o
@@ -314,8 +351,12 @@ help:
 	@echo "... ament_cmake_python_symlink_jaybot"
 	@echo "... jaybot_uninstall"
 	@echo "... uninstall"
+	@echo "... motor_controller"
 	@echo "... range_publisher"
 	@echo "... rl_server"
+	@echo "... src/motor_controller.o"
+	@echo "... src/motor_controller.i"
+	@echo "... src/motor_controller.s"
 	@echo "... src/range_publisher.o"
 	@echo "... src/range_publisher.i"
 	@echo "... src/range_publisher.s"

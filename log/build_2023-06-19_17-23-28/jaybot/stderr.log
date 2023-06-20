@@ -1,0 +1,48 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/motor_controller.h:8[m[K,
+                 from [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:1[m[K:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:[m[K In lambda function:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:59:30:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ is not captured
+   59 |                 RCLCPP_ERROR([01;31m[Knode[m[K->get_logger(), "Received incorrect number of motor commands.");
+      |                              [01;31m[K^~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:56:17:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   56 |         [&motors[01;36m[K][m[K(std_msgs::msg::Float32MultiArray::UniquePtr msg) {
+      |                 [01;36m[K^[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:42:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::shared_ptr<rclcpp::Node> node[m[K’ declared here
+   42 |     auto [01;36m[Knode[m[K = rclcpp::Node::make_shared("motor_controller_node");
+      |          [01;36m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/motor_controller.h:8[m[K,
+                 from [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:1[m[K:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:59:30:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ is not captured
+   59 |                 RCLCPP_ERROR([01;31m[Knode[m[K->get_logger(), "Received incorrect number of motor commands.");
+      |                              [01;31m[K^~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:56:17:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   56 |         [&motors[01;36m[K][m[K(std_msgs::msg::Float32MultiArray::UniquePtr msg) {
+      |                 [01;36m[K^[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:42:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::shared_ptr<rclcpp::Node> node[m[K’ declared here
+   42 |     auto [01;36m[Knode[m[K = rclcpp::Node::make_shared("motor_controller_node");
+      |          [01;36m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_controller.dir/build.make:76: CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/motor_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

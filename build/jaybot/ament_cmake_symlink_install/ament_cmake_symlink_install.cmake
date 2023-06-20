@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "range_publisher" "rl_server" "DESTINATION" "lib/jaybot")
+# install("TARGETS" "range_publisher" "motor_controller" "rl_server" "DESTINATION" "lib/jaybot")
 include("/home/rlcontrol/jay_ws/build/jaybot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "include/" "DESTINATION" "include")

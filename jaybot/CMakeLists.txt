@@ -24,12 +24,18 @@ target_include_directories(range_publisher PUBLIC include)
 target_link_libraries(range_publisher ${catkin_LIBRARIES} pigpiod_if2)
 ament_target_dependencies(range_publisher rclcpp rl_custom_messages)
 
+add_executable(motor_controller src/motor_controller.cpp)
+target_include_directories(motor_controller PUBLIC include)
+target_link_libraries(motor_controller ${catkin_LIBRARIES} pigpiod_if2)
+ament_target_dependencies(motor_controller rclcpp rl_custom_messages)
+
 add_executable(rl_server src/rl_server.cpp)
 ament_target_dependencies(rl_server rclcpp rl_custom_messages)
 
 
 install(TARGETS
   range_publisher
+  motor_controller
   rl_server
   DESTINATION lib/${PROJECT_NAME})
   

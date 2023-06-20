@@ -31,22 +31,67 @@ void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_int
   rl_custom_messages__srv__ObservationService_Request__fini(message_memory);
 }
 
+size_t rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__action(
+  const void * untyped_member)
+{
+  (void)untyped_member;
+  return 12;
+}
+
+const void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__action(
+  const void * untyped_member, size_t index)
+{
+  const int32_t * member =
+    (const int32_t *)(untyped_member);
+  return &member[index];
+}
+
+void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__action(
+  void * untyped_member, size_t index)
+{
+  int32_t * member =
+    (int32_t *)(untyped_member);
+  return &member[index];
+}
+
+void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__action(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int32_t * item =
+    ((const int32_t *)
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__action(untyped_member, index));
+  int32_t * value =
+    (int32_t *)(untyped_value);
+  *value = *item;
+}
+
+void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__action(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int32_t * item =
+    ((int32_t *)
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__action(untyped_member, index));
+  const int32_t * value =
+    (const int32_t *)(untyped_value);
+  *item = *value;
+}
+
 static rosidl_typesupport_introspection_c__MessageMember rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__ObservationService_Request_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "action",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    12,  // array size
     false,  // is upper bound
-    offsetof(rl_custom_messages__srv__ObservationService_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(rl_custom_messages__srv__ObservationService_Request, action),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__action,  // size() function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__action,  // get_const(index) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__action,  // get(index) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__action,  // fetch(index, &value) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__action,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };

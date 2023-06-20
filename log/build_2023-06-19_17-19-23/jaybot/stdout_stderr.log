@@ -1,0 +1,20 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o[0m
+[ 16%] Built target ament_cmake_python_symlink_jaybot
+[ 66%] Built target range_publisher
+[ 83%] Built target rl_server
+In file included from [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:1[m[K:
+[01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/motor_controller.h:6:10:[m[K [01;31m[Kfatal error: [m[Kpigpio_if2.h: No such file or directory
+    6 | #include [01;31m[K<pigpio_if2.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/motor_controller.dir/build.make:76: CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/motor_controller.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+running egg_info
+writing jaybot.egg-info/PKG-INFO
+writing dependency_links to jaybot.egg-info/dependency_links.txt
+writing top-level names to jaybot.egg-info/top_level.txt
+reading manifest file 'jaybot.egg-info/SOURCES.txt'
+writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[ 83%] Built target ament_cmake_python_build_jaybot_egg
+gmake: *** [Makefile:146: all] Error 2

@@ -20,7 +20,7 @@ extern "C"
 /// Struct defined in srv/ObservationService in the package rl_custom_messages.
 typedef struct rl_custom_messages__srv__ObservationService_Request
 {
-  uint8_t structure_needs_at_least_one_member;
+  int32_t action[12];
 } rl_custom_messages__srv__ObservationService_Request;
 
 // Struct for a sequence of rl_custom_messages__srv__ObservationService_Request.

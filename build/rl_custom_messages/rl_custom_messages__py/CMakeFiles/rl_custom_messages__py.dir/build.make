@@ -70,10 +70,12 @@ include /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/C
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_introspection_c.c
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_c.c
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_range_array.py
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_motor_commands.py
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/srv/_observation_service.py
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/__init__.py
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/srv/__init__.py
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py/CMakeFiles/rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/srv/_observation_service_s.c
 
 rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
@@ -90,6 +92,7 @@ rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesuppo
 rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rl_custom_messages/msg/RangeArray.idl
+rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl
 rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rl_custom_messages/srv/ObservationService.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/rlcontrol/jay_ws/build/rl_custom_messages/rl_custom_messages__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
@@ -103,6 +106,9 @@ rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesuppo
 rosidl_generator_py/rl_custom_messages/msg/_range_array.py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rl_custom_messages/msg/_range_array.py
 
+rosidl_generator_py/rl_custom_messages/msg/_motor_commands.py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rl_custom_messages/msg/_motor_commands.py
+
 rosidl_generator_py/rl_custom_messages/srv/_observation_service.py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rl_custom_messages/srv/_observation_service.py
 
@@ -115,6 +121,9 @@ rosidl_generator_py/rl_custom_messages/srv/__init__.py: rosidl_generator_py/rl_c
 rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c
 
+rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c
+
 rosidl_generator_py/rl_custom_messages/srv/_observation_service_s.c: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rl_custom_messages/srv/_observation_service_s.c
 
@@ -123,6 +132,8 @@ rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/_rl_custom_messag
 rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_fastrtps_c.c
 rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/_rl_custom_messages_s.ep.rosidl_typesupport_introspection_c.c
 rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/__init__.py
+rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_motor_commands.py
+rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c
 rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_range_array.py
 rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c
 rl_custom_messages__py: rosidl_generator_py/rl_custom_messages/srv/__init__.py

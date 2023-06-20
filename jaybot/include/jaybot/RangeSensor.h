@@ -16,7 +16,9 @@ class Rangesensor
 {
   public:
     // Constructor. Mainly sets up pins.
-    Rangesensor(int trigpin, int echopin);      
+    Rangesensor(int trigpin, int echopin);
+
+    ~Rangesensor();      
 
     // tells if joystick has moved
     double Range();  
@@ -50,6 +52,15 @@ Rangesensor::Rangesensor(int trigpin, int echopin)
   //sleep(1);
   std::cout << "initialized" << "\n";
 
+}
+
+Rangesensor::~Rangesensor() 
+{
+    // Stop the motor
+    gpio_write(pi, trig, 0);
+
+    // Disconnect from the pigpiod daemon
+    pigpio_stop(pi);
 }
 
 double Rangesensor::Range() {

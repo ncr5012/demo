@@ -32,8 +32,10 @@ cdr_serialize(
   const rl_custom_messages::srv::ObservationService_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr << ros_message.structure_needs_at_least_one_member;
+  // Member: action
+  {
+    cdr << ros_message.action;
+  }
   return true;
 }
 
@@ -43,8 +45,10 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rl_custom_messages::srv::ObservationService_Request & ros_message)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr >> ros_message.structure_needs_at_least_one_member;
+  // Member: action
+  {
+    cdr >> ros_message.action;
+  }
 
   return true;
 }
@@ -62,10 +66,11 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: action
   {
-    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
-    current_alignment += item_size +
+    size_t array_size = 12;
+    size_t item_size = sizeof(ros_message.action[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -90,11 +95,12 @@ max_serialized_size_ObservationService_Request(
   is_plain = true;
 
 
-  // Member: structure_needs_at_least_one_member
+  // Member: action
   {
-    size_t array_size = 1;
+    size_t array_size = 12;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   return current_alignment - initial_alignment;

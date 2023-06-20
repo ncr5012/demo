@@ -1,6 +1,8 @@
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/motor_controller
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
 /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+/home/rlcontrol/jay_ws/install/jaybot/include/jaybot/motor_controller.h
 /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.sh
 /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.dsv
 /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/PKG-INFO

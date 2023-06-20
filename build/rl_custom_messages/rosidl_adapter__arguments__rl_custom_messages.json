@@ -2,6 +2,7 @@
   "package_name": "rl_custom_messages",
   "non_idl_tuples": [
     "/home/rlcontrol/jay_ws/rl_custom_messages:msg/RangeArray.msg",
+    "/home/rlcontrol/jay_ws/rl_custom_messages:msg/MotorCommands.msg",
     "/home/rlcontrol/jay_ws/rl_custom_messages:srv/ObservationService.srv"
   ]
 }

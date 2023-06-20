@@ -38,25 +38,32 @@ struct ObservationService_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      std::fill<typename std::array<int32_t, 12>::iterator, int32_t>(this->action.begin(), this->action.end(), 0l);
     }
   }
 
   explicit ObservationService_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : action(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      std::fill<typename std::array<int32_t, 12>::iterator, int32_t>(this->action.begin(), this->action.end(), 0l);
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _action_type =
+    std::array<int32_t, 12>;
+  _action_type action;
 
+  // setters for named parameter idiom
+  Type & set__action(
+    const std::array<int32_t, 12> & _arg)
+  {
+    this->action = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -100,7 +107,7 @@ struct ObservationService_Request_
   // comparison operators
   bool operator==(const ObservationService_Request_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->action != other.action) {
       return false;
     }
     return true;

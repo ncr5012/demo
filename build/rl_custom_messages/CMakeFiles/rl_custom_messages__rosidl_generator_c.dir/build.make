@@ -83,6 +83,7 @@ rosidl_generator_c/rl_custom_messages/msg/range_array.h: /opt/ros/humble/share/r
 rosidl_generator_c/rl_custom_messages/msg/range_array.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/rl_custom_messages/msg/range_array.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/rl_custom_messages/msg/range_array.h: rosidl_adapter/rl_custom_messages/msg/RangeArray.idl
+rosidl_generator_c/rl_custom_messages/msg/range_array.h: rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl
 rosidl_generator_c/rl_custom_messages/msg/range_array.h: rosidl_adapter/rl_custom_messages/srv/ObservationService.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c__arguments.json
@@ -95,6 +96,18 @@ rosidl_generator_c/rl_custom_messages/msg/detail/range_array__struct.h: rosidl_g
 
 rosidl_generator_c/rl_custom_messages/msg/detail/range_array__type_support.h: rosidl_generator_c/rl_custom_messages/msg/range_array.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/detail/range_array__type_support.h
+
+rosidl_generator_c/rl_custom_messages/msg/motor_commands.h: rosidl_generator_c/rl_custom_messages/msg/range_array.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/motor_commands.h
+
+rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.h: rosidl_generator_c/rl_custom_messages/msg/range_array.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.h
+
+rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__struct.h: rosidl_generator_c/rl_custom_messages/msg/range_array.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__struct.h
+
+rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__type_support.h: rosidl_generator_c/rl_custom_messages/msg/range_array.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__type_support.h
 
 rosidl_generator_c/rl_custom_messages/srv/observation_service.h: rosidl_generator_c/rl_custom_messages/msg/range_array.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/srv/observation_service.h
@@ -110,6 +123,9 @@ rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__type_suppo
 
 rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c: rosidl_generator_c/rl_custom_messages/msg/range_array.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c
+
+rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c: rosidl_generator_c/rl_custom_messages/msg/range_array.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c
 
 rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c: rosidl_generator_c/rl_custom_messages/msg/range_array.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c
@@ -128,10 +144,24 @@ CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_cust
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c -o CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.s
 
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/flags.make
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o: rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o -MF CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o.d -o CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c
+
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c > CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.i
+
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c -o CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.s
+
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/flags.make
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o: rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o -MF CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o.d -o CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c
 
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.i: cmake_force
@@ -145,18 +175,20 @@ CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_cust
 # Object files for target rl_custom_messages__rosidl_generator_c
 rl_custom_messages__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.o" \
+"CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o" \
 "CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o"
 
 # External object files for target rl_custom_messages__rosidl_generator_c
 rl_custom_messages__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 librl_custom_messages__rosidl_generator_c.so: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.o
+librl_custom_messages__rosidl_generator_c.so: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o
 librl_custom_messages__rosidl_generator_c.so: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c.o
 librl_custom_messages__rosidl_generator_c.so: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/build.make
 librl_custom_messages__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librl_custom_messages__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 librl_custom_messages__rosidl_generator_c.so: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library librl_custom_messages__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library librl_custom_messages__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -167,10 +199,15 @@ CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/clean
 
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.h
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__struct.h
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__type_support.h
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.h
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/range_array__struct.h
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/detail/range_array__type_support.h
+CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/motor_commands.h
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/msg/range_array.h
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.c
 CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/depend: rosidl_generator_c/rl_custom_messages/srv/detail/observation_service__functions.h

@@ -1,0 +1,22 @@
+[0.015s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.069s] [ 16%] [32mBuilding CXX object CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o[0m
+[0.072s] [ 16%] Built target ament_cmake_python_symlink_jaybot
+[0.074s] [ 66%] Built target range_publisher
+[0.074s] [ 83%] Built target rl_server
+[0.125s] In file included from [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:1[m[K:
+[0.126s] [01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/motor_controller.h:6:10:[m[K [01;31m[Kfatal error: [m[Kpigpio_if2.h: No such file or directory
+[0.126s]     6 | #include [01;31m[K<pigpio_if2.h>[m[K
+[0.126s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.126s] compilation terminated.
+[0.127s] gmake[2]: *** [CMakeFiles/motor_controller.dir/build.make:76: CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o] Error 1
+[0.127s] gmake[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/motor_controller.dir/all] Error 2
+[0.127s] gmake[1]: *** Waiting for unfinished jobs....
+[0.297s] running egg_info
+[0.298s] writing jaybot.egg-info/PKG-INFO
+[0.298s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.299s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.301s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.302s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.323s] [ 83%] Built target ament_cmake_python_build_jaybot_egg
+[0.324s] gmake: *** [Makefile:146: all] Error 2
+[0.330s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

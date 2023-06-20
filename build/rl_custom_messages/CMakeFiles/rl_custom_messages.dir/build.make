@@ -67,6 +67,7 @@ include CMakeFiles/rl_custom_messages.dir/compiler_depend.make
 include CMakeFiles/rl_custom_messages.dir/progress.make
 
 CMakeFiles/rl_custom_messages: /home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg
+CMakeFiles/rl_custom_messages: /home/rlcontrol/jay_ws/rl_custom_messages/msg/MotorCommands.msg
 CMakeFiles/rl_custom_messages: /home/rlcontrol/jay_ws/rl_custom_messages/srv/ObservationService.srv
 CMakeFiles/rl_custom_messages: rosidl_cmake/srv/ObservationService_Request.msg
 CMakeFiles/rl_custom_messages: rosidl_cmake/srv/ObservationService_Response.msg

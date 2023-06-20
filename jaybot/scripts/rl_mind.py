@@ -76,8 +76,9 @@ class ServiceClientNode(Node):
         self.client = self.create_client(ObservationService, "get_range_data")
         self.response_deque = deque(maxlen=6)
 
-    def send_request(self):
+    def send_request(self, action):
         req = ObservationService.Request()
+        req.action = action.astype(np.int32)
         future = self.client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
@@ -216,7 +217,7 @@ class JayEnv(gymnasium.Env):
             #timing with observations is something to watch - presumably, middleware should 
             #match the timing of whatever is in this code so its all efficient
             print("217 test")
-            self.service_client_node.send_request()
+            self.service_client_node.send_request(action)
 
             try: 
                 response = self.service_client_node.response_deque[-1]

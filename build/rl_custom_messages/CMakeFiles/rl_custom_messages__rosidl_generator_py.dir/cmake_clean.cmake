@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c.o"
+  "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c.o.d"
   "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c.o"
   "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c.o.d"
   "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_observation_service_s.c.o"

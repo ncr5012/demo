@@ -3,7 +3,8 @@
 
 CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp \
   /usr/include/stdc-predef.h \
-  /usr/include/c++/11/functional \
+  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
+  /usr/include/c++/11/csignal \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -16,24 +17,62 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/initializer_list \
-  /usr/include/c++/11/array \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/cpp_type_traits.h \
   /usr/include/c++/11/ext/type_traits.h \
   /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/concept_check.h \
@@ -42,101 +81,60 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/predefined_ops.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/hashtable.h \
-  /usr/include/c++/11/bits/hashtable_policy.h \
-  /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/bits/stl_algo.h \
-  /usr/include/c++/11/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/11/bits/std_abs.h \
-  /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
-  /usr/include/c++/11/bits/uniform_int_dist.h \
-  /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
   /usr/include/c++/11/bit \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/shared_ptr.h \
   /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -148,7 +146,11 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
@@ -166,38 +168,6 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
-  /usr/include/c++/11/csignal \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
   /usr/include/c++/11/future \
   /usr/include/c++/11/mutex \
@@ -233,6 +203,19 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
+  /usr/include/c++/11/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -247,17 +230,34 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/atomic \
   /usr/include/c++/11/bits/atomic_futex.h \
+  /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/std_thread.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/unordered_map.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
   /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
   /usr/include/c++/11/iostream \
@@ -669,6 +669,10 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__struct.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__builder.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__traits.hpp \
+  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/motor_commands.hpp \
+  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__struct.hpp \
+  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__builder.hpp \
+  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__traits.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__builder.hpp \
@@ -678,6 +682,10 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.hpp:
+
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__builder.hpp:
+
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__struct.hpp:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__struct.hpp:
 
@@ -750,6 +758,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_parameters_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
+
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/motor_commands.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
 
@@ -829,6 +839,30 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
 
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics_state.hpp:
+
+/usr/include/c++/11/bits/vector.tcc:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:
+
+/usr/include/wchar.h:
+
+/opt/ros/humble/include/rcutils/rcutils/qsort.h:
+
+/usr/include/c++/11/bits/enable_special_members.h:
+
+/usr/include/c++/11/bits/hashtable_policy.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/c++/11/bits/hashtable.h:
+
+/usr/include/c++/11/unordered_map:
+
 /usr/include/c++/11/bits/stl_multiset.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
@@ -836,6 +870,18 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/c++/11/thread:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/opt/ros/humble/include/rmw/rmw/impl/config.h:
 
 /usr/include/c++/11/cctype:
 
@@ -845,91 +891,19 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
-/usr/include/linux/errno.h:
-
 /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:
 
 /usr/include/c++/11/cerrno:
 
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/11/limits:
+
 /usr/include/c++/11/bits/atomic_futex.h:
 
 /usr/include/c++/11/ratio:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
-
-/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
-
-/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/c++/11/algorithm:
-
-/opt/ros/humble/include/rclcpp/rclcpp/exceptions/exceptions.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
-
-/usr/include/c++/11/bits/allocated_ptr.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/publisher_base.hpp:
-
-/opt/ros/humble/include/rcutils/rcutils/types/char_array.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/create_service.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/c++/11/ext/type_traits.h:
-
-/usr/include/c++/11/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
-
-/usr/include/features-time64.h:
-
-/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
-
-/usr/include/c++/11/bits/string_view.tcc:
-
-/usr/include/c++/11/bits/node_handle.h:
-
-/usr/include/c++/11/utility:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
-
-/opt/ros/humble/include/rcutils/rcutils/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
@@ -947,19 +921,17 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
 
-/usr/include/c++/11/future:
+/usr/include/c++/11/functional:
 
-/opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
+/usr/include/c++/11/bits/stl_heap.h:
 
-/usr/include/linux/close_range.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
@@ -969,137 +941,7 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rmw/rmw/qos_policy_kind.h:
 
-/usr/include/locale.h:
-
-/usr/include/c++/11/ext/concurrence.h:
-
-/usr/include/c++/11/tr1/poly_hermite.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/signal.h:
-
-/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
-
-/usr/include/c++/11/string_view:
-
-/opt/ros/humble/include/rcutils/rcutils/time.h:
-
-/opt/ros/humble/include/rcl/rcl/client.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_options.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_clock_interface.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp:
-
-/usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
-
-/usr/include/c++/11/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/11/bits/shared_ptr_base.h:
-
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
-/opt/ros/humble/include/rmw/rmw/visibility_control.h:
-
-/usr/include/c++/11/bits/cxxabi_forced.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/11/bits/unique_ptr.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/c++/11/bits/allocator.h:
-
-/usr/include/c++/11/memory:
-
-/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
-
-/usr/include/c++/11/bits/unordered_set.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:
-
-/usr/include/wchar.h:
-
-/opt/ros/humble/include/rcutils/rcutils/qsort.h:
-
-/usr/include/c++/11/unordered_map:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__builder.hpp:
-
-/usr/include/c++/11/bits/hash_bytes.h:
-
-/opt/ros/humble/include/rcl/rcl/service.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/c++/11/tr1/hypergeometric.tcc:
-
-/usr/include/c++/11/bits/cpp_type_traits.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
-
-/usr/include/c++/11/bits/ptr_traits.h:
-
-/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__builder.hpp:
-
-/usr/include/c++/11/sstream:
-
-/usr/include/c++/11/bits/stl_bvector.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics_state.hpp:
-
-/usr/include/c++/11/bits/stl_iterator_base_funcs.h:
-
-/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
-
-/usr/include/c++/11/ext/numeric_traits.h:
-
-/usr/include/c++/11/mutex:
-
-/usr/include/c++/11/bits/unique_lock.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/c++/11/bits/functional_hash.h:
-
-/usr/include/c++/11/bits/align.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/c++/11/locale:
-
-/usr/include/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/serialized_message.hpp:
-
-/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp:
 
@@ -1111,69 +953,127 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_topics_interface.hpp:
+/usr/include/locale.h:
 
-/usr/include/c++/11/typeinfo:
+/usr/include/c++/11/ext/concurrence.h:
 
-/opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
+/usr/include/c++/11/tr1/poly_hermite.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
+/usr/include/signal.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+/usr/include/c++/11/bits/uses_allocator.h:
 
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
+/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
 
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
+/usr/include/c++/11/string_view:
 
-/usr/include/c++/11/cwctype:
+/opt/ros/humble/include/rcutils/rcutils/time.h:
+
+/opt/ros/humble/include/rcl/rcl/client.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
+
+/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_options.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_clock_interface.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp:
+
+/usr/include/wctype.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
+
+/usr/include/c++/11/bits/allocated_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/publisher_base.hpp:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/opt/ros/humble/include/rmw/rmw/visibility_control.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/11/pstl/pstl_config.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/usr/include/c++/11/bits/localefwd.h:
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
-/usr/include/c++/11/bits/char_traits.h:
+/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:
 
-/usr/include/c++/11/bits/stl_iterator.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
-/usr/include/c++/11/bits/functexcept.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
-/usr/include/c++/11/bits/erase_if.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/opt/ros/humble/include/rcl/rcl/context.h:
+/usr/include/c++/11/debug/assertions.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/opt/ros/humble/include/rclcpp/rclcpp/event.hpp:
 
-/usr/include/c++/11/bits/exception_ptr.h:
+/usr/include/c++/11/cmath:
 
-/usr/include/c++/11/bits/postypes.h:
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/usr/include/c++/11/bits/refwrap.h:
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
 
-/usr/include/c++/11/bits/stl_heap.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/c++/11/functional:
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+/opt/ros/humble/include/rcutils/rcutils/types/char_array.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/guard_condition.hpp:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
-/usr/include/c++/11/bits/nested_exception.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/c++/11/bits/range_access.h:
+/usr/include/linux/close_range.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
-/opt/ros/humble/include/rmw/rmw/impl/config.h:
+/opt/ros/humble/include/rclcpp/rclcpp/create_service.hpp:
 
-/usr/include/c++/11/ext/string_conversions.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/c++/11/ext/type_traits.h:
+
+/usr/include/c++/11/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_factory.hpp:
 
@@ -1195,61 +1095,21 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+/usr/include/c++/11/algorithm:
 
-/usr/include/c++/11/pstl/pstl_config.h:
+/opt/ros/humble/include/rclcpp/rclcpp/exceptions/exceptions.hpp:
 
-/usr/include/c++/11/bits/stl_tree.h:
+/usr/include/c++/11/bits/shared_ptr_atomic.h:
 
-/usr/include/c++/11/initializer_list:
+/usr/include/c++/11/bits/shared_ptr_base.h:
 
-/opt/ros/humble/include/rcutils/rcutils/error_handling.h:
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/logger.hpp:
+/usr/include/c++/11/bits/node_handle.h:
 
-/usr/include/c++/11/bits/exception.h:
+/usr/include/c++/11/bits/string_view.tcc:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/bits/shared_ptr.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
-
-/usr/include/c++/11/bits/invoke.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
-
-/usr/include/c++/11/string:
-
-/usr/include/c++/11/set:
-
-/usr/include/c++/11/bits/stl_relops.h:
-
-/usr/include/c++/11/cstdlib:
-
-/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_parameters_interface.hpp:
-
-/opt/ros/humble/include/rcutils/rcutils/types/array_list.h:
-
-/usr/include/c++/11/bits/predefined_ops.h:
-
-/usr/include/c++/11/bits/stl_set.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
-
-/usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/c++/11/bits/memoryfwd.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/loaned_message.hpp:
-
-/usr/include/c++/11/exception:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+/usr/include/c++/11/utility:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_publisher.hpp:
 
@@ -1259,65 +1119,75 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/assert.h:
 
-/usr/include/c++/11/condition_variable:
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
-/usr/include/math.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/include/c++/11/ext/new_allocator.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
-/usr/include/stdc-predef.h:
+/opt/ros/humble/include/rcl/rcl/context.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
+/usr/include/c++/11/ext/string_conversions.h:
 
-/usr/include/c++/11/tr1/riemann_zeta.tcc:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/c++/11/bits/unique_ptr.h:
+
+/usr/include/c++/11/bits/locale_conv.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/c++/11/bits/postypes.h:
+
+/usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/c++/11/bits/align.h:
+
+/usr/include/c++/11/bits/functional_hash.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/serialized_message.hpp:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/c++/11/locale:
+
+/opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/guard_condition.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:
+
+/usr/include/c++/11/bits/range_access.h:
+
+/usr/include/c++/11/bits/nested_exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
 /usr/include/c++/11/chrono:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/include/c++/11/system_error:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/11/bits/hashtable.h:
-
-/usr/include/c++/11/bits/hashtable_policy.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/11/tuple:
-
-/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
-
-/usr/include/c++/11/bits/alloc_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/c++/11/bits/list.tcc:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
@@ -1331,9 +1201,59 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_content_filter_options.hpp:
 
-/usr/include/c++/11/bits/stl_function.h:
+/usr/include/endian.h:
 
-/usr/include/c++/11/type_traits:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
+
+/usr/include/c++/11/future:
+
+/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__builder.hpp:
+
+/usr/include/c++/11/bits/hash_bytes.h:
+
+/opt/ros/humble/include/rcl/rcl/service.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
+
+/usr/include/c++/11/ext/numeric_traits.h:
+
+/usr/include/c++/11/mutex:
+
+/usr/include/c++/11/bits/unique_lock.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_funcs.h:
+
+/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/opt/ros/humble/include/rcutils/rcutils/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/c++/11/bits/stl_set.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/c++/11/bits/predefined_ops.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
+
+/usr/include/c++/11/bits/sstream.tcc:
+
+/usr/include/c++/11/bits/stl_pair.h:
+
+/usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -1345,21 +1265,105 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/shared_mutex:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/c++/11/bits/basic_string.h:
 
-/opt/ros/humble/include/rmw/rmw/serialized_message.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/sequential_synchronization.hpp:
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
-/usr/include/pthread.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/time.h:
+/usr/include/c++/11/bits/list.tcc:
 
-/opt/ros/humble/include/rcutils/rcutils/logging.h:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/include/c++/11/backward/binders.h:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/include/features-time64.h:
+
+/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/usr/include/c++/11/bits/std_abs.h:
+
+/opt/ros/humble/include/rmw/rmw/topic_endpoint_info_array.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/loaned_message.hpp:
+
+/usr/include/c++/11/exception:
+
+/usr/include/math.h:
+
+/usr/include/c++/11/condition_variable:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+/usr/include/c++/11/bits/functexcept.h:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/c++/11/bits/cpp_type_traits.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
+
+/usr/include/c++/11/cstdlib:
+
+/usr/include/c++/11/set:
+
+/usr/include/c++/11/bits/stl_relops.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_parameters_interface.hpp:
+
+/opt/ros/humble/include/rcutils/rcutils/types/array_list.h:
+
+/usr/include/c++/11/bits/allocator.h:
+
+/usr/include/c++/11/memory:
+
+/usr/include/c++/11/bits/char_traits.h:
+
+/usr/include/c++/11/bits/localefwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
+
+/usr/include/c++/11/bits/unordered_set.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface.hpp:
+
+/usr/include/c++/11/type_traits:
+
+/usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
+
+/usr/include/c++/11/cwctype:
+
+/usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/c++/11/bits/ptr_traits.h:
+
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__builder.hpp:
+
+/usr/include/c++/11/sstream:
 
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
@@ -1367,25 +1371,47 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
 
-/usr/include/sched.h:
+/usr/include/c++/11/string:
 
-/usr/include/c++/11/bits/stl_pair.h:
+/usr/include/c++/11/bits/memoryfwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+/opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp:
 
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/c++/11/bits/invoke.h:
 
-/usr/include/c++/11/array:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/c++/11/csignal:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
-/opt/ros/humble/include/rmw/rmw/subscription_content_filter_options.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
-/usr/include/c++/11/bits/enable_special_members.h:
+/usr/include/c++/11/system_error:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
+
+/usr/include/c++/11/ext/new_allocator.h:
+
+/usr/include/stdc-predef.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/11/bits/exception.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
@@ -1403,89 +1429,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_lost.h:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/include/c++/11/tuple:
 
-/usr/include/c++/11/bits/stl_vector.h:
+/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
 
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
-
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/c++/11/limits:
-
-/usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/11/bits/locale_classes.h:
-
-/usr/include/c++/11/typeindex:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/stdio.h:
-
-/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp:
-
-/usr/include/c++/11/cwchar:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/11/tr1/legendre_function.tcc:
-
-/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
-
-/usr/include/c++/11/debug/assertions.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/event.hpp:
-
-/usr/include/c++/11/cmath:
-
-/usr/include/c++/11/bits/std_abs.h:
-
-/opt/ros/humble/include/rmw/rmw/topic_endpoint_info_array.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/stdint.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/11/vector:
 
@@ -1497,11 +1449,69 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/bits/stringfwd.h:
 
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/11/bits/locale_classes.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
 
 /usr/include/c++/11/optional:
 
 /usr/include/c++/11/bits/specfun.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/initializer_list:
+
+/opt/ros/humble/include/rcutils/rcutils/error_handling.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/logger.hpp:
+
+/usr/include/c++/11/array:
+
+/usr/include/c++/11/csignal:
+
+/opt/ros/humble/include/rmw/rmw/subscription_content_filter_options.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/opt/ros/humble/include/rmw/rmw/serialized_message.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/sequential_synchronization.hpp:
+
+/usr/include/pthread.h:
+
+/usr/include/time.h:
+
+/opt/ros/humble/include/rcutils/rcutils/logging.h:
+
+/usr/include/c++/11/backward/binders.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/stdio.h:
+
+/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp:
+
+/usr/include/c++/11/cwchar:
+
+/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_topics_interface.hpp:
+
+/usr/include/c++/11/typeinfo:
+
+/opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/c++/11/typeindex:
 
 /usr/include/c++/11/cassert:
 
@@ -1511,9 +1521,9 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/iostream:
 
-/opt/ros/humble/include/tracetools/tracetools/utils.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/opt/ros/humble/include/tracetools/tracetools/utils.hpp:
 
 /usr/include/c++/11/ios:
 
@@ -1523,9 +1533,9 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
 
-/opt/ros/humble/include/rmw/rmw/error_handling.h:
-
 /opt/ros/humble/include/rclcpp/rclcpp/any_service_callback.hpp:
+
+/opt/ros/humble/include/rmw/rmw/error_handling.h:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 
@@ -1640,6 +1650,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:
 
 /opt/ros/humble/include/rmw/rmw/security_options.h:
+
+/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__traits.hpp:
 
 /opt/ros/humble/include/rcl/rcl/macros.h:
 
@@ -1907,9 +1919,9 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
 /usr/include/c++/11/ctime:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/rate.hpp:
 

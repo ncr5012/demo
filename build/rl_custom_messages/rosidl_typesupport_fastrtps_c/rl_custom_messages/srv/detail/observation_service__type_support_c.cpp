@@ -49,9 +49,11 @@ static bool _ObservationService_Request__cdr_serialize(
     return false;
   }
   const _ObservationService_Request__ros_msg_type * ros_message = static_cast<const _ObservationService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: action
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    size_t size = 12;
+    auto array_ptr = ros_message->action;
+    cdr.serializeArray(array_ptr, size);
   }
 
   return true;
@@ -66,9 +68,11 @@ static bool _ObservationService_Request__cdr_deserialize(
     return false;
   }
   _ObservationService_Request__ros_msg_type * ros_message = static_cast<_ObservationService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: action
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    size_t size = 12;
+    auto array_ptr = ros_message->action;
+    cdr.deserializeArray(array_ptr, size);
   }
 
   return true;
@@ -88,10 +92,13 @@ size_t get_serialized_size_rl_custom_messages__srv__ObservationService_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
+  // field.name action
   {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
-    current_alignment += item_size +
+    size_t array_size = 12;
+    auto array_ptr = ros_message->action;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -121,11 +128,12 @@ size_t max_serialized_size_rl_custom_messages__srv__ObservationService_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: structure_needs_at_least_one_member
+  // member: action
   {
-    size_t array_size = 1;
+    size_t array_size = 12;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   return current_alignment - initial_alignment;

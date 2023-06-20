@@ -1,0 +1,61 @@
+[0.010s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.053s] [ 16%] [32mBuilding CXX object CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o[0m
+[0.056s] [ 16%] Built target ament_cmake_python_symlink_jaybot
+[0.057s] [ 50%] Built target range_publisher
+[0.057s] [ 83%] Built target rl_server
+[0.273s] running egg_info
+[0.273s] writing jaybot.egg-info/PKG-INFO
+[0.273s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.274s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.276s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.276s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.294s] [ 83%] Built target ament_cmake_python_build_jaybot_egg
+[2.335s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.335s]                  from [01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/motor_controller.h:8[m[K,
+[2.335s]                  from [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:1[m[K:
+[2.335s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:[m[K In lambda function:
+[2.335s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:59:30:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ is not captured
+[2.335s]    59 |                 RCLCPP_ERROR([01;31m[Knode[m[K->get_logger(), "Received incorrect number of motor commands.");
+[2.335s]       |                              [01;31m[K^~~~[m[K
+[2.336s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:56:17:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+[2.336s]    56 |         [&motors[01;36m[K][m[K(std_msgs::msg::Float32MultiArray::UniquePtr msg) {
+[2.336s]       |                 [01;36m[K^[m[K
+[2.336s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:42:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::shared_ptr<rclcpp::Node> node[m[K’ declared here
+[2.336s]    42 |     auto [01;36m[Knode[m[K = rclcpp::Node::make_shared("motor_controller_node");
+[2.336s]       |          [01;36m[K^~~~[m[K
+[2.336s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.336s]                  from [01m[K/home/rlcontrol/jay_ws/jaybot/include/jaybot/motor_controller.h:8[m[K,
+[2.337s]                  from [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:1[m[K:
+[2.337s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:59:30:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ is not captured
+[2.337s]    59 |                 RCLCPP_ERROR([01;31m[Knode[m[K->get_logger(), "Received incorrect number of motor commands.");
+[2.337s]       |                              [01;31m[K^~~~[m[K
+[2.337s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:56:17:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+[2.337s]    56 |         [&motors[01;36m[K][m[K(std_msgs::msg::Float32MultiArray::UniquePtr msg) {
+[2.337s]       |                 [01;36m[K^[m[K
+[2.337s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/motor_controller.cpp:42:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::shared_ptr<rclcpp::Node> node[m[K’ declared here
+[2.337s]    42 |     auto [01;36m[Knode[m[K = rclcpp::Node::make_shared("motor_controller_node");
+[2.337s]       |          [01;36m[K^~~~[m[K
+[4.829s] gmake[2]: *** [CMakeFiles/motor_controller.dir/build.make:76: CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o] Error 1
+[4.829s] gmake[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/motor_controller.dir/all] Error 2
+[4.829s] gmake: *** [Makefile:146: all] Error 2
+[4.835s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

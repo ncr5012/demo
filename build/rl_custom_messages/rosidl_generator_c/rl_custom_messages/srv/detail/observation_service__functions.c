@@ -16,7 +16,7 @@ rl_custom_messages__srv__ObservationService_Request__init(rl_custom_messages__sr
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // action
   return true;
 }
 
@@ -26,7 +26,7 @@ rl_custom_messages__srv__ObservationService_Request__fini(rl_custom_messages__sr
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // action
 }
 
 bool
@@ -35,9 +35,11 @@ rl_custom_messages__srv__ObservationService_Request__are_equal(const rl_custom_m
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
-    return false;
+  // action
+  for (size_t i = 0; i < 12; ++i) {
+    if (lhs->action[i] != rhs->action[i]) {
+      return false;
+    }
   }
   return true;
 }
@@ -50,8 +52,10 @@ rl_custom_messages__srv__ObservationService_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // action
+  for (size_t i = 0; i < 12; ++i) {
+    output->action[i] = input->action[i];
+  }
   return true;
 }
 

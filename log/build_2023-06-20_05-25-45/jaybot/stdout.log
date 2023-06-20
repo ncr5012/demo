@@ -1,0 +1,13 @@
+[ 33%] Built target rl_server
+[ 50%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[ 50%] Built target ament_cmake_python_symlink_jaybot
+[ 66%] [32mBuilding CXX object CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o[0m
+running egg_info
+writing jaybot.egg-info/PKG-INFO
+writing dependency_links to jaybot.egg-info/dependency_links.txt
+writing top-level names to jaybot.egg-info/top_level.txt
+reading manifest file 'jaybot.egg-info/SOURCES.txt'
+writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[ 66%] Built target ament_cmake_python_build_jaybot_egg
+[ 83%] [32m[1mLinking CXX executable motor_controller[0m
+[ 83%] Built target motor_controller

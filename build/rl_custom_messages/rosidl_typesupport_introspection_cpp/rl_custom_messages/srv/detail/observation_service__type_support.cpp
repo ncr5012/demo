@@ -37,22 +37,60 @@ void ObservationService_Request_fini_function(void * message_memory)
   typed_message->~ObservationService_Request();
 }
 
+size_t size_function__ObservationService_Request__action(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 12;
+}
+
+const void * get_const_function__ObservationService_Request__action(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<int32_t, 12> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__ObservationService_Request__action(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<int32_t, 12> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__ObservationService_Request__action(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const int32_t *>(
+    get_const_function__ObservationService_Request__action(untyped_member, index));
+  auto & value = *reinterpret_cast<int32_t *>(untyped_value);
+  value = item;
+}
+
+void assign_function__ObservationService_Request__action(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<int32_t *>(
+    get_function__ObservationService_Request__action(untyped_member, index));
+  const auto & value = *reinterpret_cast<const int32_t *>(untyped_value);
+  item = value;
+}
+
 static const ::rosidl_typesupport_introspection_cpp::MessageMember ObservationService_Request_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    "action",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    12,  // array size
     false,  // is upper bound
-    offsetof(rl_custom_messages::srv::ObservationService_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(rl_custom_messages::srv::ObservationService_Request, action),  // bytes offset in struct
     nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
+    size_function__ObservationService_Request__action,  // size() function pointer
+    get_const_function__ObservationService_Request__action,  // get_const(index) function pointer
+    get_function__ObservationService_Request__action,  // get(index) function pointer
+    fetch_function__ObservationService_Request__action,  // fetch(index, &value) function pointer
+    assign_function__ObservationService_Request__action,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };

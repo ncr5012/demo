@@ -6,8 +6,9 @@
 
 module rl_custom_messages {
   module srv {
+    typedef int32 int32__12[12];
     struct ObservationService_Request {
-      uint8 structure_needs_at_least_one_member;
+      int32__12 action;
     };
     struct ObservationService_Response {
       rl_custom_messages::msg::RangeArray range_data;

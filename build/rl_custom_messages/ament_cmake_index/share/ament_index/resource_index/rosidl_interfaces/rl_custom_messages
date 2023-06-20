@@ -1,3 +1,5 @@
+msg/MotorCommands.idl
+msg/MotorCommands.msg
 msg/RangeArray.idl
 msg/RangeArray.msg
 srv/ObservationService.idl
