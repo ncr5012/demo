@@ -1,0 +1,44 @@
+[0.155s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4
+[0.558s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.046s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[2.501s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.531s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.608s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.737s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.913s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.590s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.612s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.154s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.587s] -- Found rl_custom_messages: 0.0.0 (/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake)
+[7.342s] -- Configuring done
+[7.497s] -- Generating done
+[7.515s] -- Build files have been written to: /home/rlagent/jay_ws/build/jaybot
+[7.700s] [35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[7.942s] [ 50%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[217.529s] [100%] [32m[1mLinking CXX executable range_publisher[0m
+[219.989s] [100%] Built target range_publisher
+[220.664s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '0': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4
+[221.657s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rlagent/jay_ws/build/jaybot
+[221.731s] -- Install configuration: ""
+[221.743s] -- Installing: /home/rlagent/jay_ws/install/jaybot/lib/jaybot/range_publisher
+[221.766s] -- Set runtime path of "/home/rlagent/jay_ws/install/jaybot/lib/jaybot/range_publisher" to ""
+[221.768s] -- Installing: /home/rlagent/jay_ws/install/jaybot/include
+[221.770s] -- Installing: /home/rlagent/jay_ws/install/jaybot/include/jaybot
+[221.772s] -- Installing: /home/rlagent/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+[221.782s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+[221.788s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+[221.807s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+[221.809s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+[221.815s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+[221.816s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+[221.819s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+[221.820s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+[221.821s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+[221.823s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+[221.825s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/package.dsv
+[221.830s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+[221.833s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+[221.838s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+[221.842s] -- Up-to-date: /home/rlagent/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+[221.843s] -- Installing: /home/rlagent/jay_ws/install/jaybot/share/jaybot/package.xml
+[221.883s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '0': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rlagent/jay_ws/build/jaybot

@@ -1,0 +1,195 @@
+[5.040s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[5.041s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8ba13ac0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8c287bb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8c287bb0>>)
+[5.504s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[5.505s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[5.505s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[5.506s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[5.506s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[5.506s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[5.507s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rlagent/jay_ws'
+[5.508s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[5.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[5.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[5.510s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[5.510s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[5.511s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[5.511s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[5.511s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[5.512s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[5.662s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[5.662s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[5.663s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[5.663s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[5.664s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[5.665s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[5.666s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[5.666s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[5.668s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[5.668s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[5.669s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[5.670s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[5.671s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[5.672s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[5.674s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[5.675s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[5.675s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[5.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[5.677s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[5.677s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[5.678s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[5.678s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[5.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[5.679s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[5.680s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[5.680s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[5.680s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[5.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extensions ['ignore', 'ignore_ament_install']
+[5.684s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extension 'ignore'
+[5.684s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extension 'ignore_ament_install'
+[5.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extensions ['colcon_pkg']
+[5.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extension 'colcon_pkg'
+[5.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extensions ['colcon_meta']
+[5.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extension 'colcon_meta'
+[5.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extensions ['ros']
+[5.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/jaybot) by extension 'ros'
+[5.715s] DEBUG:colcon.colcon_core.package_identification:Package 'src/jaybot' with type 'ros.ament_cmake' and name 'jaybot'
+[5.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extensions ['ignore', 'ignore_ament_install']
+[5.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extension 'ignore'
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extension 'ignore_ament_install'
+[5.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extensions ['colcon_pkg']
+[5.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extension 'colcon_pkg'
+[5.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extensions ['colcon_meta']
+[5.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extension 'colcon_meta'
+[5.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extensions ['ros']
+[5.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/rl_custom_messages) by extension 'ros'
+[5.727s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rl_custom_messages' with type 'ros.ament_cmake' and name 'rl_custom_messages'
+[5.728s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[5.728s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[5.728s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[5.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[5.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[6.005s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[6.006s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[6.044s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/rlagent/jay_ws/install
+[6.070s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 189 installed packages in /opt/ros/humble
+[6.089s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.725s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'cmake_args' from command line to 'None'
+[6.725s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'cmake_target' from command line to 'None'
+[6.725s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.726s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'cmake_clean_cache' from command line to 'False'
+[6.726s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'cmake_clean_first' from command line to 'False'
+[6.726s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'cmake_force_configure' from command line to 'False'
+[6.726s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'ament_cmake_args' from command line to 'None'
+[6.727s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'catkin_cmake_args' from command line to 'None'
+[6.727s] Level 5:colcon.colcon_core.verb:set package 'rl_custom_messages' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.727s] DEBUG:colcon.colcon_core.verb:Building package 'rl_custom_messages' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rlagent/jay_ws/build/rl_custom_messages', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rlagent/jay_ws/install/rl_custom_messages', 'merge_install': False, 'path': '/home/rlagent/jay_ws/src/rl_custom_messages', 'symlink_install': False, 'test_result_base': None}
+[6.736s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'cmake_args' from command line to 'None'
+[6.736s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'cmake_target' from command line to 'None'
+[6.736s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.736s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'cmake_clean_cache' from command line to 'False'
+[6.737s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'cmake_clean_first' from command line to 'False'
+[6.737s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'cmake_force_configure' from command line to 'False'
+[6.737s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'ament_cmake_args' from command line to 'None'
+[6.737s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'catkin_cmake_args' from command line to 'None'
+[6.737s] Level 5:colcon.colcon_core.verb:set package 'jaybot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.738s] DEBUG:colcon.colcon_core.verb:Building package 'jaybot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rlagent/jay_ws/build/jaybot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rlagent/jay_ws/install/jaybot', 'merge_install': False, 'path': '/home/rlagent/jay_ws/src/jaybot', 'symlink_install': False, 'test_result_base': None}
+[6.743s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.771s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.773s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rlagent/jay_ws/src/rl_custom_messages' with build type 'ament_cmake'
+[6.774s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rlagent/jay_ws/src/rl_custom_messages'
+[6.832s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.834s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.834s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rlagent/jay_ws/build/rl_custom_messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/rl_custom_messages -- -j4 -l4
+[10.685s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rlagent/jay_ws/build/rl_custom_messages' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/rl_custom_messages -- -j4 -l4
+[11.338s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rlagent/jay_ws/build/rl_custom_messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rlagent/jay_ws/build/rl_custom_messages
+[11.976s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rl_custom_messages)
+[11.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rlagent/jay_ws/build/rl_custom_messages' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rlagent/jay_ws/build/rl_custom_messages
+[12.048s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages' for CMake module files
+[12.059s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages' for CMake config files
+[12.070s] Level 1:colcon.colcon_core.shell:create_environment_hook('rl_custom_messages', 'cmake_prefix_path')
+[12.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/cmake_prefix_path.ps1'
+[12.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/cmake_prefix_path.dsv'
+[12.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/cmake_prefix_path.sh'
+[12.097s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/lib'
+[12.099s] Level 1:colcon.colcon_core.shell:create_environment_hook('rl_custom_messages', 'ld_library_path_lib')
+[12.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/ld_library_path_lib.ps1'
+[12.113s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/ld_library_path_lib.dsv'
+[12.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/ld_library_path_lib.sh'
+[12.120s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/bin'
+[12.121s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/lib/pkgconfig/rl_custom_messages.pc'
+[12.124s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/lib/python3.10/site-packages'
+[12.126s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/bin'
+[12.140s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.ps1'
+[12.146s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.dsv'
+[12.152s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.sh'
+[12.158s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.bash'
+[12.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.zsh'
+[12.171s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rlagent/jay_ws/install/rl_custom_messages/share/colcon-core/packages/rl_custom_messages)
+[12.758s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rl_custom_messages)
+[12.773s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages' for CMake module files
+[12.781s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages' for CMake config files
+[12.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('rl_custom_messages', 'cmake_prefix_path')
+[12.801s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/cmake_prefix_path.ps1'
+[12.804s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/cmake_prefix_path.dsv'
+[12.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/cmake_prefix_path.sh'
+[12.813s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/lib'
+[12.814s] Level 1:colcon.colcon_core.shell:create_environment_hook('rl_custom_messages', 'ld_library_path_lib')
+[12.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/ld_library_path_lib.ps1'
+[12.828s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/ld_library_path_lib.dsv'
+[12.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/hook/ld_library_path_lib.sh'
+[12.836s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/bin'
+[12.836s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/lib/pkgconfig/rl_custom_messages.pc'
+[12.839s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/lib/python3.10/site-packages'
+[12.841s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/rl_custom_messages/bin'
+[12.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.ps1'
+[12.857s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.dsv'
+[12.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.sh'
+[12.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.bash'
+[12.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/rl_custom_messages/share/rl_custom_messages/package.zsh'
+[12.874s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rlagent/jay_ws/install/rl_custom_messages/share/colcon-core/packages/rl_custom_messages)
+[12.877s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rlagent/jay_ws/src/jaybot' with build type 'ament_cmake'
+[12.878s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rlagent/jay_ws/src/jaybot'
+[12.889s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.890s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.002s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rlagent/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/home/rlagent/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4
+[278.381s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/home/rlagent/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4
+[279.764s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(jaybot)
+[279.832s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot' for CMake module files
+[279.867s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot' for CMake config files
+[279.891s] Level 1:colcon.colcon_core.shell:create_environment_hook('jaybot', 'cmake_prefix_path')
+[279.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/jaybot/share/jaybot/hook/cmake_prefix_path.ps1'
+[280.033s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rlagent/jay_ws/install/jaybot/share/jaybot/hook/cmake_prefix_path.dsv'
+[280.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rlagent/jay_ws/install/jaybot/share/jaybot/hook/cmake_prefix_path.sh'
+[280.131s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot/lib'
+[280.134s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot/bin'
+[280.138s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot/lib/pkgconfig/jaybot.pc'
+[280.188s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot/lib/python3.10/site-packages'
+[280.193s] Level 1:colcon.colcon_core.environment:checking '/home/rlagent/jay_ws/install/jaybot/bin'
+[280.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/jaybot/share/jaybot/package.ps1'
+[280.226s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rlagent/jay_ws/install/jaybot/share/jaybot/package.dsv'
+[280.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/jaybot/share/jaybot/package.sh'
+[280.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/jaybot/share/jaybot/package.bash'
+[280.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/rlagent/jay_ws/install/jaybot/share/jaybot/package.zsh'
+[280.283s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rlagent/jay_ws/install/jaybot/share/colcon-core/packages/jaybot)
+[280.323s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[280.367s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[280.380s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[280.386s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[280.975s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[280.977s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[280.979s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[280.980s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[281.157s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[281.161s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[281.201s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rlagent/jay_ws/install/local_setup.ps1'
+[281.224s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rlagent/jay_ws/install/_local_setup_util_ps1.py'
+[281.246s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rlagent/jay_ws/install/setup.ps1'
+[281.279s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rlagent/jay_ws/install/local_setup.sh'
+[281.299s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rlagent/jay_ws/install/_local_setup_util_sh.py'
+[281.305s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rlagent/jay_ws/install/setup.sh'
+[281.331s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rlagent/jay_ws/install/local_setup.bash'
+[281.341s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rlagent/jay_ws/install/setup.bash'
+[281.358s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rlagent/jay_ws/install/local_setup.zsh'
+[281.368s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rlagent/jay_ws/install/setup.zsh'

@@ -1,0 +1,7 @@
+[0.114s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlagent/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlagent/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4
+[0.569s] [35m[1mConsolidate compiler generated dependencies of target motor_controller[0m
+[0.581s] [35m[1mConsolidate compiler generated dependencies of target range_publisher[0m
+[0.795s] [ 50%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[0.796s] [ 50%] [32mBuilding CXX object CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o[0m
+[1178.205s] [ 75%] [32m[1mLinking CXX executable range_publisher[0m
+[1181.196s] [ 75%] Built target range_publisher

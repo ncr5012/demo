@@ -1,0 +1,11 @@
+[01m[K/home/rlagent/jay_ws/src/jaybot/src/range_publisher.cpp:[m[K In constructor ‘[01m[KRangePublisher::RangePublisher()[m[K’:
+[01m[K/home/rlagent/jay_ws/src/jaybot/src/range_publisher.cpp:26:3:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K{[m[K’ token
+   26 |   [01;31m[K{[m[K
+      |   [01;31m[K^[m[K
+[01m[K/home/rlagent/jay_ws/src/jaybot/src/range_publisher.cpp:28:72:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KRangePublisher[m[K’
+   28 | = this->create_wall_timer(500ms, std::bind(&RangePublisher::[01;31m[Ktimer_callback[m[K, this));
+      |                                                             [01;31m[K^~~~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/range_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
