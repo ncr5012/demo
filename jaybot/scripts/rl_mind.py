@@ -206,6 +206,7 @@ class JayEnv(gymnasium.Env):
             print("205 action", action)
             self.flat_action, self.flat_last_action = [], []
             self.steps_left -= 1
+            self.penalty = 0
 
             
                                 
@@ -225,8 +226,10 @@ class JayEnv(gymnasium.Env):
             except IndexError:
                 self.get_logger().warning('No responses received yet')
 
-            print("226 test")
-            self.current_observations = self.observation_space.sample()
+            #self.current_observations = self.observation_space.sample()
+            self.camera_zeros = np.zeros(self.camera_space.shape)
+            self.user_input_zeros = 0
+            self.goal_zeros = 0
 
             """
             for motor_action in action:
@@ -235,48 +238,54 @@ class JayEnv(gymnasium.Env):
 
             print("flat action in steps", self.flat_action)
             """
-
+            """
             for motor_action in self.current_observations[6]:
                 for discrete_action in motor_action:
                     self.flat_last_action.append(discrete_action)
+            """
 
-            self.one_hot_observation_8 = torch.nn.functional.one_hot(torch.tensor(self.current_observations[8]), num_classes=13).numpy()
-
+            #self.one_hot_observation_89 = torch.nn.functional.one_hot(torch.tensor(self.current_observations[8]), num_classes=13).numpy()
+            self.one_hot_observation_8 = torch.nn.functional.one_hot(torch.tensor(self.user_input_zeros), num_classes=13).numpy()
+            
             self.x3_array_list = [np.array([self.range_observations[0]]), np.array([self.range_observations[1]]), \
                 np.array([self.range_observations[2]]), np.array([self.range_observations[3]])] \
-                + [np.array(action)] + [np.array([self.current_observations[7]])] + \
+                + [np.array(action)] + [np.array([self.goal_zeros])] + \
                 [np.array(self.one_hot_observation_8)]
-            """
-            self.x3_array_list = [np.array([self.current_observations[2]]), np.array([self.current_observations[3]]), \
-                np.array([self.current_observations[4]]), np.array([self.current_observations[5]])] \
-                + [np.array(action)] + [np.array([self.current_observations[7]])] + \
-                [np.array(self.one_hot_observation_8)]
-            """
+
 
             # Now concatenate along the first axis
             self.x3_array = np.concatenate(self.x3_array_list)
 
             self.x3_flat_list = [item for sublist in self.x3_array_list for item in sublist]
 
-            self.processed_observations = np.array([self.current_observations[0], self.current_observations[1], np.array(self.x3_flat_list)])
+            self.processed_observations = np.array([self.camera_zeros, self.camera_zeros, np.array(self.x3_flat_list)])
 
             self.state = np.array([action, self.processed_observations])
 
-            if self.current_observations[8] == 1:
+            if all(observation > 10 for observation in self.range_observations):
+                self.goal += 1
+            elif any(observation < 10 for observation in self.range_observations):
+                self.penalty += -100
 
-                self.goal = STOP_REWARD
+
+            if self.goal_zeros == 1:
+
+                self.goal = 1000
             
             else:
                 self.goal = 0
 
-            if self.current_observations[7] == 0:
-                self.penalty = 0
+            if self.user_input_zeros == 0:
+                self.penalty += 0
 
             else:
-                self.penalty = HUMAN_CONTROL_PENALTY
+                self.penalty += HUMAN_CONTROL_PENALTY
 
             self.reward = self.goal + self.penalty
 
+            print("286 penalty", self.penalty)
+
+            print("286 reward", self.reward)
 
             return np.transpose(self.state), self.reward, done, {}   
      

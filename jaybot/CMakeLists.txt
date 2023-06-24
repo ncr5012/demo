@@ -48,6 +48,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
   scripts/rl_mind.py
+  scripts/robot_monitor.py
   DESTINATION lib/${PROJECT_NAME}
 )
 ament_export_dependencies(rclcpp rl_custom_messages)

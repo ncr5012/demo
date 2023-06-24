@@ -1,6 +1,0 @@
-[0.171s] Invoking command in '/home/rlagent/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/home/rlagent/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4
-[1.380s] [ 50%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
-[13.535s] gmake[2]: *** [CMakeFiles/range_publisher.dir/build.make:76: CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o] Interrupt
-[13.584s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/range_publisher.dir/all] Interrupt
-[13.606s] gmake: *** [Makefile:146: all] Interrupt
-[13.698s] Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '-2': CMAKE_PREFIX_PATH=/home/rlagent/jay_ws/install/rl_custom_messages:/home/rlagent/jay_ws/install/jaybot:/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j4 -l4

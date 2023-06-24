@@ -93,7 +93,7 @@ double Rangesensor::Range() {
   auto echo_timer = std::chrono::duration_cast<std::chrono::microseconds>(echo_end-echo_start);
 
   //Consider putting calibration factor as an initialization variable for range sensors if they are different
-  double calibration_factor = -3.5;
+  double calibration_factor = -43.5;
   double distance = ((echo_timer.count() / 1000000.0) * 17150.0) + calibration_factor;
   
   // Store the measurement with its timestamp
@@ -118,6 +118,10 @@ double Rangesensor::Range() {
     });
 
   double average_distance = sum / measurements.size();
+
+  if (distance < 0) {
+    distance = 0;
+  }
 
  // std::cout << "Distance: " << distance << " cm" << "\n";
   //std::cout << "Average Distance (last 0.5s): " << average_distance << " cm" << "\n";

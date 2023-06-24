@@ -1,6 +1,0 @@
-# CMake generated Testfile for 
-# Source directory: /home/rlagent/jay_ws/build/rl_custom_messages/rl_custom_messages__py
-# Build directory: /home/rlagent/jay_ws/build/rl_custom_messages/rl_custom_messages__py
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.

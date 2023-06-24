@@ -1,8 +1,0 @@
-{
-  "package_name": "rl_custom_messages",
-  "non_idl_tuples": [
-    "/home/rlagent/jay_ws/src/rl_custom_messages:msg/RangeArray.msg",
-    "/home/rlagent/jay_ws/src/rl_custom_messages:msg/MotorCommands.msg",
-    "/home/rlagent/jay_ws/src/rl_custom_messages:srv/ObservationService.srv"
-  ]
-}

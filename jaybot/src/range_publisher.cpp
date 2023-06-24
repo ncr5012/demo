@@ -16,11 +16,11 @@ class RangePublisher : public rclcpp::Node
 public:
   RangePublisher()
   : Node("range_publisher"),
-  
-    rangesensorl{15, 14},
-    rangesensorf{3, 2},
-    rangesensorr{23, 18},
-    rangesensorb{22, 27}
+
+    rangesensorl{23, 18},
+    rangesensorf{22, 27},
+    rangesensorr{15, 14},
+    rangesensorb{3, 2}
 
   {
     publisher_ = this->create_publisher<rl_custom_messages::msg::RangeArray>("range_data", 10);
@@ -31,12 +31,7 @@ private:
   void timer_callback()
   {
     auto message = rl_custom_messages::msg::RangeArray();
-    /*
-    Rangesensor rangesensorl{15, 14};
-    Rangesensor rangesensorf{3, 2};
-    Rangesensor rangesensorr{23, 18};
-    Rangesensor rangesensorb{22, 27};
-    */
+
     message.range_left = rangesensorl.Range();
     message.range_front = rangesensorf.Range();
     message.range_right = rangesensorr.Range();
