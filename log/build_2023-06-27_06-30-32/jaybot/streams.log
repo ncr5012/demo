@@ -1,0 +1,45 @@
+[0.012s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.048s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.138s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.144s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[0.173s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.176s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.182s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.194s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.210s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.271s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.272s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.379s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.542s] -- Found rclpy: 3.3.8 (/opt/ros/humble/share/rclpy/cmake)
+[0.542s] -- Found rl_custom_messages: 0.0.0 (/home/rlcontrol/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake)
+[0.559s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.807s] -- Configuring done (0.8s)
+[0.828s] -- Generating done (0.0s)
+[0.832s] -- Build files have been written to: /home/rlcontrol/jay_ws/build/jaybot
+[0.853s] [ 12%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+[0.856s] [ 12%] Built target ament_cmake_python_symlink_jaybot
+[0.862s] [ 37%] Built target motor_controller
+[0.863s] [ 50%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[0.863s] [ 75%] Built target range_publisher
+[1.050s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kopencv2/opencv.hpp: No such file or directory
+[1.051s]     2 | #include [01;31m[K<opencv2/opencv.hpp>[m[K
+[1.051s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.051s] compilation terminated.
+[1.053s] gmake[2]: *** [CMakeFiles/camera_publisher.dir/build.make:76: CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o] Error 1
+[1.053s] gmake[1]: *** [CMakeFiles/Makefile2:198: CMakeFiles/camera_publisher.dir/all] Error 2
+[1.053s] gmake[1]: *** Waiting for unfinished jobs....
+[1.055s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/image.hpp: No such file or directory
+[1.055s]     5 | #include [01;31m[K<sensor_msgs/msg/image.hpp>[m[K
+[1.055s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.055s] compilation terminated.
+[1.057s] gmake[2]: *** [CMakeFiles/rl_server.dir/build.make:76: CMakeFiles/rl_server.dir/src/rl_server.cpp.o] Error 1
+[1.057s] gmake[1]: *** [CMakeFiles/Makefile2:224: CMakeFiles/rl_server.dir/all] Error 2
+[1.104s] running egg_info
+[1.105s] writing jaybot.egg-info/PKG-INFO
+[1.105s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[1.105s] writing top-level names to jaybot.egg-info/top_level.txt
+[1.108s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[1.108s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[1.126s] [ 75%] Built target ament_cmake_python_build_jaybot_egg
+[1.127s] gmake: *** [Makefile:146: all] Error 2
+[1.132s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

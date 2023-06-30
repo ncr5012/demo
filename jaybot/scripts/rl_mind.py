@@ -207,6 +207,7 @@ class JayEnv(gymnasium.Env):
             self.flat_action, self.flat_last_action = [], []
             self.steps_left -= 1
             self.penalty = 0
+            self.goal = 0
 
             
                                 
@@ -266,20 +267,6 @@ class JayEnv(gymnasium.Env):
                 self.goal += 1
             elif any(observation < 10 for observation in self.range_observations):
                 self.penalty += -100
-
-
-            if self.goal_zeros == 1:
-
-                self.goal = 1000
-            
-            else:
-                self.goal = 0
-
-            if self.user_input_zeros == 0:
-                self.penalty += 0
-
-            else:
-                self.penalty += HUMAN_CONTROL_PENALTY
 
             self.reward = self.goal + self.penalty
 

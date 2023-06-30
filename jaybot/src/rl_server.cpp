@@ -2,6 +2,9 @@
 #include "rl_custom_messages/msg/range_array.hpp"
 #include "rl_custom_messages/msg/motor_commands.hpp"
 #include "rl_custom_messages/srv/observation_service.hpp"
+#include <sensor_msgs/msg/image.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <opencv2/opencv.hpp>
 
 using std::placeholders::_1;
 using std::placeholders::_2;
@@ -53,13 +56,61 @@ private:
   rl_custom_messages::msg::MotorCommands motor_commands;
 };
 
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <opencv2/opencv.hpp>
+
+class ImageSubscriber : public rclcpp::Node
+{
+public:
+    ImageSubscriber()
+    : Node("image_subscriber")
+    {
+        subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
+        "camera_image", 10, std::bind(&ImageSubscriber::topic_callback, this, std::placeholders::_1));
+    }
+
+private:
+    void topic_callback(const sensor_msgs::msg::Image::SharedPtr msg) {
+        cv_bridge::CvImagePtr cv_ptr;
+        try
+        {
+            cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+        }
+        catch (cv_bridge::Exception& e)
+        {
+            RCLCPP_ERROR(this->get_logger(), "cv_bridge exception: %s", e.what());
+            return;
+        }
+
+        // Display the image using OpenCV
+        cv::imshow("Image Window", cv_ptr->image);
+        cv::waitKey(5); // Wait for a while before next image. Change the value if needed
+    }
+
+
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
+};
+
 int main(int argc, char * argv[])
 {
-  rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<RangeSubscriber>());
-  rclcpp::shutdown();
-  return 0;
+    rclcpp::init(argc, argv);
+    
+    auto range_subscriber = std::make_shared<RangeSubscriber>();
+    auto image_subscriber = std::make_shared<ImageSubscriber>();
+    
+    rclcpp::executors::MultiThreadedExecutor executor;
+    
+    executor.add_node(range_subscriber);
+    executor.add_node(image_subscriber);
+    
+    executor.spin();
+    
+    rclcpp::shutdown();
+    return 0;
 }
+
 
 
 

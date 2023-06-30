@@ -224,6 +224,19 @@ motor_controller/fast:
 .PHONY : motor_controller/fast
 
 #=============================================================================
+# Target rules for targets named camera_publisher
+
+# Build rule for target.
+camera_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 camera_publisher
+.PHONY : camera_publisher
+
+# fast build rule for target.
+camera_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_publisher.dir/build.make CMakeFiles/camera_publisher.dir/build
+.PHONY : camera_publisher/fast
+
+#=============================================================================
 # Target rules for targets named rl_server
 
 # Build rule for target.
@@ -261,6 +274,30 @@ ament_cmake_python_build_jaybot_egg: cmake_check_build_system
 ament_cmake_python_build_jaybot_egg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_jaybot_egg.dir/build.make CMakeFiles/ament_cmake_python_build_jaybot_egg.dir/build
 .PHONY : ament_cmake_python_build_jaybot_egg/fast
+
+src/camera_publisher.o: src/camera_publisher.cpp.o
+.PHONY : src/camera_publisher.o
+
+# target to build an object file
+src/camera_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_publisher.dir/build.make CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o
+.PHONY : src/camera_publisher.cpp.o
+
+src/camera_publisher.i: src/camera_publisher.cpp.i
+.PHONY : src/camera_publisher.i
+
+# target to preprocess a source file
+src/camera_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_publisher.dir/build.make CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.i
+.PHONY : src/camera_publisher.cpp.i
+
+src/camera_publisher.s: src/camera_publisher.cpp.s
+.PHONY : src/camera_publisher.s
+
+# target to generate assembly for a file
+src/camera_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_publisher.dir/build.make CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.s
+.PHONY : src/camera_publisher.cpp.s
 
 src/motor_controller.o: src/motor_controller.cpp.o
 .PHONY : src/motor_controller.o
@@ -351,9 +388,13 @@ help:
 	@echo "... ament_cmake_python_symlink_jaybot"
 	@echo "... jaybot_uninstall"
 	@echo "... uninstall"
+	@echo "... camera_publisher"
 	@echo "... motor_controller"
 	@echo "... range_publisher"
 	@echo "... rl_server"
+	@echo "... src/camera_publisher.o"
+	@echo "... src/camera_publisher.i"
+	@echo "... src/camera_publisher.s"
 	@echo "... src/motor_controller.o"
 	@echo "... src/motor_controller.i"
 	@echo "... src/motor_controller.s"

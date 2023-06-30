@@ -15,8 +15,11 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(rl_custom_messages REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(cv_bridge REQUIRED)
 
-include_directories(include)
+include_directories(include ${OpenCV_INCLUDE_DIRS} ${sensor_msgs_INCLUDE_DIRS} ${cv_bridge_INCLUDE_DIRS})
 
 # After message generation
 add_executable(range_publisher src/range_publisher.cpp)
@@ -29,13 +32,19 @@ target_include_directories(motor_controller PUBLIC include)
 target_link_libraries(motor_controller ${catkin_LIBRARIES} pigpiod_if2)
 ament_target_dependencies(motor_controller rclcpp rl_custom_messages)
 
+add_executable(camera_publisher src/camera_publisher.cpp)
+target_link_libraries(camera_publisher ${OpenCV_LIBS} ${sensor_msgs_LIBS} ${cv_bridge_LIBS})
+ament_target_dependencies(camera_publisher rclcpp sensor_msgs cv_bridge)
+
 add_executable(rl_server src/rl_server.cpp)
-ament_target_dependencies(rl_server rclcpp rl_custom_messages)
+target_link_libraries(rl_server ${OpenCV_LIBS} ${cv_bridge_LIBS})
+ament_target_dependencies(rl_server rclcpp rl_custom_messages cv_bridge)
 
 
 install(TARGETS
   range_publisher
   motor_controller
+  camera_publisher
   rl_server
   DESTINATION lib/${PROJECT_NAME})
   
@@ -51,7 +60,7 @@ install(PROGRAMS
   scripts/robot_monitor.py
   DESTINATION lib/${PROJECT_NAME}
 )
-ament_export_dependencies(rclcpp rl_custom_messages)
+ament_export_dependencies(rclcpp rl_custom_messages sensor_msgs)
 ament_package()
 
 

@@ -1,0 +1,24 @@
+[0.008s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.057s] [  0%] Built target ament_cmake_python_symlink_jaybot
+[0.058s] [ 25%] Built target range_publisher
+[0.058s] [ 50%] Built target motor_controller
+[0.059s] [ 62%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[0.060s] [ 75%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+[0.252s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:6:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.h: No such file or directory
+[0.252s]     6 | #include [01;31m[K<cv_bridge/cv_bridge.h>[m[K
+[0.252s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.252s] compilation terminated.
+[0.255s] gmake[2]: *** [CMakeFiles/rl_server.dir/build.make:76: CMakeFiles/rl_server.dir/src/rl_server.cpp.o] Error 1
+[0.255s] gmake[1]: *** [CMakeFiles/Makefile2:224: CMakeFiles/rl_server.dir/all] Error 2
+[0.255s] gmake[1]: *** Waiting for unfinished jobs....
+[0.284s] running egg_info
+[0.284s] writing jaybot.egg-info/PKG-INFO
+[0.285s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.285s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.287s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.287s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.304s] [ 75%] Built target ament_cmake_python_build_jaybot_egg
+[5.348s] [ 87%] [32m[1mLinking CXX executable camera_publisher[0m
+[5.842s] [ 87%] Built target camera_publisher
+[5.843s] gmake: *** [Makefile:146: all] Error 2
+[5.849s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': AMENT_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

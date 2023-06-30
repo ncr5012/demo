@@ -676,14 +676,299 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.hpp \
   /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__builder.hpp \
-  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp
+  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp \
+  /usr/include/opencv4/opencv2/core/core.hpp \
+  /usr/include/opencv4/opencv2/core.hpp \
+  /usr/include/opencv4/opencv2/core/cvdef.h \
+  /usr/include/opencv4/opencv2/core/version.hpp \
+  /usr/include/opencv4/opencv2/core/hal/interface.h \
+  /usr/include/c++/11/cstddef \
+  /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
+  /usr/include/opencv4/opencv2/core/base.hpp \
+  /usr/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/opencv4/opencv2/core/cvstd.hpp \
+  /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+  /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+  /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
+  /usr/include/opencv4/opencv2/core/check.hpp \
+  /usr/include/opencv4/opencv2/core/traits.hpp \
+  /usr/include/opencv4/opencv2/core/matx.hpp \
+  /usr/include/opencv4/opencv2/core/saturate.hpp \
+  /usr/include/opencv4/opencv2/core/fast_math.hpp \
+  /usr/include/opencv4/opencv2/core/types.hpp \
+  /usr/include/c++/11/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/opencv4/opencv2/core/mat.hpp \
+  /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+  /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+  /usr/include/opencv4/opencv2/core/persistence.hpp \
+  /usr/include/opencv4/opencv2/core/operations.hpp \
+  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+  /usr/include/c++/11/complex \
+  /usr/include/opencv4/opencv2/core/utility.hpp \
+  /usr/include/opencv4/opencv2/core/optim.hpp \
+  /usr/include/opencv4/opencv2/core/ovx.hpp \
+  /usr/include/opencv4/opencv2/core/cvdef.h \
+  /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
+  /usr/include/opencv4/opencv2/imgproc.hpp \
+  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
+  /usr/include/opencv4/opencv2/imgproc/types_c.h \
+  /usr/include/opencv4/opencv2/core/core_c.h \
+  /usr/include/opencv4/opencv2/core/types_c.h \
+  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h \
+  /usr/include/opencv4/opencv2/opencv.hpp \
+  /usr/include/opencv4/opencv2/calib3d.hpp \
+  /usr/include/opencv4/opencv2/features2d.hpp \
+  /usr/include/opencv4/opencv2/flann/miniflann.hpp \
+  /usr/include/opencv4/opencv2/flann/defines.h \
+  /usr/include/opencv4/opencv2/flann/config.h \
+  /usr/include/opencv4/opencv2/core/affine.hpp \
+  /usr/include/opencv4/opencv2/dnn.hpp \
+  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
+  /usr/include/opencv4/opencv2/core/async.hpp \
+  /usr/include/opencv4/opencv2/dnn/version.hpp \
+  /usr/include/opencv4/opencv2/dnn/dict.hpp \
+  /usr/include/opencv4/opencv2/dnn/layer.hpp \
+  /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+  /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
+  /usr/include/opencv4/opencv2/flann.hpp \
+  /usr/include/opencv4/opencv2/flann/flann_base.hpp \
+  /usr/include/opencv4/opencv2/flann/general.h \
+  /usr/include/opencv4/opencv2/flann/matrix.h \
+  /usr/include/opencv4/opencv2/flann/params.h \
+  /usr/include/opencv4/opencv2/flann/any.h \
+  /usr/include/opencv4/opencv2/flann/defines.h \
+  /usr/include/opencv4/opencv2/flann/saving.h \
+  /usr/include/opencv4/opencv2/flann/nn_index.h \
+  /usr/include/opencv4/opencv2/flann/result_set.h \
+  /usr/include/opencv4/opencv2/flann/all_indices.h \
+  /usr/include/opencv4/opencv2/flann/kdtree_index.h \
+  /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
+  /usr/include/opencv4/opencv2/flann/dist.h \
+  /usr/include/opencv4/opencv2/flann/heap.h \
+  /usr/include/opencv4/opencv2/flann/allocator.h \
+  /usr/include/opencv4/opencv2/flann/random.h \
+  /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
+  /usr/include/opencv4/opencv2/flann/kmeans_index.h \
+  /usr/include/opencv4/opencv2/flann/logger.h \
+  /usr/include/opencv4/opencv2/flann/composite_index.h \
+  /usr/include/opencv4/opencv2/flann/linear_index.h \
+  /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+  /usr/include/opencv4/opencv2/flann/lsh_index.h \
+  /usr/include/opencv4/opencv2/flann/lsh_table.h \
+  /usr/include/c++/11/math.h \
+  /usr/include/opencv4/opencv2/flann/autotuned_index.h \
+  /usr/include/opencv4/opencv2/flann/ground_truth.h \
+  /usr/include/opencv4/opencv2/flann/index_testing.h \
+  /usr/include/opencv4/opencv2/flann/timer.h \
+  /usr/include/opencv4/opencv2/flann/sampling.h \
+  /usr/include/opencv4/opencv2/highgui.hpp \
+  /usr/include/opencv4/opencv2/imgcodecs.hpp \
+  /usr/include/opencv4/opencv2/videoio.hpp \
+  /usr/include/opencv4/opencv2/ml.hpp \
+  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
+  /usr/include/opencv4/opencv2/objdetect.hpp \
+  /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+  /usr/include/opencv4/opencv2/objdetect/face.hpp \
+  /usr/include/opencv4/opencv2/photo.hpp \
+  /usr/include/opencv4/opencv2/stitching.hpp \
+  /usr/include/opencv4/opencv2/stitching/warpers.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+  /usr/include/opencv4/opencv2/core/cuda.hpp \
+  /usr/include/opencv4/opencv2/core/cuda_types.hpp \
+  /usr/include/opencv4/opencv2/core/cuda.inl.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
+  /usr/include/opencv4/opencv2/video.hpp \
+  /usr/include/opencv4/opencv2/video/tracking.hpp \
+  /usr/include/opencv4/opencv2/video/background_segm.hpp
 
+
+/usr/include/opencv4/opencv2/video/background_segm.hpp:
+
+/usr/include/opencv4/opencv2/video/tracking.hpp:
+
+/usr/include/opencv4/opencv2/video.hpp:
+
+/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp:
+
+/usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/queue:
+
+/usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
+
+/usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp:
+
+/usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
+
+/usr/include/opencv4/opencv2/core/cuda.hpp:
+
+/usr/include/opencv4/opencv2/stitching.hpp:
+
+/usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
+
+/usr/include/opencv4/opencv2/objdetect.hpp:
+
+/usr/include/opencv4/opencv2/ml/ml.inl.hpp:
+
+/usr/include/opencv4/opencv2/ml.hpp:
+
+/usr/include/opencv4/opencv2/videoio.hpp:
+
+/usr/include/opencv4/opencv2/imgcodecs.hpp:
+
+/usr/include/opencv4/opencv2/flann/sampling.h:
+
+/usr/include/opencv4/opencv2/flann/ground_truth.h:
+
+/usr/include/opencv4/opencv2/flann/autotuned_index.h:
+
+/usr/include/opencv4/opencv2/flann/lsh_table.h:
+
+/usr/include/opencv4/opencv2/flann/dist.h:
+
+/usr/include/opencv4/opencv2/flann/dynamic_bitset.h:
+
+/usr/include/opencv4/opencv2/flann/all_indices.h:
+
+/usr/include/opencv4/opencv2/flann/result_set.h:
+
+/usr/include/opencv4/opencv2/flann/saving.h:
+
+/usr/include/opencv4/opencv2/flann/any.h:
+
+/usr/include/opencv4/opencv2/flann/params.h:
+
+/usr/include/opencv4/opencv2/dnn/dnn.inl.hpp:
+
+/usr/include/opencv4/opencv2/dnn/layer.hpp:
+
+/usr/include/opencv4/opencv2/dnn/dict.hpp:
+
+/usr/include/opencv4/opencv2/dnn/version.hpp:
+
+/usr/include/opencv4/opencv2/core/async.hpp:
+
+/usr/include/opencv4/opencv2/dnn/dnn.hpp:
+
+/usr/include/opencv4/opencv2/dnn.hpp:
+
+/usr/include/opencv4/opencv2/core/affine.hpp:
+
+/usr/include/opencv4/opencv2/flann/config.h:
+
+/usr/include/opencv4/opencv2/calib3d.hpp:
+
+/usr/include/opencv4/opencv2/core/core_c.h:
+
+/usr/include/opencv4/opencv2/imgproc/types_c.h:
+
+/usr/include/opencv4/opencv2/imgproc/segmentation.hpp:
+
+/usr/include/c++/11/deque:
+
+/usr/include/opencv4/opencv2/imgproc.hpp:
+
+/usr/include/opencv4/opencv2/imgproc/imgproc.hpp:
+
+/usr/include/opencv4/opencv2/core/ovx.hpp:
+
+/usr/include/opencv4/opencv2/core/utility.hpp:
+
+/usr/include/opencv4/opencv2/core/operations.hpp:
+
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:
+
+/usr/include/opencv4/opencv2/core/bufferpool.hpp:
+
+/usr/include/opencv4/opencv2/core/fast_math.hpp:
+
+/usr/include/opencv4/opencv2/core/saturate.hpp:
+
+/usr/include/opencv4/opencv2/core/check.hpp:
+
+/usr/include/opencv4/opencv2/core/neon_utils.hpp:
+
+/usr/include/opencv4/opencv2/core/cvstd.hpp:
+
+/usr/include/linux/limits.h:
+
+/usr/include/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/include/opencv4/opencv2/core/base.hpp:
+
+/usr/include/opencv4/opencv2/core/hal/interface.h:
+
+/usr/include/opencv4/opencv2/core/version.hpp:
+
+/usr/include/opencv4/opencv2/core/cvdef.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp:
+
+/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.hpp:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__builder.hpp:
+
+/usr/include/opencv4/opencv2/core/vsx_utils.hpp:
 
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__struct.hpp:
 
@@ -696,6 +981,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/storage_policy_common.hpp:
+
+/usr/include/opencv4/opencv2/flann.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
 
@@ -729,6 +1016,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
@@ -743,11 +1032,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
 
+/usr/include/opencv4/opencv2/flann/nn_index.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/executors/static_executor_entities_collector.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface_traits.hpp:
+
+/usr/include/opencv4/opencv2/stitching/detail/util.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface_traits.hpp:
 
@@ -773,11 +1066,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__struct.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_value.hpp:
 
@@ -785,11 +1082,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter.hpp:
 
+/usr/include/opencv4/opencv2/flann/heap.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_logging_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/typesupport_helpers.hpp:
+
+/usr/include/opencv4/opencv2/flann/kmeans_index.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
 
@@ -799,9 +1100,17 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
 
+/usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
 
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/opencv4/opencv2/flann/matrix.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
 
@@ -812,6 +1121,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
+
+/usr/include/opencv4/opencv2/flann/allocator.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp:
 
@@ -829,11 +1140,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_publisher_payload.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:
 
@@ -850,6 +1165,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:
 
 /usr/include/wchar.h:
+
+/usr/include/opencv4/opencv2/opencv_modules.hpp:
 
 /opt/ros/humble/include/rcutils/rcutils/qsort.h:
 
@@ -905,6 +1222,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/ratio:
 
+/usr/include/opencv4/opencv2/stitching/detail/matchers.hpp:
+
 /usr/include/c++/11/pstl/execution_defs.h:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
@@ -943,6 +1262,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
+
 /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp:
 
 /usr/include/ctype.h:
@@ -952,6 +1273,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rmw/rmw/subscription_options.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
 
 /usr/include/locale.h:
 
@@ -965,15 +1288,21 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
+
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
 
 /usr/include/c++/11/string_view:
 
 /opt/ros/humble/include/rcutils/rcutils/time.h:
 
+/usr/include/c++/11/bits/stl_deque.h:
+
 /opt/ros/humble/include/rcl/rcl/client.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
 
@@ -994,6 +1323,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
+
+/usr/include/opencv4/opencv2/core/mat.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
@@ -1027,13 +1358,19 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
+/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/debug/assertions.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/event.hpp:
 
+/usr/include/opencv4/opencv2/core/optim.hpp:
+
 /usr/include/c++/11/cmath:
+
+/usr/include/opencv4/opencv2/core/cuda_types.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
@@ -1050,6 +1387,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/opencv4/opencv2/flann/kdtree_single_index.h:
 
 /usr/include/linux/close_range.h:
 
@@ -1070,6 +1409,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/opencv4/opencv2/core/core.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp:
 
@@ -1117,6 +1458,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
+/usr/include/c++/11/math.h:
+
 /usr/include/assert.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
@@ -1131,6 +1474,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
+/usr/include/opencv4/opencv2/flann/miniflann.hpp:
+
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/bits/unique_ptr.h:
@@ -1143,9 +1488,13 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/opencv4/opencv2/flann/defines.h:
+
 /usr/include/c++/11/bits/exception_ptr.h:
 
 /usr/include/c++/11/bits/postypes.h:
+
+/usr/include/opencv4/opencv2/flann/composite_index.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
@@ -1169,6 +1518,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/locale:
 
+/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
@@ -1180,6 +1531,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:
+
+/usr/include/opencv4/opencv2/features2d.hpp:
 
 /usr/include/c++/11/bits/range_access.h:
 
@@ -1203,6 +1556,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/endian.h:
 
+/usr/include/c++/11/complex:
+
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
@@ -1223,6 +1578,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/tr1/hypergeometric.tcc:
 
+/usr/include/opencv4/opencv2/core/matx.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
 
 /usr/include/c++/11/ext/numeric_traits.h:
@@ -1238,6 +1595,10 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
 /opt/ros/humble/include/rcutils/rcutils/types.h:
+
+/usr/include/opencv4/opencv2/flann/kdtree_index.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
@@ -1275,6 +1636,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/bits/list.tcc:
 
+/usr/include/opencv4/opencv2/core/traits.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
@@ -1282,6 +1645,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
 
 /usr/include/stdlib.h:
 
@@ -1294,6 +1659,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/c++/11/tr1/legendre_function.tcc:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/usr/include/c++/11/cstddef:
 
 /usr/include/c++/11/bits/std_abs.h:
 
@@ -1314,6 +1681,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
+
+/usr/include/opencv4/opencv2/stitching/warpers.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
 
@@ -1353,6 +1722,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
+/usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
 
 /usr/include/c++/11/cwctype:
@@ -1365,11 +1736,17 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/sstream:
 
+/usr/include/opencv4/opencv2/core/cvstd.inl.hpp:
+
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /opt/ros/humble/include/rcl/rcl/init_options.h:
 
+/usr/include/opencv4/opencv2/flann/index_testing.h:
+
 /usr/include/c++/11/ext/alloc_traits.h:
+
+/usr/include/opencv4/opencv2/flann/logger.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
 
@@ -1415,6 +1792,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
+/usr/include/opencv4/opencv2/core/types.hpp:
+
 /usr/include/c++/11/bits/codecvt.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
@@ -1434,6 +1813,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/c++/11/cfloat:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -1503,9 +1884,13 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/cwchar:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_topics_interface.hpp:
 
 /usr/include/c++/11/typeinfo:
+
+/usr/include/opencv4/opencv2/highgui.hpp:
 
 /opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
 
@@ -1563,6 +1948,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
@@ -1579,7 +1966,11 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/bits/istream.tcc:
 
+/usr/include/opencv4/opencv2/flann/random.h:
+
 /usr/include/c++/11/bits/stl_list.h:
+
+/usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_base.hpp:
 
@@ -1631,6 +2022,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/type_support_decl.hpp:
 
+/usr/include/opencv4/opencv2/core/persistence.hpp:
+
 /opt/ros/humble/include/rmw/rmw/init.h:
 
 /opt/ros/humble/include/rmw/rmw/init_options.h:
@@ -1659,6 +2052,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcl/rcl/types.h:
 
+/usr/include/opencv4/opencv2/opencv.hpp:
+
 /opt/ros/humble/include/rmw/rmw/types.h:
 
 /usr/include/c++/11/unordered_set:
@@ -1668,6 +2063,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp:
 
 /usr/include/strings.h:
+
+/usr/include/opencv4/opencv2/objdetect/face.hpp:
 
 /opt/ros/humble/include/rcutils/rcutils/snprintf.h:
 
@@ -1679,11 +2076,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/incompatible_qos.h:
 
+/usr/include/opencv4/opencv2/photo.hpp:
+
 /usr/include/c++/11/iosfwd:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_changed.h:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h:
+
+/usr/include/opencv4/opencv2/flann/lsh_index.h:
 
 /opt/ros/humble/include/rcutils/rcutils/logging_macros.h:
 
@@ -1765,6 +2166,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcpputils/rcpputils/scope_exit.hpp:
 
+/usr/include/c++/11/climits:
+
 /opt/ros/humble/include/rclcpp/rclcpp/context.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/init_options.hpp:
@@ -1777,9 +2180,13 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:
 
+/usr/include/opencv4/opencv2/stitching/detail/camera.hpp:
+
 /usr/include/c++/11/streambuf:
 
 /opt/ros/humble/include/rclcpp/rclcpp/macros.hpp:
+
+/usr/include/opencv4/opencv2/core/types_c.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:
 
@@ -1821,6 +2228,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:
 
+/usr/include/opencv4/opencv2/flann/general.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
@@ -1835,11 +2244,15 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/service.hpp:
 
 /usr/include/c++/11/iomanip:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 
 /usr/include/libintl.h:
 
@@ -1848,6 +2261,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /usr/include/features.h:
 
 /usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
+/usr/include/opencv4/opencv2/flann/flann_base.hpp:
 
 /usr/include/c++/11/bits/move.h:
 
@@ -1879,11 +2294,17 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h:
 
+/usr/include/opencv4/opencv2/core/cuda.inl.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp:
 
 /opt/ros/humble/include/rmw/rmw/network_flow_endpoint.h:
+
+/usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/qos_event.hpp:
 
@@ -1987,6 +2408,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
 
+/usr/include/opencv4/opencv2/flann/linear_index.h:
+
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__traits.hpp:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
@@ -2009,6 +2432,8 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
 
+/usr/include/opencv4/opencv2/core.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp:
@@ -2022,6 +2447,10 @@ CMakeFiles/rl_server.dir/src/rl_server.cpp.o: /home/rlcontrol/jay_ws/jaybot/src/
 /opt/ros/humble/include/rcl/rcl/allocator.h:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
+
+/usr/include/opencv4/opencv2/flann/timer.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp:
 
 /usr/include/c++/11/bits/atomic_base.h:
 
