@@ -364,14 +364,29 @@ ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FI
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl" "DESTINATION" "share/rl_custom_messages/msg")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl" "DESTINATION" "share/rl_custom_messages/msg")
 
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/ImageArray.idl" "DESTINATION" "share/rl_custom_messages/msg")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/ImageArray.idl" "DESTINATION" "share/rl_custom_messages/msg")
+
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/AudioData.idl" "DESTINATION" "share/rl_custom_messages/msg")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/AudioData.idl" "DESTINATION" "share/rl_custom_messages/msg")
+
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ImageService.idl" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ImageService.idl" "DESTINATION" "share/rl_custom_messages/srv")
 
 # install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
 
 # install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/MotorCommands.msg" "DESTINATION" "share/rl_custom_messages/msg")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/MotorCommands.msg" "DESTINATION" "share/rl_custom_messages/msg")
+
+# install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/ImageArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/ImageArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
+
+# install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/AudioData.msg" "DESTINATION" "share/rl_custom_messages/msg")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/AudioData.msg" "DESTINATION" "share/rl_custom_messages/msg")
 
 # install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/ObservationService.srv" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/ObservationService.srv" "DESTINATION" "share/rl_custom_messages/srv")
@@ -381,6 +396,15 @@ ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FI
 
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ObservationService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ObservationService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/ImageService.srv" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/ImageService.srv" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ImageService_Request.msg" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ImageService_Request.msg" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ImageService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ImageService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
 
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rl_custom_messages" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rl_custom_messages" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

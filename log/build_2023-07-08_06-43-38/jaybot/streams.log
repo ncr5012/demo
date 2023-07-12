@@ -1,0 +1,66 @@
+[0.027s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.171s] [ 16%] Built target motor_controller
+[0.174s] [ 33%] Built target range_publisher
+[0.180s] [ 50%] Built target image_debugger
+[0.182s] [ 66%] Built target camera_publisher
+[0.187s] [ 83%] Built target rl_server
+[0.195s] [ 91%] [32mBuilding CXX object CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o[0m
+[0.212s] [ 91%] Built target ament_cmake_python_symlink_jaybot
+[0.724s] running egg_info
+[0.725s] writing jaybot.egg-info/PKG-INFO
+[0.726s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.726s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.730s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.731s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.761s] [ 91%] Built target ament_cmake_python_build_jaybot_egg
+[4.364s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:45:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kaudio_data[m[K’ is not a member of ‘[01m[Krl_custom_messages::msg[m[K’; did you mean ‘[01m[KAudioData[m[K’?
+[4.364s]    45 |     rclcpp::Publisher<rl_custom_messages::msg::[01;31m[Kaudio_data[m[K>::SharedPtr publisher_;
+[4.365s]       |                                                [01;31m[K^~~~~~~~~~[m[K
+[4.365s]       |                                                [32m[KAudioData[m[K
+[4.365s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:45:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.365s]    45 |     rclcpp::Publisher<rl_custom_messages::msg::audio_data[01;31m[K>[m[K::SharedPtr publisher_;
+[4.365s]       |                                                          [01;31m[K^[m[K
+[4.365s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:45:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[4.366s]    45 |     rclcpp::Publisher<rl_custom_messages::msg::audio_data>::[01;31m[KSharedPtr[m[K publisher_;
+[4.366s]       |                                                             [01;31m[K^~~~~~~~~[m[K
+[4.366s]       |                                                                      [32m[K;[m[K
+[4.368s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:45:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[4.368s]    45 |     rclcpp::Publisher<rl_custom_messages::msg::audio_data>::SharedPtr [01;31m[Kpublisher_[m[K;
+[4.368s]       |                                                                       [01;31m[K^~~~~~~~~~[m[K
+[4.368s]       |                                                                       [32m[Krmw_publisher_t[m[K
+[4.380s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:[m[K In constructor ‘[01m[KAudioCapturePublisher::AudioCapturePublisher()[m[K’:
+[4.380s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:16:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[4.380s]    16 |         [01;31m[Kpublisher_[m[K = this->create_publisher<rl_custom_messages::msg::audio_data>("audio_data", 10);
+[4.380s]       |         [01;31m[K^~~~~~~~~~[m[K
+[4.380s]       |         [32m[Krmw_publisher_t[m[K
+[4.381s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:16:70:[m[K [01;31m[Kerror: [m[K‘[01m[Kaudio_data[m[K’ is not a member of ‘[01m[Krl_custom_messages::msg[m[K’; did you mean ‘[01m[KAudioData[m[K’?
+[4.381s]    16 |         publisher_ = this->create_publisher<rl_custom_messages::msg::[01;31m[Kaudio_data[m[K>("audio_data", 10);
+[4.381s]       |                                                                      [01;31m[K^~~~~~~~~~[m[K
+[4.381s]       |                                                                      [32m[KAudioData[m[K
+[4.381s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:16:81:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KAudioCapturePublisher::create_publisher<<expression error> >(const char [11], int)[m[K’
+[4.381s]    16 |         publisher_ = [01;31m[Kthis->create_publisher<rl_custom_messages::msg::audio_data>("audio_data", 10)[m[K;
+[4.381s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[4.382s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.382s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[4.382s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.382s]                  from [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:3[m[K:
+[4.382s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[4.382s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[4.382s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.383s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.383s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:16:81:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.383s]    16 |         publisher_ = [01;31m[Kthis->create_publisher<rl_custom_messages::msg::audio_data>("audio_data", 10)[m[K;
+[4.383s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[4.394s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:[m[K In member function ‘[01m[Kvoid AudioCapturePublisher::timer_callback()[m[K’:
+[4.394s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:33:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kaudio_data[m[K’ is not a member of ‘[01m[Krl_custom_messages::msg[m[K’; did you mean ‘[01m[KAudioData[m[K’?
+[4.394s]    33 |         auto message = rl_custom_messages::msg::[01;31m[Kaudio_data[m[K();
+[4.395s]       |                                                 [01;31m[K^~~~~~~~~~[m[K
+[4.395s]       |                                                 [32m[KAudioData[m[K
+[4.406s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:39:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[4.406s]    39 |         [01;31m[Kpublisher_[m[K->publish(message);
+[4.406s]       |         [01;31m[K^~~~~~~~~~[m[K
+[4.406s]       |         [32m[Krmw_publisher_t[m[K
+[5.100s] gmake[2]: *** [CMakeFiles/microphone_publisher.dir/build.make:76: CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o] Error 1
+[5.100s] gmake[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/microphone_publisher.dir/all] Error 2
+[5.100s] gmake: *** [Makefile:146: all] Error 2
+[5.110s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

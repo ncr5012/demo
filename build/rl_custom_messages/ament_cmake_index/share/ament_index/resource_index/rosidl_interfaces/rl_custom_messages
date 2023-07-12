@@ -1,7 +1,15 @@
+msg/AudioData.idl
+msg/AudioData.msg
+msg/ImageArray.idl
+msg/ImageArray.msg
 msg/MotorCommands.idl
 msg/MotorCommands.msg
 msg/RangeArray.idl
 msg/RangeArray.msg
+srv/ImageService.idl
+srv/ImageService.srv
+srv/ImageService_Request.msg
+srv/ImageService_Response.msg
 srv/ObservationService.idl
 srv/ObservationService.srv
 srv/ObservationService_Request.msg

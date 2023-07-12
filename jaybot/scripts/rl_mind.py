@@ -32,6 +32,14 @@ import rclpy
 from rclpy.node import Node
 from rl_custom_messages.srv import ObservationService
 
+import rclpy
+from rclpy.node import Node
+from cv_bridge import CvBridge
+import numpy as np
+from rl_custom_messages.srv import ImageService
+import cv2
+
+
 
 CAMERA_RESOLUTION = (3,640,480)
 
@@ -69,6 +77,34 @@ HID_SIZE = 64
 
 
 device = torch.device("cpu")
+
+class ImageClient(Node):
+    def __init__(self):
+        super().__init__('image_client')
+        self.cli1 = self.create_client(ImageService, 'get_image_data')
+        self.cli2 = self.create_client(ImageService, 'get_image_data_2')
+        while not self.cli1.wait_for_service(timeout_sec=1.0) or not self.cli2.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...')
+        self.bridge = CvBridge()
+
+    def get_image(self, cli):
+        req = ImageService.Request()
+        future = cli.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            img_data = np.array(future.result().image_data.data, dtype=np.uint8)
+            img = img_data.reshape((3, 640, 480)) # Reshape to your required shape
+            return img
+        else:
+            self.get_logger().info('Service call failed %r' % (future.exception(),))
+
+    def get_image_1(self):
+        return self.get_image(self.cli1)
+
+    def get_image_2(self):
+        return self.get_image(self.cli2)
+
+
 
 class ServiceClientNode(Node):
     def __init__(self):
@@ -176,6 +212,7 @@ class JayEnv(gymnasium.Env):
             if not rclpy.ok():
                 rclpy.init(args=None)
             self.service_client_node = ServiceClientNode()
+            self.image_client_node = ImageClient()
             #Initializes the range of actions the robot can choose to take. format of the action space is <<(wheelfl)<In1><In2><PWM>><wheelfr...><wheelrl>...<wheelrr>...>
             #In's can be 0 or 1, the combinations of Ins tell if the motor is spinning clockwise or counterclockwise. PWM can be 0-100 floating point and tell the motor how fast to spin in a given direction
             #Agent has essentially root level physical control over the robot, able to execute any combination of movements the hardware platform will support
@@ -227,11 +264,15 @@ class JayEnv(gymnasium.Env):
             except IndexError:
                 self.get_logger().warning('No responses received yet')
 
+            self.camera_one = self.image_client_node.get_image_1()
+            self.camera_two = self.image_client_node.get_image_2()
+            #self.camera_one = np.array(future.result().image_data.data, dtype=np.uint8)
+            #print("camera image", self.camera_one)
+
             #self.current_observations = self.observation_space.sample()
             self.camera_zeros = np.zeros(self.camera_space.shape)
             self.user_input_zeros = 0
             self.goal_zeros = 0
-
             """
             for motor_action in action:
                 for discrete_action in motor_action:
@@ -259,7 +300,7 @@ class JayEnv(gymnasium.Env):
 
             self.x3_flat_list = [item for sublist in self.x3_array_list for item in sublist]
 
-            self.processed_observations = np.array([self.camera_zeros, self.camera_zeros, np.array(self.x3_flat_list)])
+            self.processed_observations = np.array([self.camera_one, self.camera_two, np.array(self.x3_flat_list)])
 
             self.state = np.array([action, self.processed_observations])
 

@@ -74,10 +74,22 @@ CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__builder.hpp
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__struct.hpp
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__traits.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/image_array.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__builder.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__traits.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/audio_data.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__builder.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__struct.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__traits.hpp
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__builder.hpp
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.hpp
 CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/image_service.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__builder.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__struct.hpp
+CMakeFiles/rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__traits.hpp
 
 rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -96,7 +108,10 @@ rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: /opt/ros/humble/sha
 rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: rosidl_adapter/rl_custom_messages/msg/RangeArray.idl
 rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl
+rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: rosidl_adapter/rl_custom_messages/msg/ImageArray.idl
+rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: rosidl_adapter/rl_custom_messages/msg/AudioData.idl
 rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: rosidl_adapter/rl_custom_messages/srv/ObservationService.idl
+rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp: rosidl_adapter/rl_custom_messages/srv/ImageService.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp__arguments.json
 
@@ -121,6 +136,30 @@ rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__struct.hpp: r
 rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__traits.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__traits.hpp
 
+rosidl_generator_cpp/rl_custom_messages/msg/image_array.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/image_array.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__builder.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__builder.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__traits.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__traits.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/audio_data.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/audio_data.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__builder.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__builder.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__struct.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__struct.hpp
+
+rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__traits.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__traits.hpp
+
 rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp
 
@@ -133,18 +172,42 @@ rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.h
 rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp
 
+rosidl_generator_cpp/rl_custom_messages/srv/image_service.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/srv/image_service.hpp
+
+rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__builder.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__builder.hpp
+
+rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__struct.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__struct.hpp
+
+rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__traits.hpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__traits.hpp
+
 rl_custom_messages__cpp: CMakeFiles/rl_custom_messages__cpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/audio_data.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__builder.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__struct.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/audio_data__traits.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__builder.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__traits.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__builder.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__struct.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/motor_commands__traits.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__builder.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__struct.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/detail/range_array__traits.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/image_array.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/motor_commands.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/msg/range_array.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__builder.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__struct.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/image_service__traits.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__builder.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__struct.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/detail/observation_service__traits.hpp
+rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/image_service.hpp
 rl_custom_messages__cpp: rosidl_generator_cpp/rl_custom_messages/srv/observation_service.hpp
 rl_custom_messages__cpp: CMakeFiles/rl_custom_messages__cpp.dir/build.make
 .PHONY : rl_custom_messages__cpp

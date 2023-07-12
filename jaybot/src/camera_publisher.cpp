@@ -13,10 +13,10 @@ sensor_msgs::msg::Image::SharedPtr toImageMsg(cv::Mat frame) {
 class ImagePublisher : public rclcpp::Node
 {
 public:
-    ImagePublisher()
-    : Node("image_publisher")
+    ImagePublisher(int id, std::string topic)
+    : Node("image_publisher_" + std::to_string(id)), cap{id + cv::CAP_V4L}
     {
-        publisher_ = this->create_publisher<sensor_msgs::msg::Image>("camera_image", 10);
+        publisher_ = this->create_publisher<sensor_msgs::msg::Image>(topic, 10);
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(200), std::bind(&ImagePublisher::timer_callback, this));
         cap.set(cv::CAP_PROP_FRAME_WIDTH, 640); // change the resolution here
@@ -43,14 +43,14 @@ private:
 
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
-    cv::VideoCapture cap{1 + cv::CAP_V4L};
+    cv::VideoCapture cap;
 };
-
 
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<ImagePublisher>());
+    rclcpp::spin(std::make_shared<ImagePublisher>(0, "camera_image_0"));
+    rclcpp::spin(std::make_shared<ImagePublisher>(1, "camera_image_1"));
     rclcpp::shutdown();
     return 0;
 }

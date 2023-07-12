@@ -1,0 +1,57 @@
+[0.026s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.160s] [ 16%] Built target range_publisher
+[0.162s] [ 33%] Built target motor_controller
+[0.164s] [ 50%] Built target camera_publisher
+[0.165s] [ 66%] Built target rl_server
+[0.165s] [ 83%] Built target image_debugger
+[0.176s] [ 91%] [32mBuilding CXX object CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o[0m
+[0.197s] [ 91%] Built target ament_cmake_python_symlink_jaybot
+[0.704s] running egg_info
+[0.705s] writing jaybot.egg-info/PKG-INFO
+[0.705s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.706s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.709s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.710s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.742s] [ 91%] Built target ament_cmake_python_build_jaybot_egg
+[7.373s] [100%] [32m[1mLinking CXX executable microphone_publisher[0m
+[7.782s] [100%] Built target microphone_publisher
+[7.798s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[8.001s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
+[8.052s] -- Install configuration: ""
+[8.053s] -- Execute custom install script
+[8.054s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+[8.061s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/motor_controller
+[8.069s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/camera_publisher
+[8.076s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/microphone_publisher
+[8.084s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+[8.091s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/image_debugger
+[8.100s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+[8.107s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/motor_controller.h
+[8.115s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.sh
+[8.122s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.dsv
+[8.131s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/PKG-INFO
+[8.138s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/SOURCES.txt
+[8.145s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/dependency_links.txt
+[8.153s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/top_level.txt
+[8.161s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot/__init__.py
+[8.168s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_mind.py
+[8.176s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/robot_monitor.py
+[8.184s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+[8.191s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+[8.199s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+[8.206s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+[8.213s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+[8.221s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+[8.228s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+[8.236s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+[8.243s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+[8.251s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+[8.258s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.dsv
+[8.266s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+[8.273s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.280s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+[8.288s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+[8.295s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.xml
+[8.363s] Listing '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot'...
+[8.363s] Compiling '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot/__init__.py'...
+[8.379s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot

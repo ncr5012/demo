@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rl_custom_messages/msg/AudioData.msg
+// generated code does not contain a copyright notice
+
+
+module rl_custom_messages {
+  module msg {
+    struct AudioData {
+      uint32 sample_rate;
+
+      uint16 channels;
+
+      sequence<int16> data;
+    };
+  };
+};

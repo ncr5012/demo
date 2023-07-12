@@ -1,0 +1,62 @@
+[0.022s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.125s] [ 20%] Built target range_publisher
+[0.133s] [ 20%] Built target ament_cmake_python_symlink_jaybot
+[0.136s] [ 40%] Built target motor_controller
+[0.145s] [ 60%] Built target camera_publisher
+[0.146s] [ 80%] Built target image_debugger
+[0.148s] [ 90%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[0.526s] running egg_info
+[0.527s] writing jaybot.egg-info/PKG-INFO
+[0.527s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.527s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.529s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.530s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.556s] [ 90%] Built target ament_cmake_python_build_jaybot_egg
+[4.294s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid ImageServer::service_callback(std::shared_ptr<rl_custom_messages::srv::ImageService_Request_<std::allocator<void> > >, std::shared_ptr<rl_custom_messages::srv::ImageService_Response_<std::allocator<void> > >)[m[K’:
+[4.294s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:89:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.294s]    89 |         [01;35m[Kconst std::shared_ptr<rl_custom_messages::srv::ImageService::Request> request[m[K,
+[4.294s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[4.301s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid AudioReceiverSubscriber::topic_callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr) const[m[K’:
+[4.301s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:114:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.301s]   114 |     void topic_callback([01;35m[Kconst sensor_msgs::msg::Image::SharedPtr msg[m[K) const
+[4.301s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[16.145s] [100%] [32m[1mLinking CXX executable rl_server[0m
+[17.368s] [100%] Built target rl_server
+[17.380s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[17.507s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
+[17.543s] -- Install configuration: ""
+[17.543s] -- Execute custom install script
+[17.544s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+[17.544s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/motor_controller
+[17.544s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/camera_publisher
+[17.544s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+[17.544s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/image_debugger
+[17.545s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+[17.545s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/motor_controller.h
+[17.546s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.sh
+[17.546s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.dsv
+[17.547s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/PKG-INFO
+[17.547s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/SOURCES.txt
+[17.548s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/dependency_links.txt
+[17.548s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/top_level.txt
+[17.548s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot/__init__.py
+[17.549s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_mind.py
+[17.549s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/robot_monitor.py
+[17.549s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+[17.549s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+[17.550s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+[17.550s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+[17.550s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+[17.551s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+[17.551s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+[17.552s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+[17.552s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+[17.552s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+[17.553s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.dsv
+[17.558s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+[17.558s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+[17.559s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+[17.559s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+[17.559s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.xml
+[17.599s] Listing '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot'...
+[17.610s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot

@@ -1,10 +1,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rl_custom_messages/msg/range_array.hpp"
 #include "rl_custom_messages/msg/motor_commands.hpp"
+#include "rl_custom_messages/msg/image_array.hpp"
 #include "rl_custom_messages/srv/observation_service.hpp"
+#include "rl_custom_messages/srv/image_service.hpp"
 #include <sensor_msgs/msg/image.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/opencv.hpp>
+#include <thread>
 
 using std::placeholders::_1;
 using std::placeholders::_2;
@@ -45,9 +48,7 @@ private:
 
     response->range_data = last_range_data_;
     motor_command_publisher_->publish(motor_commands);
-    
   }
-
 
   rclcpp::Subscription<rl_custom_messages::msg::RangeArray>::SharedPtr subscription_;
   rclcpp::Service<rl_custom_messages::srv::ObservationService>::SharedPtr service_;
@@ -56,23 +57,21 @@ private:
   rl_custom_messages::msg::MotorCommands motor_commands;
 };
 
-#include <rclcpp/rclcpp.hpp>
-#include <sensor_msgs/msg/image.hpp>
-#include <cv_bridge/cv_bridge.h>
-#include <opencv2/opencv.hpp>
-
-class ImageSubscriber : public rclcpp::Node
+class ImageServer : public rclcpp::Node
 {
 public:
-    ImageSubscriber()
-    : Node("image_subscriber")
+    ImageServer(std::string topic)
+    : Node("image_server_" + topic)
     {
         subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
-        "camera_image", 10, std::bind(&ImageSubscriber::topic_callback, this, std::placeholders::_1));
+        topic, 10, std::bind(&ImageServer::topic_callback, this, _1));
+        service_ = this->create_service<rl_custom_messages::srv::ImageService>("get_image_data_" + topic,
+        std::bind(&ImageServer::service_callback, this, _1, _2));
     }
 
 private:
-    void topic_callback(const sensor_msgs::msg::Image::SharedPtr msg) {
+    void topic_callback(const sensor_msgs::msg::Image::SharedPtr msg)
+    {
         cv_bridge::CvImagePtr cv_ptr;
         try
         {
@@ -83,12 +82,41 @@ private:
             RCLCPP_ERROR(this->get_logger(), "cv_bridge exception: %s", e.what());
             return;
         }
-
-        // Display the image using OpenCV
-        cv::imshow("Image Window", cv_ptr->image);
-        cv::waitKey(5); // Wait for a while before next image. Change the value if needed
+        last_image_data_ = cv_ptr->image;
     }
 
+    void service_callback(
+        const std::shared_ptr<rl_custom_messages::srv::ImageService::Request> request,
+        std::shared_ptr<rl_custom_messages::srv::ImageService::Response> response)
+    {
+        rl_custom_messages::msg::ImageArray img_msg;
+        img_msg.data.assign(last_image_data_.data, last_image_data_.data + last_image_data_.total()*last_image_data_.channels());
+        response->image_data = img_msg;
+    }
+
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
+    rclcpp::Service<rl_custom_messages::srv::ImageService>::SharedPtr service_;
+    cv::Mat last_image_data_;
+    std::thread display_thread_;
+};
+
+class AudioReceiverSubscriber : public rclcpp::Node
+{
+public:
+    AudioReceiverSubscriber()
+    : Node("audio_receiver_subscriber")
+    {
+        subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
+        "audio_data", 10, std::bind(&AudioReceiverSubscriber::topic_callback, this, _1));
+    }
+
+private:
+    void topic_callback(const sensor_msgs::msg::Image::SharedPtr msg) const
+    {
+        RCLCPP_INFO(this->get_logger(), "Received Audio Data");
+        // Here you can write the audio data to a file, send it to a speech-to-text API, etc.
+        // The data is in msg->```
+    }
 
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
 };
@@ -96,21 +124,24 @@ private:
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);
-    
+
     auto range_subscriber = std::make_shared<RangeSubscriber>();
-    auto image_subscriber = std::make_shared<ImageSubscriber>();
-    
+    auto image_server_0 = std::make_shared<ImageServer>("camera_image_0");
+    auto image_server_1 = std::make_shared<ImageServer>("camera_image_1");
+    auto audio_receiver_subscriber = std::make_shared<AudioReceiverSubscriber>();
+
     rclcpp::executors::MultiThreadedExecutor executor;
-    
+
     executor.add_node(range_subscriber);
-    executor.add_node(image_subscriber);
-    
+    executor.add_node(image_server_0);
+    executor.add_node(image_server_1);
+    executor.add_node(audio_receiver_subscriber);
+
     executor.spin();
-    
+
     rclcpp::shutdown();
     return 0;
 }
-
 
 
 

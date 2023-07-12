@@ -36,16 +36,26 @@ add_executable(camera_publisher src/camera_publisher.cpp)
 target_link_libraries(camera_publisher ${OpenCV_LIBS} ${sensor_msgs_LIBS} ${cv_bridge_LIBS})
 ament_target_dependencies(camera_publisher rclcpp sensor_msgs cv_bridge)
 
+add_executable(microphone_publisher src/microphone_publisher.cpp)
+target_link_libraries(microphone_publisher ${sensor_msgs_LIBS} asound)
+ament_target_dependencies(microphone_publisher rclcpp rl_custom_messages)
+
 add_executable(rl_server src/rl_server.cpp)
 target_link_libraries(rl_server ${OpenCV_LIBS} ${cv_bridge_LIBS})
 ament_target_dependencies(rl_server rclcpp rl_custom_messages cv_bridge)
+
+add_executable(image_debugger src/image_debugger.cpp)
+target_link_libraries(image_debugger ${OpenCV_LIBS} ${cv_bridge_LIBS})
+ament_target_dependencies(image_debugger rclcpp rl_custom_messages cv_bridge)
 
 
 install(TARGETS
   range_publisher
   motor_controller
   camera_publisher
+  microphone_publisher
   rl_server
+  image_debugger
   DESTINATION lib/${PROJECT_NAME})
   
 install(

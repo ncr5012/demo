@@ -1,0 +1,62 @@
+[  0%] Built target ament_cmake_python_symlink_jaybot
+[ 25%] Built target motor_controller
+[ 50%] Built target range_publisher
+[ 75%] Built target rl_server
+[ 87%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+running egg_info
+writing jaybot.egg-info/PKG-INFO
+writing dependency_links to jaybot.egg-info/dependency_links.txt
+writing top-level names to jaybot.egg-info/top_level.txt
+reading manifest file 'jaybot.egg-info/SOURCES.txt'
+writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[ 87%] Built target ament_cmake_python_build_jaybot_egg
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:61:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+   61 | int [01;31m[Kmain[m[K(int argc, char * argv[])
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:50:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+   50 | int [01;36m[Kmain[m[K(int argc, char * argv[])
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:73:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap[m[K’ does not name a type
+   73 |         [01;31m[Kcap[m[K.set(cv::CAP_PROP_FRAME_WIDTH, 640); // change the resolution here
+      |         [01;31m[K^~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:74:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap[m[K’ does not name a type
+   74 |         [01;31m[Kcap[m[K.set(cv::CAP_PROP_FRAME_HEIGHT, 480); // change the resolution here
+      |         [01;31m[K^~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:75:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap[m[K’ does not name a type
+   75 |         [01;31m[Kcap[m[K.set(cv::CAP_PROP_FPS, 5);
+      |         [01;31m[K^~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:77:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+   77 |         [01;31m[Kif[m[K(!cap.isOpened()) {
+      |         [01;31m[K^~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:82:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+   82 |         [01;31m[Kpublisher_[m[K = this->create_publisher<sensor_msgs::msg::Image>("camera_image", 10);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krmw_publisher_t[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:83:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ does not name a type; did you mean ‘[01m[Ktimer_t[m[K’?
+   83 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:85:5:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+   85 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:87:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+   87 | [01;31m[Kprivate[m[K:
+      | [01;31m[K^~~~~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:[m[K In function ‘[01m[Kvoid publish(cv::Mat)[m[K’:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:98:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublish[m[K’?
+   98 |         [01;31m[Kpublisher_[m[K->publish(*message);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Kpublish[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:[m[K At global scope:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:104:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  104 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:107:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+  107 | int [01;31m[Kmain[m[K(int argc, char * argv[])
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:50:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+   50 | int [01;36m[Kmain[m[K(int argc, char * argv[])
+      |     [01;36m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/camera_publisher.dir/build.make:76: CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:198: CMakeFiles/camera_publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,64 @@
+[0.010s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.063s] [  0%] Built target ament_cmake_python_symlink_jaybot
+[0.064s] [ 25%] Built target motor_controller
+[0.065s] [ 50%] Built target range_publisher
+[0.067s] [ 75%] Built target rl_server
+[0.071s] [ 87%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+[0.316s] running egg_info
+[0.316s] writing jaybot.egg-info/PKG-INFO
+[0.317s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.317s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.319s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.319s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.339s] [ 87%] Built target ament_cmake_python_build_jaybot_egg
+[2.901s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:61:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+[2.901s]    61 | int [01;31m[Kmain[m[K(int argc, char * argv[])
+[2.901s]       |     [01;31m[K^~~~[m[K
+[2.901s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:50:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+[2.901s]    50 | int [01;36m[Kmain[m[K(int argc, char * argv[])
+[2.902s]       |     [01;36m[K^~~~[m[K
+[2.903s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:73:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap[m[K’ does not name a type
+[2.903s]    73 |         [01;31m[Kcap[m[K.set(cv::CAP_PROP_FRAME_WIDTH, 640); // change the resolution here
+[2.903s]       |         [01;31m[K^~~[m[K
+[2.904s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:74:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap[m[K’ does not name a type
+[2.904s]    74 |         [01;31m[Kcap[m[K.set(cv::CAP_PROP_FRAME_HEIGHT, 480); // change the resolution here
+[2.904s]       |         [01;31m[K^~~[m[K
+[2.904s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:75:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap[m[K’ does not name a type
+[2.905s]    75 |         [01;31m[Kcap[m[K.set(cv::CAP_PROP_FPS, 5);
+[2.905s]       |         [01;31m[K^~~[m[K
+[2.905s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:77:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+[2.905s]    77 |         [01;31m[Kif[m[K(!cap.isOpened()) {
+[2.905s]       |         [01;31m[K^~[m[K
+[2.906s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:82:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[2.906s]    82 |         [01;31m[Kpublisher_[m[K = this->create_publisher<sensor_msgs::msg::Image>("camera_image", 10);
+[2.906s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.906s]       |         [32m[Krmw_publisher_t[m[K
+[2.907s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:83:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ does not name a type; did you mean ‘[01m[Ktimer_t[m[K’?
+[2.907s]    83 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[2.907s]       |         [01;31m[K^~~~~~[m[K
+[2.907s]       |         [32m[Ktimer_t[m[K
+[2.907s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:85:5:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.907s]    85 |     [01;31m[K}[m[K
+[2.907s]       |     [01;31m[K^[m[K
+[2.908s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:87:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[2.908s]    87 | [01;31m[Kprivate[m[K:
+[2.908s]       | [01;31m[K^~~~~~~[m[K
+[2.912s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:[m[K In function ‘[01m[Kvoid publish(cv::Mat)[m[K’:
+[2.912s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:98:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublish[m[K’?
+[2.912s]    98 |         [01;31m[Kpublisher_[m[K->publish(*message);
+[2.912s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.912s]       |         [32m[Kpublish[m[K
+[2.913s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:[m[K At global scope:
+[2.913s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:104:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.913s]   104 | [01;31m[K}[m[K;
+[2.913s]       | [01;31m[K^[m[K
+[2.913s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:107:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+[2.913s]   107 | int [01;31m[Kmain[m[K(int argc, char * argv[])
+[2.913s]       |     [01;31m[K^~~~[m[K
+[2.913s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:50:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+[2.913s]    50 | int [01;36m[Kmain[m[K(int argc, char * argv[])
+[2.913s]       |     [01;36m[K^~~~[m[K
+[4.503s] gmake[2]: *** [CMakeFiles/camera_publisher.dir/build.make:76: CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o] Error 1
+[4.503s] gmake[1]: *** [CMakeFiles/Makefile2:198: CMakeFiles/camera_publisher.dir/all] Error 2
+[4.503s] gmake: *** [Makefile:146: all] Error 2
+[4.510s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

@@ -3,6 +3,9 @@
   "non_idl_tuples": [
     "/home/rlcontrol/jay_ws/rl_custom_messages:msg/RangeArray.msg",
     "/home/rlcontrol/jay_ws/rl_custom_messages:msg/MotorCommands.msg",
-    "/home/rlcontrol/jay_ws/rl_custom_messages:srv/ObservationService.srv"
+    "/home/rlcontrol/jay_ws/rl_custom_messages:msg/ImageArray.msg",
+    "/home/rlcontrol/jay_ws/rl_custom_messages:msg/AudioData.msg",
+    "/home/rlcontrol/jay_ws/rl_custom_messages:srv/ObservationService.srv",
+    "/home/rlcontrol/jay_ws/rl_custom_messages:srv/ImageService.srv"
   ]
 }

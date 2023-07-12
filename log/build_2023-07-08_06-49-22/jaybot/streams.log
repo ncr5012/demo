@@ -1,0 +1,28 @@
+[0.026s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.156s] [ 16%] Built target motor_controller
+[0.158s] [ 33%] Built target range_publisher
+[0.163s] [ 50%] Built target rl_server
+[0.165s] [ 66%] Built target camera_publisher
+[0.166s] [ 83%] Built target image_debugger
+[0.177s] [ 91%] [32mBuilding CXX object CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o[0m
+[0.194s] [ 91%] Built target ament_cmake_python_symlink_jaybot
+[0.700s] running egg_info
+[0.701s] writing jaybot.egg-info/PKG-INFO
+[0.701s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.702s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.705s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.706s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.737s] [ 91%] Built target ament_cmake_python_build_jaybot_egg
+[4.375s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:71:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[4.375s]    71 | [01;31m[K}[m[K;
+[4.375s]       | [01;31m[K^[m[K
+[4.376s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:73:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+[4.376s]    73 | int [01;31m[Kmain[m[K(int argc, char * argv[])
+[4.376s]       |     [01;31m[K^~~~[m[K
+[4.376s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/microphone_publisher.cpp:58:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+[4.376s]    58 | int [01;36m[Kmain[m[K(int argc, char * argv[])
+[4.376s]       |     [01;36m[K^~~~[m[K
+[5.615s] gmake[2]: *** [CMakeFiles/microphone_publisher.dir/build.make:76: CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o] Error 1
+[5.616s] gmake[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/microphone_publisher.dir/all] Error 2
+[5.616s] gmake: *** [Makefile:146: all] Error 2
+[5.624s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/vision_opencv:/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/image_geometry:/home/rlcontrol/jay_ws/install/cv_bridge:/home/rlcontrol/jay_ws/install/opencv_tests:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

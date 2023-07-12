@@ -12,7 +12,10 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RangeArray.msg"
   "msg/MotorCommands.msg"
+  "msg/ImageArray.msg"
+  "msg/AudioData.msg"
   "srv/ObservationService.srv"
+  "srv/ImageService.srv"
 )
 
 

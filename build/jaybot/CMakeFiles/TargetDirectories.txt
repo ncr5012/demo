@@ -3,7 +3,9 @@
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/range_publisher.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/motor_controller.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/camera_publisher.dir
+/home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/microphone_publisher.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/rl_server.dir
+/home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/image_debugger.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/ament_cmake_python_symlink_jaybot.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/ament_cmake_python_build_jaybot_egg.dir
 /home/rlcontrol/jay_ws/build/jaybot/CMakeFiles/test.dir

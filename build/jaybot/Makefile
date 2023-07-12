@@ -237,6 +237,19 @@ camera_publisher/fast:
 .PHONY : camera_publisher/fast
 
 #=============================================================================
+# Target rules for targets named microphone_publisher
+
+# Build rule for target.
+microphone_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 microphone_publisher
+.PHONY : microphone_publisher
+
+# fast build rule for target.
+microphone_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/microphone_publisher.dir/build.make CMakeFiles/microphone_publisher.dir/build
+.PHONY : microphone_publisher/fast
+
+#=============================================================================
 # Target rules for targets named rl_server
 
 # Build rule for target.
@@ -248,6 +261,19 @@ rl_server: cmake_check_build_system
 rl_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rl_server.dir/build.make CMakeFiles/rl_server.dir/build
 .PHONY : rl_server/fast
+
+#=============================================================================
+# Target rules for targets named image_debugger
+
+# Build rule for target.
+image_debugger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 image_debugger
+.PHONY : image_debugger
+
+# fast build rule for target.
+image_debugger/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_debugger.dir/build.make CMakeFiles/image_debugger.dir/build
+.PHONY : image_debugger/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_symlink_jaybot
@@ -298,6 +324,54 @@ src/camera_publisher.s: src/camera_publisher.cpp.s
 src/camera_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_publisher.dir/build.make CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.s
 .PHONY : src/camera_publisher.cpp.s
+
+src/image_debugger.o: src/image_debugger.cpp.o
+.PHONY : src/image_debugger.o
+
+# target to build an object file
+src/image_debugger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_debugger.dir/build.make CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o
+.PHONY : src/image_debugger.cpp.o
+
+src/image_debugger.i: src/image_debugger.cpp.i
+.PHONY : src/image_debugger.i
+
+# target to preprocess a source file
+src/image_debugger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_debugger.dir/build.make CMakeFiles/image_debugger.dir/src/image_debugger.cpp.i
+.PHONY : src/image_debugger.cpp.i
+
+src/image_debugger.s: src/image_debugger.cpp.s
+.PHONY : src/image_debugger.s
+
+# target to generate assembly for a file
+src/image_debugger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_debugger.dir/build.make CMakeFiles/image_debugger.dir/src/image_debugger.cpp.s
+.PHONY : src/image_debugger.cpp.s
+
+src/microphone_publisher.o: src/microphone_publisher.cpp.o
+.PHONY : src/microphone_publisher.o
+
+# target to build an object file
+src/microphone_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/microphone_publisher.dir/build.make CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o
+.PHONY : src/microphone_publisher.cpp.o
+
+src/microphone_publisher.i: src/microphone_publisher.cpp.i
+.PHONY : src/microphone_publisher.i
+
+# target to preprocess a source file
+src/microphone_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/microphone_publisher.dir/build.make CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.i
+.PHONY : src/microphone_publisher.cpp.i
+
+src/microphone_publisher.s: src/microphone_publisher.cpp.s
+.PHONY : src/microphone_publisher.s
+
+# target to generate assembly for a file
+src/microphone_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/microphone_publisher.dir/build.make CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.s
+.PHONY : src/microphone_publisher.cpp.s
 
 src/motor_controller.o: src/motor_controller.cpp.o
 .PHONY : src/motor_controller.o
@@ -389,12 +463,20 @@ help:
 	@echo "... jaybot_uninstall"
 	@echo "... uninstall"
 	@echo "... camera_publisher"
+	@echo "... image_debugger"
+	@echo "... microphone_publisher"
 	@echo "... motor_controller"
 	@echo "... range_publisher"
 	@echo "... rl_server"
 	@echo "... src/camera_publisher.o"
 	@echo "... src/camera_publisher.i"
 	@echo "... src/camera_publisher.s"
+	@echo "... src/image_debugger.o"
+	@echo "... src/image_debugger.i"
+	@echo "... src/image_debugger.s"
+	@echo "... src/microphone_publisher.o"
+	@echo "... src/microphone_publisher.i"
+	@echo "... src/microphone_publisher.s"
 	@echo "... src/motor_controller.o"
 	@echo "... src/motor_controller.i"
 	@echo "... src/motor_controller.s"

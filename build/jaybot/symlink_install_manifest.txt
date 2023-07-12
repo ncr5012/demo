@@ -1,7 +1,9 @@
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/motor_controller
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/camera_publisher
+/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/microphone_publisher
 /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+/home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/image_debugger
 /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
 /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/motor_controller.h
 /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.sh

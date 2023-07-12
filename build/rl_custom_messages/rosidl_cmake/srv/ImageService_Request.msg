@@ -1,0 +1,1 @@
+# This Service takes an empty request and provides an ImageArray as a response

@@ -5,7 +5,10 @@
   "idl_tuples": [
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/RangeArray.idl",
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/MotorCommands.idl",
-    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:srv/ObservationService.idl"
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/ImageArray.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:msg/AudioData.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:srv/ObservationService.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages:srv/ImageService.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
@@ -18,6 +21,9 @@
     "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/RangeArray.idl",
     "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/MotorCommands.idl",
-    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl"
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/ImageArray.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/msg/AudioData.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ObservationService.idl",
+    "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ImageService.idl"
   ]
 }

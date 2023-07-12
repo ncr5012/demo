@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rl_custom_messages/srv/ImageService.srv
+// generated code does not contain a copyright notice
+
+#include "rl_custom_messages/msg/ImageArray.idl"
+
+module rl_custom_messages {
+  module srv {
+    @verbatim (language="comment", text=
+      "This Service takes an empty request and provides an ImageArray as a response")
+    struct ImageService_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ImageService_Response {
+      rl_custom_messages::msg::ImageArray image_data;
+    };
+  };
+};
