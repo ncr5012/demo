@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "range_publisher" "motor_controller" "camera_publisher" "microphone_publisher" "rl_server" "image_debugger" "DESTINATION" "lib/jaybot")
+# install("TARGETS" "range_publisher" "motor_controller" "camera_publisher" "microphone_publisher" "speaker_controller" "rl_server" "image_debugger" "DESTINATION" "lib/jaybot")
 include("/home/rlcontrol/jay_ws/build/jaybot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "include/" "DESTINATION" "include")
@@ -328,8 +328,8 @@ ament_cmake_symlink_install_directory("/home/rlcontrol/jay_ws/jaybot" DIRECTORY 
 # install(DIRECTORY "/home/rlcontrol/jay_ws/jaybot/jaybot/" "DESTINATION" "local/lib/python3.10/dist-packages/jaybot" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/rlcontrol/jay_ws/jaybot" DIRECTORY "/home/rlcontrol/jay_ws/jaybot/jaybot/" "DESTINATION" "local/lib/python3.10/dist-packages/jaybot" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/rl_mind.py" "scripts/robot_monitor.py" "DESTINATION" "lib/jaybot")
-ament_cmake_symlink_install_programs("/home/rlcontrol/jay_ws/jaybot" PROGRAMS "scripts/rl_mind.py" "scripts/robot_monitor.py" "DESTINATION" "lib/jaybot")
+# install(PROGRAMS "scripts/rl_mind.py" "DESTINATION" "lib/jaybot")
+ament_cmake_symlink_install_programs("/home/rlcontrol/jay_ws/jaybot" PROGRAMS "scripts/rl_mind.py" "DESTINATION" "lib/jaybot")
 
 # install(FILES "/home/rlcontrol/jay_ws/build/jaybot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/jaybot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/jaybot" FILES "/home/rlcontrol/jay_ws/build/jaybot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/jaybot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

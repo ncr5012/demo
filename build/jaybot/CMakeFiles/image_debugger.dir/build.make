@@ -194,6 +194,10 @@ image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtp
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 image_debugger: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
+image_debugger: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 image_debugger: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -201,10 +205,6 @@ image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fa
 image_debugger: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
 image_debugger: /opt/ros/humble/lib/libfastcdr.so.1.0.24
 image_debugger: /opt/ros/humble/lib/librmw.so
-image_debugger: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
-image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
-image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 image_debugger: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
@@ -219,11 +219,11 @@ image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
-image_debugger: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
 image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 image_debugger: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
+image_debugger: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 image_debugger: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 image_debugger: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 image_debugger: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so

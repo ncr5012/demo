@@ -92,8 +92,10 @@ PyObject * rl_custom_messages__srv__image_service__request__convert_to_py(void *
 // already included above
 // #include "rl_custom_messages/srv/detail/image_service__functions.h"
 
-bool rl_custom_messages__msg__image_array__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * rl_custom_messages__msg__image_array__convert_to_py(void * raw_ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+bool sensor_msgs__msg__compressed_image__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * sensor_msgs__msg__compressed_image__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool rl_custom_messages__srv__image_service__response__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -133,7 +135,7 @@ bool rl_custom_messages__srv__image_service__response__convert_from_py(PyObject 
     if (!field) {
       return false;
     }
-    if (!rl_custom_messages__msg__image_array__convert_from_py(field, &ros_message->image_data)) {
+    if (!sensor_msgs__msg__compressed_image__convert_from_py(field, &ros_message->image_data)) {
       Py_DECREF(field);
       return false;
     }
@@ -163,7 +165,7 @@ PyObject * rl_custom_messages__srv__image_service__response__convert_to_py(void 
   rl_custom_messages__srv__ImageService_Response * ros_message = (rl_custom_messages__srv__ImageService_Response *)raw_ros_message;
   {  // image_data
     PyObject * field = NULL;
-    field = rl_custom_messages__msg__image_array__convert_to_py(&ros_message->image_data);
+    field = sensor_msgs__msg__compressed_image__convert_to_py(&ros_message->image_data);
     if (!field) {
       return NULL;
     }

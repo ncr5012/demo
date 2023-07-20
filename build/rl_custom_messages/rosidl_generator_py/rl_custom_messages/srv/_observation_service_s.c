@@ -53,8 +53,8 @@ bool rl_custom_messages__srv__observation_service__request__convert_from_py(PyOb
     assert(strncmp("rl_custom_messages.srv._observation_service.ObservationService_Request", full_classname_dest, 70) == 0);
   }
   rl_custom_messages__srv__ObservationService_Request * ros_message = _ros_message;
-  {  // action
-    PyObject * field = PyObject_GetAttrString(_pymsg, "action");
+  {  // motor_action
+    PyObject * field = PyObject_GetAttrString(_pymsg, "motor_action");
     if (!field) {
       return false;
     }
@@ -68,7 +68,31 @@ bool rl_custom_messages__srv__observation_service__request__convert_from_py(PyOb
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_INT32);
       Py_ssize_t size = 12;
-      int32_t * dest = ros_message->action;
+      int32_t * dest = ros_message->motor_action;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        int32_t tmp = *(npy_int32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(int32_t));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
+  {  // sound_action
+    PyObject * field = PyObject_GetAttrString(_pymsg, "sound_action");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_INT32);
+      Py_ssize_t size = 1;
+      int32_t * dest = ros_message->sound_action;
       for (Py_ssize_t i = 0; i < size; ++i) {
         int32_t tmp = *(npy_int32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(int32_t));
@@ -99,9 +123,9 @@ PyObject * rl_custom_messages__srv__observation_service__request__convert_to_py(
     }
   }
   rl_custom_messages__srv__ObservationService_Request * ros_message = (rl_custom_messages__srv__ObservationService_Request *)raw_ros_message;
-  {  // action
+  {  // motor_action
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "action");
+    field = PyObject_GetAttrString(_pymessage, "motor_action");
     if (!field) {
       return NULL;
     }
@@ -113,8 +137,26 @@ PyObject * rl_custom_messages__srv__observation_service__request__convert_to_py(
     assert(PyArray_TYPE(seq_field) == NPY_INT32);
     assert(sizeof(npy_int32) == sizeof(int32_t));
     npy_int32 * dst = (npy_int32 *)PyArray_GETPTR1(seq_field, 0);
-    int32_t * src = &(ros_message->action[0]);
+    int32_t * src = &(ros_message->motor_action[0]);
     memcpy(dst, src, 12 * sizeof(int32_t));
+    Py_DECREF(field);
+  }
+  {  // sound_action
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "sound_action");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_INT32);
+    assert(sizeof(npy_int32) == sizeof(int32_t));
+    npy_int32 * dst = (npy_int32 *)PyArray_GETPTR1(seq_field, 0);
+    int32_t * src = &(ros_message->sound_action[0]);
+    memcpy(dst, src, 1 * sizeof(int32_t));
     Py_DECREF(field);
   }
 

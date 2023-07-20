@@ -1,0 +1,58 @@
+[0.013s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.127s] [ 33%] Built target range_publisher
+[0.127s] [ 33%] Built target motor_controller
+[0.128s] [ 50%] Built target microphone_publisher
+[0.134s] [ 58%] [32mBuilding CXX object CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o[0m
+[0.134s] [ 66%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+[0.135s] [ 83%] Built target rl_server
+[0.144s] [ 83%] Built target ament_cmake_python_symlink_jaybot
+[0.416s] running egg_info
+[0.417s] writing jaybot.egg-info/PKG-INFO
+[0.417s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.417s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.420s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.421s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.440s] [ 83%] Built target ament_cmake_python_build_jaybot_egg
+[6.913s] [ 91%] [32m[1mLinking CXX executable camera_publisher[0m
+[7.746s] [ 91%] Built target camera_publisher
+[10.314s] [100%] [32m[1mLinking CXX executable image_debugger[0m
+[11.001s] [100%] Built target image_debugger
+[11.010s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': AMENT_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[11.083s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': AMENT_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
+[11.106s] -- Install configuration: ""
+[11.108s] -- Execute custom install script
+[11.110s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+[11.110s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/motor_controller
+[11.110s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/camera_publisher
+[11.110s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/microphone_publisher
+[11.110s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+[11.111s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/image_debugger
+[11.112s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+[11.113s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/motor_controller.h
+[11.113s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.sh
+[11.114s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.dsv
+[11.116s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/PKG-INFO
+[11.116s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/SOURCES.txt
+[11.116s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/dependency_links.txt
+[11.116s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/top_level.txt
+[11.117s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot/__init__.py
+[11.117s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_mind.py
+[11.117s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/robot_monitor.py
+[11.118s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+[11.119s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+[11.119s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+[11.119s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+[11.120s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+[11.120s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+[11.120s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+[11.121s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+[11.121s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+[11.121s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+[11.121s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.dsv
+[11.125s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+[11.126s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.127s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+[11.127s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+[11.127s] -- Up-to-date symlink: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.xml
+[11.153s] Listing '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot'...
+[11.163s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': AMENT_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble LD_LIBRARY_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot

@@ -4,7 +4,7 @@
 #include "rl_custom_messages/msg/image_array.hpp"
 #include "rl_custom_messages/srv/observation_service.hpp"
 #include "rl_custom_messages/srv/image_service.hpp"
-#include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/compressed_image.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/opencv.hpp>
 #include <thread>
@@ -60,65 +60,75 @@ private:
 class ImageServer : public rclcpp::Node
 {
 public:
-    ImageServer()
-    : Node("image_server")
+    ImageServer(std::string topic)
+    : Node("image_server_" + topic)
     {
-        subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
-        "camera_image", 10, std::bind(&ImageServer::topic_callback, this, _1));
-        service_ = this->create_service<rl_custom_messages::srv::ImageService>("get_image_data",
+        subscription_ = this->create_subscription<sensor_msgs::msg::CompressedImage>(
+        topic, 10, std::bind(&ImageServer::topic_callback, this, _1));
+        service_ = this->create_service<rl_custom_messages::srv::ImageService>("get_image_data_" + topic,
         std::bind(&ImageServer::service_callback, this, _1, _2));
     }
 
 private:
-    void topic_callback(const sensor_msgs::msg::Image::SharedPtr msg)
+    void topic_callback(const sensor_msgs::msg::CompressedImage::SharedPtr msg)
     {
-        cv_bridge::CvImagePtr cv_ptr;
-        try
-        {
-            cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-        }
-        catch (cv_bridge::Exception& e)
-        {
-            RCLCPP_ERROR(this->get_logger(), "cv_bridge exception: %s", e.what());
-            return;
-        }
-        last_image_data_ = cv_ptr->image;
+        last_image_data_ = *msg;  // Directly store the compressed image
     }
 
     void service_callback(
         const std::shared_ptr<rl_custom_messages::srv::ImageService::Request> request,
         std::shared_ptr<rl_custom_messages::srv::ImageService::Response> response)
     {
-        rl_custom_messages::msg::ImageArray img_msg;
-        img_msg.data.assign(last_image_data_.data, last_image_data_.data + last_image_data_.total()*last_image_data_.channels());
-        response->image_data = img_msg;
+        response->image_data = last_image_data_; // Forward the compressed image
+    }
+
+    rclcpp::Subscription<sensor_msgs::msg::CompressedImage>::SharedPtr subscription_;
+    rclcpp::Service<rl_custom_messages::srv::ImageService>::SharedPtr service_;
+    sensor_msgs::msg::CompressedImage last_image_data_;
+};
+
+class AudioReceiverSubscriber : public rclcpp::Node
+{
+public:
+    AudioReceiverSubscriber()
+    : Node("audio_receiver_subscriber")
+    {
+        subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
+        "audio_data", 10, std::bind(&AudioReceiverSubscriber::topic_callback, this, _1));
+    }
+
+private:
+    void topic_callback(const sensor_msgs::msg::Image::SharedPtr msg) const
+    {
+        RCLCPP_INFO(this->get_logger(), "Received Audio Data");
+        // Here you can write the audio data to a file, send it to a speech-to-text API, etc.
+        // The data is in msg->
     }
 
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
-    rclcpp::Service<rl_custom_messages::srv::ImageService>::SharedPtr service_;
-    cv::Mat last_image_data_;
-    std::thread display_thread_;
 };
-
 
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);
 
     auto range_subscriber = std::make_shared<RangeSubscriber>();
-    auto image_server = std::make_shared<ImageServer>();
+    auto image_server_0 = std::make_shared<ImageServer>("camera_image_0");
+    auto image_server_1 = std::make_shared<ImageServer>("camera_image_1");
+    auto audio_receiver_subscriber = std::make_shared<AudioReceiverSubscriber>();
 
     rclcpp::executors::MultiThreadedExecutor executor;
 
     executor.add_node(range_subscriber);
-    executor.add_node(image_server);
+    executor.add_node(image_server_0);
+    executor.add_node(image_server_1);
+    executor.add_node(audio_receiver_subscriber);
 
     executor.spin();
 
     rclcpp::shutdown();
     return 0;
 }
-
 
 
 

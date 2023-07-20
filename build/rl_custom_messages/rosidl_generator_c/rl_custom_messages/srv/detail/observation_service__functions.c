@@ -16,7 +16,8 @@ rl_custom_messages__srv__ObservationService_Request__init(rl_custom_messages__sr
   if (!msg) {
     return false;
   }
-  // action
+  // motor_action
+  // sound_action
   return true;
 }
 
@@ -26,7 +27,8 @@ rl_custom_messages__srv__ObservationService_Request__fini(rl_custom_messages__sr
   if (!msg) {
     return;
   }
-  // action
+  // motor_action
+  // sound_action
 }
 
 bool
@@ -35,9 +37,15 @@ rl_custom_messages__srv__ObservationService_Request__are_equal(const rl_custom_m
   if (!lhs || !rhs) {
     return false;
   }
-  // action
+  // motor_action
   for (size_t i = 0; i < 12; ++i) {
-    if (lhs->action[i] != rhs->action[i]) {
+    if (lhs->motor_action[i] != rhs->motor_action[i]) {
+      return false;
+    }
+  }
+  // sound_action
+  for (size_t i = 0; i < 1; ++i) {
+    if (lhs->sound_action[i] != rhs->sound_action[i]) {
       return false;
     }
   }
@@ -52,9 +60,13 @@ rl_custom_messages__srv__ObservationService_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // action
+  // motor_action
   for (size_t i = 0; i < 12; ++i) {
-    output->action[i] = input->action[i];
+    output->motor_action[i] = input->motor_action[i];
+  }
+  // sound_action
+  for (size_t i = 0; i < 1; ++i) {
+    output->sound_action[i] = input->sound_action[i];
   }
   return true;
 }

@@ -1,0 +1,126 @@
+[0.000000] (-) TimerEvent: {}
+[0.000151] (rl_custom_messages) JobQueued: {'identifier': 'rl_custom_messages', 'dependencies': OrderedDict()}
+[0.000202] (jaybot) JobQueued: {'identifier': 'jaybot', 'dependencies': OrderedDict([('rl_custom_messages', '/home/rlcontrol/jay_ws/install/rl_custom_messages')])}
+[0.000383] (rl_custom_messages) JobStarted: {'identifier': 'rl_custom_messages'}
+[0.014343] (rl_custom_messages) JobProgress: {'identifier': 'rl_custom_messages', 'progress': 'cmake'}
+[0.015298] (rl_custom_messages) JobProgress: {'identifier': 'rl_custom_messages', 'progress': 'build'}
+[0.015971] (rl_custom_messages) Command: {'cmd': ['/home/rlcontrol/.local/bin/cmake', '--build', '/home/rlcontrol/jay_ws/build/rl_custom_messages', '--', '-j6', '-l6'], 'cwd': '/home/rlcontrol/jay_ws/build/rl_custom_messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rlcontrol'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/rlcontrol/jay_ws/install/rl_custom_messages/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rlcontrol'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3441'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rlcontrol/jay_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rlcontrol'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rlcontrol'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/rlcontrol/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rlcontrol:@/tmp/.ICE-unix/1254,unix/rlcontrol:/tmp/.ICE-unix/1254'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87ec8dc7_46e8_46ea_b6cf_77345a5dd7d1'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.2IVG81'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.116'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rlcontrol/jay_ws/build/rl_custom_messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages:/home/rlcontrol/jay_ws/install/rl_custom_messages/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rlcontrol/jay_ws/install/jaybot:/home/rlcontrol/jay_ws/install/rl_custom_messages:/opt/ros/humble')]), 'shell': False}
+[0.074020] (rl_custom_messages) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.098544] (-) TimerEvent: {}
+[0.198965] (-) TimerEvent: {}
+[0.202815] (rl_custom_messages) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.215408] (rl_custom_messages) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.218054] (rl_custom_messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.223123] (rl_custom_messages) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.268678] (rl_custom_messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299167] (-) TimerEvent: {}
+[0.399525] (-) TimerEvent: {}
+[0.500004] (-) TimerEvent: {}
+[0.541609] (rl_custom_messages) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.600330] (-) TimerEvent: {}
+[0.661636] (rl_custom_messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700516] (-) TimerEvent: {}
+[0.800924] (-) TimerEvent: {}
+[0.813906] (rl_custom_messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.847282] (rl_custom_messages) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.877369] (rl_custom_messages) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.877546] (rl_custom_messages) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.877632] (rl_custom_messages) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.901118] (-) TimerEvent: {}
+[0.908713] (rl_custom_messages) StdoutLine: {'line': b'-- Configuring done (0.8s)\n'}
+[0.975131] (rl_custom_messages) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[0.981317] (rl_custom_messages) StdoutLine: {'line': b'-- Build files have been written to: /home/rlcontrol/jay_ws/build/rl_custom_messages\n'}
+[1.001409] (-) TimerEvent: {}
+[1.004132] (rl_custom_messages) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.015525] (rl_custom_messages) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.022810] (rl_custom_messages) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_symlink_rl_custom_messages\n'}
+[1.101645] (-) TimerEvent: {}
+[1.202381] (-) TimerEvent: {}
+[1.303002] (-) TimerEvent: {}
+[1.403526] (-) TimerEvent: {}
+[1.410361] (rl_custom_messages) StdoutLine: {'line': b'running egg_info\n'}
+[1.411421] (rl_custom_messages) StdoutLine: {'line': b'writing rl_custom_messages.egg-info/PKG-INFO\n'}
+[1.411867] (rl_custom_messages) StdoutLine: {'line': b'writing dependency_links to rl_custom_messages.egg-info/dependency_links.txt\n'}
+[1.412380] (rl_custom_messages) StdoutLine: {'line': b'writing top-level names to rl_custom_messages.egg-info/top_level.txt\n'}
+[1.415702] (rl_custom_messages) StdoutLine: {'line': b"reading manifest file 'rl_custom_messages.egg-info/SOURCES.txt'\n"}
+[1.416950] (rl_custom_messages) StdoutLine: {'line': b"writing manifest file 'rl_custom_messages.egg-info/SOURCES.txt'\n"}
+[1.443288] (rl_custom_messages) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_rl_custom_messages_egg\n'}
+[1.503907] (-) TimerEvent: {}
+[1.604408] (-) TimerEvent: {}
+[1.607361] (rl_custom_messages) StdoutLine: {'line': b'[  2%] Built target rl_custom_messages__cpp\n'}
+[1.621381] (rl_custom_messages) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.624378] (rl_custom_messages) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.631005] (rl_custom_messages) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.687822] (rl_custom_messages) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/range_array__functions.c.o\x1b[0m\n'}
+[1.689377] (rl_custom_messages) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/image_array__functions.c.o\x1b[0m\n'}
+[1.689756] (rl_custom_messages) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/motor_commands__functions.c.o\x1b[0m\n'}
+[1.704641] (-) TimerEvent: {}
+[1.730713] (rl_custom_messages) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/image_array__functions.h:19\x1b[m\x1b[K,\n'}
+[1.730929] (rl_custom_messages) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/image_array__functions.c:4\x1b[m\x1b[K:\n'}
+[1.733570] (rl_custom_messages) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/msg/detail/image_array__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[1.733817] (rl_custom_messages) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[1.733924] (rl_custom_messages) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.734020] (rl_custom_messages) StderrLine: {'line': b'compilation terminated.\n'}
+[1.734118] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/build.make:213: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/rosidl_generator_c/rl_custom_messages/msg/detail/image_array__functions.c.o] Error 1\n'}
+[1.734221] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[1.797203] (rl_custom_messages) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/rl_custom_messages__rosidl_generator_c.dir/all] Error 2\n'}
+[1.797378] (rl_custom_messages) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[1.804873] (-) TimerEvent: {}
+[1.905551] (-) TimerEvent: {}
+[2.006084] (-) TimerEvent: {}
+[2.081288] (rl_custom_messages) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp.o\x1b[0m\n'}
+[2.082228] (rl_custom_messages) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/motor_commands__type_support.cpp.o\x1b[0m\n'}
+[2.083334] (rl_custom_messages) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/image_array__type_support.cpp.o\x1b[0m\n'}
+[2.087291] (rl_custom_messages) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/audio_data__type_support.cpp.o\x1b[0m\n'}
+[2.106477] (-) TimerEvent: {}
+[2.207048] (-) TimerEvent: {}
+[2.211555] (rl_custom_messages) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_cpp/rl_custom_messages/msg/image_array__type_support.cpp:7\x1b[m\x1b[K:\n'}
+[2.211739] (rl_custom_messages) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory\n'}
+[2.211987] (rl_custom_messages) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.hpp"\x1b[m\x1b[K\n'}
+[2.212086] (rl_custom_messages) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.212176] (rl_custom_messages) StderrLine: {'line': b'compilation terminated.\n'}
+[2.213124] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/build.make:134: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/image_array__type_support.cpp.o] Error 1\n'}
+[2.213421] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.225768] (rl_custom_messages) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp.o\x1b[0m\n'}
+[2.226264] (rl_custom_messages) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o\x1b[0m\n'}
+[2.258314] (rl_custom_messages) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rl_custom_messages/msg/detail/dds_fastrtps/range_array__type_support.cpp.o\x1b[0m\n'}
+[2.307364] (-) TimerEvent: {}
+[2.407998] (-) TimerEvent: {}
+[2.493658] (rl_custom_messages) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rl_custom_messages/msg/detail/dds_fastrtps/motor_commands__type_support.cpp.o\x1b[0m\n'}
+[2.503433] (rl_custom_messages) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__type_support.cpp.o\x1b[0m\n'}
+[2.508189] (-) TimerEvent: {}
+[2.524909] (rl_custom_messages) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/all] Error 2\n'}
+[2.552003] (rl_custom_messages) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/audio_data__type_support.cpp.o\x1b[0m\n'}
+[2.608476] (-) TimerEvent: {}
+[2.631518] (rl_custom_messages) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__type_support.cpp:12\x1b[m\x1b[K:\n'}
+[2.631840] (rl_custom_messages) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory\n'}
+[2.632076] (rl_custom_messages) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.hpp"\x1b[m\x1b[K\n'}
+[2.632370] (rl_custom_messages) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.632633] (rl_custom_messages) StderrLine: {'line': b'compilation terminated.\n'}
+[2.634545] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/build.make:154: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__type_support.cpp.o] Error 1\n'}
+[2.635167] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.643172] (rl_custom_messages) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rl_custom_messages/msg/detail/dds_fastrtps/image_array__type_support.cpp.o\x1b[0m\n'}
+[2.708721] (-) TimerEvent: {}
+[2.765970] (rl_custom_messages) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_fastrtps_cpp/rl_custom_messages/msg/detail/image_array__rosidl_typesupport_fastrtps_cpp.hpp:11\x1b[m\x1b[K,\n'}
+[2.766356] (rl_custom_messages) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_fastrtps_cpp/rl_custom_messages/msg/detail/dds_fastrtps/image_array__type_support.cpp:4\x1b[m\x1b[K:\n'}
+[2.766671] (rl_custom_messages) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_cpp/rl_custom_messages/msg/detail/image_array__struct.hpp:20:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory\n'}
+[2.766928] (rl_custom_messages) StderrLine: {'line': b'   20 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.hpp"\x1b[m\x1b[K\n'}
+[2.767256] (rl_custom_messages) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.767534] (rl_custom_messages) StderrLine: {'line': b'compilation terminated.\n'}
+[2.769544] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_cpp.dir/build.make:154: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rl_custom_messages/msg/detail/dds_fastrtps/image_array__type_support.cpp.o] Error 1\n'}
+[2.769929] (rl_custom_messages) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.809061] (-) TimerEvent: {}
+[2.909746] (-) TimerEvent: {}
+[3.021294] (-) TimerEvent: {}
+[3.082489] (rl_custom_messages) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2\n'}
+[3.090158] (rl_custom_messages) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/all] Error 2\n'}
+[3.090423] (rl_custom_messages) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.095466] (rl_custom_messages) CommandEnded: {'returncode': 2}
+[3.121492] (-) TimerEvent: {}
+[3.221854] (-) TimerEvent: {}
+[3.322355] (-) TimerEvent: {}
+[3.422934] (-) TimerEvent: {}
+[3.523297] (-) TimerEvent: {}
+[3.580553] (rl_custom_messages) JobEnded: {'identifier': 'rl_custom_messages', 'rc': 2}
+[3.591480] (jaybot) JobSkipped: {'identifier': 'jaybot'}
+[3.591554] (-) EventReactorShutdown: {}

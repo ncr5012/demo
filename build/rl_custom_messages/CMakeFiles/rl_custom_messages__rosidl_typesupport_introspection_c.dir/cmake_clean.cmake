@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/audio_data__type_support.c.o"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/audio_data__type_support.c.o.d"
-  "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/image_array__type_support.c.o"
-  "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/image_array__type_support.c.o.d"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/motor_commands__type_support.c.o"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/motor_commands__type_support.c.o.d"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/range_array__type_support.c.o"
@@ -15,8 +13,6 @@ file(REMOVE_RECURSE
   "librl_custom_messages__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/audio_data__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/audio_data__type_support.c"
-  "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/image_array__rosidl_typesupport_introspection_c.h"
-  "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/image_array__type_support.c"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/motor_commands__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/motor_commands__type_support.c"
   "rosidl_typesupport_introspection_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_c.h"

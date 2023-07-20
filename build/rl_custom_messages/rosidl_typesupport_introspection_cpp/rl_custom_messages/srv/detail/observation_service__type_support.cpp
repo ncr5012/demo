@@ -37,60 +37,115 @@ void ObservationService_Request_fini_function(void * message_memory)
   typed_message->~ObservationService_Request();
 }
 
-size_t size_function__ObservationService_Request__action(const void * untyped_member)
+size_t size_function__ObservationService_Request__motor_action(const void * untyped_member)
 {
   (void)untyped_member;
   return 12;
 }
 
-const void * get_const_function__ObservationService_Request__action(const void * untyped_member, size_t index)
+const void * get_const_function__ObservationService_Request__motor_action(const void * untyped_member, size_t index)
 {
   const auto & member =
     *reinterpret_cast<const std::array<int32_t, 12> *>(untyped_member);
   return &member[index];
 }
 
-void * get_function__ObservationService_Request__action(void * untyped_member, size_t index)
+void * get_function__ObservationService_Request__motor_action(void * untyped_member, size_t index)
 {
   auto & member =
     *reinterpret_cast<std::array<int32_t, 12> *>(untyped_member);
   return &member[index];
 }
 
-void fetch_function__ObservationService_Request__action(
+void fetch_function__ObservationService_Request__motor_action(
   const void * untyped_member, size_t index, void * untyped_value)
 {
   const auto & item = *reinterpret_cast<const int32_t *>(
-    get_const_function__ObservationService_Request__action(untyped_member, index));
+    get_const_function__ObservationService_Request__motor_action(untyped_member, index));
   auto & value = *reinterpret_cast<int32_t *>(untyped_value);
   value = item;
 }
 
-void assign_function__ObservationService_Request__action(
+void assign_function__ObservationService_Request__motor_action(
   void * untyped_member, size_t index, const void * untyped_value)
 {
   auto & item = *reinterpret_cast<int32_t *>(
-    get_function__ObservationService_Request__action(untyped_member, index));
+    get_function__ObservationService_Request__motor_action(untyped_member, index));
   const auto & value = *reinterpret_cast<const int32_t *>(untyped_value);
   item = value;
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ObservationService_Request_message_member_array[1] = {
+size_t size_function__ObservationService_Request__sound_action(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 1;
+}
+
+const void * get_const_function__ObservationService_Request__sound_action(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<int32_t, 1> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__ObservationService_Request__sound_action(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<int32_t, 1> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__ObservationService_Request__sound_action(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const int32_t *>(
+    get_const_function__ObservationService_Request__sound_action(untyped_member, index));
+  auto & value = *reinterpret_cast<int32_t *>(untyped_value);
+  value = item;
+}
+
+void assign_function__ObservationService_Request__sound_action(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<int32_t *>(
+    get_function__ObservationService_Request__sound_action(untyped_member, index));
+  const auto & value = *reinterpret_cast<const int32_t *>(untyped_value);
+  item = value;
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ObservationService_Request_message_member_array[2] = {
   {
-    "action",  // name
+    "motor_action",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     true,  // is array
     12,  // array size
     false,  // is upper bound
-    offsetof(rl_custom_messages::srv::ObservationService_Request, action),  // bytes offset in struct
+    offsetof(rl_custom_messages::srv::ObservationService_Request, motor_action),  // bytes offset in struct
     nullptr,  // default value
-    size_function__ObservationService_Request__action,  // size() function pointer
-    get_const_function__ObservationService_Request__action,  // get_const(index) function pointer
-    get_function__ObservationService_Request__action,  // get(index) function pointer
-    fetch_function__ObservationService_Request__action,  // fetch(index, &value) function pointer
-    assign_function__ObservationService_Request__action,  // assign(index, value) function pointer
+    size_function__ObservationService_Request__motor_action,  // size() function pointer
+    get_const_function__ObservationService_Request__motor_action,  // get_const(index) function pointer
+    get_function__ObservationService_Request__motor_action,  // get(index) function pointer
+    fetch_function__ObservationService_Request__motor_action,  // fetch(index, &value) function pointer
+    assign_function__ObservationService_Request__motor_action,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "sound_action",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    1,  // array size
+    false,  // is upper bound
+    offsetof(rl_custom_messages::srv::ObservationService_Request, sound_action),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__ObservationService_Request__sound_action,  // size() function pointer
+    get_const_function__ObservationService_Request__sound_action,  // get_const(index) function pointer
+    get_function__ObservationService_Request__sound_action,  // get(index) function pointer
+    fetch_function__ObservationService_Request__sound_action,  // fetch(index, &value) function pointer
+    assign_function__ObservationService_Request__sound_action,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };
@@ -98,7 +153,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ObservationSe
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ObservationService_Request_message_members = {
   "rl_custom_messages::srv",  // message namespace
   "ObservationService_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(rl_custom_messages::srv::ObservationService_Request),
   ObservationService_Request_message_member_array,  // message members
   ObservationService_Request_init_function,  // function to initialize message memory (memory has to be allocated)

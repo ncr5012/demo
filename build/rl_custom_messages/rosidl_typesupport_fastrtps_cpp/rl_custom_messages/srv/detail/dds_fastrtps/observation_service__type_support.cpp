@@ -32,9 +32,13 @@ cdr_serialize(
   const rl_custom_messages::srv::ObservationService_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: action
+  // Member: motor_action
   {
-    cdr << ros_message.action;
+    cdr << ros_message.motor_action;
+  }
+  // Member: sound_action
+  {
+    cdr << ros_message.sound_action;
   }
   return true;
 }
@@ -45,9 +49,14 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rl_custom_messages::srv::ObservationService_Request & ros_message)
 {
-  // Member: action
+  // Member: motor_action
   {
-    cdr >> ros_message.action;
+    cdr >> ros_message.motor_action;
+  }
+
+  // Member: sound_action
+  {
+    cdr >> ros_message.sound_action;
   }
 
   return true;
@@ -66,10 +75,17 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: action
+  // Member: motor_action
   {
     size_t array_size = 12;
-    size_t item_size = sizeof(ros_message.action[0]);
+    size_t item_size = sizeof(ros_message.motor_action[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: sound_action
+  {
+    size_t array_size = 1;
+    size_t item_size = sizeof(ros_message.sound_action[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -95,9 +111,17 @@ max_serialized_size_ObservationService_Request(
   is_plain = true;
 
 
-  // Member: action
+  // Member: motor_action
   {
     size_t array_size = 12;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: sound_action
+  {
+    size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

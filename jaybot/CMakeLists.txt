@@ -40,6 +40,10 @@ add_executable(microphone_publisher src/microphone_publisher.cpp)
 target_link_libraries(microphone_publisher ${sensor_msgs_LIBS} asound)
 ament_target_dependencies(microphone_publisher rclcpp rl_custom_messages)
 
+add_executable(speaker_controller src/speaker_controller.cpp)
+target_link_libraries(speaker_controller ${sensor_msgs_LIBS} asound)
+ament_target_dependencies(speaker_controller rclcpp rl_custom_messages)
+
 add_executable(rl_server src/rl_server.cpp)
 target_link_libraries(rl_server ${OpenCV_LIBS} ${cv_bridge_LIBS})
 ament_target_dependencies(rl_server rclcpp rl_custom_messages cv_bridge)
@@ -54,6 +58,7 @@ install(TARGETS
   motor_controller
   camera_publisher
   microphone_publisher
+  speaker_controller
   rl_server
   image_debugger
   DESTINATION lib/${PROJECT_NAME})
@@ -67,7 +72,6 @@ ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
   scripts/rl_mind.py
-  scripts/robot_monitor.py
   DESTINATION lib/${PROJECT_NAME}
 )
 ament_export_dependencies(rclcpp rl_custom_messages sensor_msgs)

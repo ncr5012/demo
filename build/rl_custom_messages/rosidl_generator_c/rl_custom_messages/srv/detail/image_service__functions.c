@@ -237,7 +237,7 @@ rl_custom_messages__srv__ImageService_Request__Sequence__copy(
 
 // Include directives for member types
 // Member `image_data`
-#include "rl_custom_messages/msg/detail/image_array__functions.h"
+#include "sensor_msgs/msg/detail/compressed_image__functions.h"
 
 bool
 rl_custom_messages__srv__ImageService_Response__init(rl_custom_messages__srv__ImageService_Response * msg)
@@ -246,7 +246,7 @@ rl_custom_messages__srv__ImageService_Response__init(rl_custom_messages__srv__Im
     return false;
   }
   // image_data
-  if (!rl_custom_messages__msg__ImageArray__init(&msg->image_data)) {
+  if (!sensor_msgs__msg__CompressedImage__init(&msg->image_data)) {
     rl_custom_messages__srv__ImageService_Response__fini(msg);
     return false;
   }
@@ -260,7 +260,7 @@ rl_custom_messages__srv__ImageService_Response__fini(rl_custom_messages__srv__Im
     return;
   }
   // image_data
-  rl_custom_messages__msg__ImageArray__fini(&msg->image_data);
+  sensor_msgs__msg__CompressedImage__fini(&msg->image_data);
 }
 
 bool
@@ -270,7 +270,7 @@ rl_custom_messages__srv__ImageService_Response__are_equal(const rl_custom_messag
     return false;
   }
   // image_data
-  if (!rl_custom_messages__msg__ImageArray__are_equal(
+  if (!sensor_msgs__msg__CompressedImage__are_equal(
       &(lhs->image_data), &(rhs->image_data)))
   {
     return false;
@@ -287,7 +287,7 @@ rl_custom_messages__srv__ImageService_Response__copy(
     return false;
   }
   // image_data
-  if (!rl_custom_messages__msg__ImageArray__copy(
+  if (!sensor_msgs__msg__CompressedImage__copy(
       &(input->image_data), &(output->image_data)))
   {
     return false;

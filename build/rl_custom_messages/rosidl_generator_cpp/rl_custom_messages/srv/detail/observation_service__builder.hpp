@@ -21,16 +21,32 @@ namespace srv
 namespace builder
 {
 
-class Init_ObservationService_Request_action
+class Init_ObservationService_Request_sound_action
 {
 public:
-  Init_ObservationService_Request_action()
+  explicit Init_ObservationService_Request_sound_action(::rl_custom_messages::srv::ObservationService_Request & msg)
+  : msg_(msg)
+  {}
+  ::rl_custom_messages::srv::ObservationService_Request sound_action(::rl_custom_messages::srv::ObservationService_Request::_sound_action_type arg)
+  {
+    msg_.sound_action = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::rl_custom_messages::srv::ObservationService_Request msg_;
+};
+
+class Init_ObservationService_Request_motor_action
+{
+public:
+  Init_ObservationService_Request_motor_action()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::rl_custom_messages::srv::ObservationService_Request action(::rl_custom_messages::srv::ObservationService_Request::_action_type arg)
+  Init_ObservationService_Request_sound_action motor_action(::rl_custom_messages::srv::ObservationService_Request::_motor_action_type arg)
   {
-    msg_.action = std::move(arg);
-    return std::move(msg_);
+    msg_.motor_action = std::move(arg);
+    return Init_ObservationService_Request_sound_action(msg_);
   }
 
 private:
@@ -48,7 +64,7 @@ template<>
 inline
 auto build<::rl_custom_messages::srv::ObservationService_Request>()
 {
-  return rl_custom_messages::srv::builder::Init_ObservationService_Request_action();
+  return rl_custom_messages::srv::builder::Init_ObservationService_Request_motor_action();
 }
 
 }  // namespace rl_custom_messages

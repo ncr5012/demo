@@ -1,7 +1,5 @@
 msg/AudioData.idl
 msg/AudioData.msg
-msg/ImageArray.idl
-msg/ImageArray.msg
 msg/MotorCommands.idl
 msg/MotorCommands.msg
 msg/RangeArray.idl

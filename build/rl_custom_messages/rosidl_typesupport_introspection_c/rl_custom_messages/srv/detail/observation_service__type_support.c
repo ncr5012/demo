@@ -31,14 +31,14 @@ void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_int
   rl_custom_messages__srv__ObservationService_Request__fini(message_memory);
 }
 
-size_t rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__action(
+size_t rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__motor_action(
   const void * untyped_member)
 {
   (void)untyped_member;
   return 12;
 }
 
-const void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__action(
+const void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__motor_action(
   const void * untyped_member, size_t index)
 {
   const int32_t * member =
@@ -46,7 +46,7 @@ const void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesup
   return &member[index];
 }
 
-void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__action(
+void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__motor_action(
   void * untyped_member, size_t index)
 {
   int32_t * member =
@@ -54,44 +54,106 @@ void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_i
   return &member[index];
 }
 
-void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__action(
+void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__motor_action(
   const void * untyped_member, size_t index, void * untyped_value)
 {
   const int32_t * item =
     ((const int32_t *)
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__action(untyped_member, index));
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__motor_action(untyped_member, index));
   int32_t * value =
     (int32_t *)(untyped_value);
   *value = *item;
 }
 
-void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__action(
+void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__motor_action(
   void * untyped_member, size_t index, const void * untyped_value)
 {
   int32_t * item =
     ((int32_t *)
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__action(untyped_member, index));
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__motor_action(untyped_member, index));
   const int32_t * value =
     (const int32_t *)(untyped_value);
   *item = *value;
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__ObservationService_Request_message_member_array[1] = {
+size_t rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__sound_action(
+  const void * untyped_member)
+{
+  (void)untyped_member;
+  return 1;
+}
+
+const void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__sound_action(
+  const void * untyped_member, size_t index)
+{
+  const int32_t * member =
+    (const int32_t *)(untyped_member);
+  return &member[index];
+}
+
+void * rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__sound_action(
+  void * untyped_member, size_t index)
+{
+  int32_t * member =
+    (int32_t *)(untyped_member);
+  return &member[index];
+}
+
+void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__sound_action(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int32_t * item =
+    ((const int32_t *)
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__sound_action(untyped_member, index));
+  int32_t * value =
+    (int32_t *)(untyped_value);
+  *value = *item;
+}
+
+void rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__sound_action(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int32_t * item =
+    ((int32_t *)
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__sound_action(untyped_member, index));
+  const int32_t * value =
+    (const int32_t *)(untyped_value);
+  *item = *value;
+}
+
+static rosidl_typesupport_introspection_c__MessageMember rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__ObservationService_Request_message_member_array[2] = {
   {
-    "action",  // name
+    "motor_action",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     true,  // is array
     12,  // array size
     false,  // is upper bound
-    offsetof(rl_custom_messages__srv__ObservationService_Request, action),  // bytes offset in struct
+    offsetof(rl_custom_messages__srv__ObservationService_Request, motor_action),  // bytes offset in struct
     NULL,  // default value
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__action,  // size() function pointer
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__action,  // get_const(index) function pointer
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__action,  // get(index) function pointer
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__action,  // fetch(index, &value) function pointer
-    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__action,  // assign(index, value) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__motor_action,  // size() function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__motor_action,  // get_const(index) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__motor_action,  // get(index) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__motor_action,  // fetch(index, &value) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__motor_action,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "sound_action",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    1,  // array size
+    false,  // is upper bound
+    offsetof(rl_custom_messages__srv__ObservationService_Request, sound_action),  // bytes offset in struct
+    NULL,  // default value
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__size_function__ObservationService_Request__sound_action,  // size() function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_const_function__ObservationService_Request__sound_action,  // get_const(index) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__get_function__ObservationService_Request__sound_action,  // get(index) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__fetch_function__ObservationService_Request__sound_action,  // fetch(index, &value) function pointer
+    rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__assign_function__ObservationService_Request__sound_action,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
@@ -99,7 +161,7 @@ static rosidl_typesupport_introspection_c__MessageMember rl_custom_messages__srv
 static const rosidl_typesupport_introspection_c__MessageMembers rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__ObservationService_Request_message_members = {
   "rl_custom_messages__srv",  // message namespace
   "ObservationService_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(rl_custom_messages__srv__ObservationService_Request),
   rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__ObservationService_Request_message_member_array,  // message members
   rl_custom_messages__srv__ObservationService_Request__rosidl_typesupport_introspection_c__ObservationService_Request_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -124,7 +124,7 @@ using ImageService_Request =
 
 // Include directives for member types
 // Member 'image_data'
-#include "rl_custom_messages/msg/detail/image_array__struct.hpp"
+#include "sensor_msgs/msg/detail/compressed_image__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__rl_custom_messages__srv__ImageService_Response __attribute__((deprecated))
@@ -158,12 +158,12 @@ struct ImageService_Response_
 
   // field types and members
   using _image_data_type =
-    rl_custom_messages::msg::ImageArray_<ContainerAllocator>;
+    sensor_msgs::msg::CompressedImage_<ContainerAllocator>;
   _image_data_type image_data;
 
   // setters for named parameter idiom
   Type & set__image_data(
-    const rl_custom_messages::msg::ImageArray_<ContainerAllocator> & _arg)
+    const sensor_msgs::msg::CompressedImage_<ContainerAllocator> & _arg)
   {
     this->image_data = _arg;
     return *this;

@@ -38,12 +38,12 @@ typedef struct rl_custom_messages__srv__ImageService_Request__Sequence
 
 // Include directives for member types
 // Member 'image_data'
-#include "rl_custom_messages/msg/detail/image_array__struct.h"
+#include "sensor_msgs/msg/detail/compressed_image__struct.h"
 
 /// Struct defined in srv/ImageService in the package rl_custom_messages.
 typedef struct rl_custom_messages__srv__ImageService_Response
 {
-  rl_custom_messages__msg__ImageArray image_data;
+  sensor_msgs__msg__CompressedImage image_data;
 } rl_custom_messages__srv__ImageService_Response;
 
 // Struct for a sequence of rl_custom_messages__srv__ImageService_Response.

@@ -250,6 +250,19 @@ microphone_publisher/fast:
 .PHONY : microphone_publisher/fast
 
 #=============================================================================
+# Target rules for targets named speaker_controller
+
+# Build rule for target.
+speaker_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 speaker_controller
+.PHONY : speaker_controller
+
+# fast build rule for target.
+speaker_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/speaker_controller.dir/build.make CMakeFiles/speaker_controller.dir/build
+.PHONY : speaker_controller/fast
+
+#=============================================================================
 # Target rules for targets named rl_server
 
 # Build rule for target.
@@ -445,6 +458,30 @@ src/rl_server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rl_server.dir/build.make CMakeFiles/rl_server.dir/src/rl_server.cpp.s
 .PHONY : src/rl_server.cpp.s
 
+src/speaker_controller.o: src/speaker_controller.cpp.o
+.PHONY : src/speaker_controller.o
+
+# target to build an object file
+src/speaker_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/speaker_controller.dir/build.make CMakeFiles/speaker_controller.dir/src/speaker_controller.cpp.o
+.PHONY : src/speaker_controller.cpp.o
+
+src/speaker_controller.i: src/speaker_controller.cpp.i
+.PHONY : src/speaker_controller.i
+
+# target to preprocess a source file
+src/speaker_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/speaker_controller.dir/build.make CMakeFiles/speaker_controller.dir/src/speaker_controller.cpp.i
+.PHONY : src/speaker_controller.cpp.i
+
+src/speaker_controller.s: src/speaker_controller.cpp.s
+.PHONY : src/speaker_controller.s
+
+# target to generate assembly for a file
+src/speaker_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/speaker_controller.dir/build.make CMakeFiles/speaker_controller.dir/src/speaker_controller.cpp.s
+.PHONY : src/speaker_controller.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -468,6 +505,7 @@ help:
 	@echo "... motor_controller"
 	@echo "... range_publisher"
 	@echo "... rl_server"
+	@echo "... speaker_controller"
 	@echo "... src/camera_publisher.o"
 	@echo "... src/camera_publisher.i"
 	@echo "... src/camera_publisher.s"
@@ -486,6 +524,9 @@ help:
 	@echo "... src/rl_server.o"
 	@echo "... src/rl_server.i"
 	@echo "... src/rl_server.s"
+	@echo "... src/speaker_controller.o"
+	@echo "... src/speaker_controller.i"
+	@echo "... src/speaker_controller.s"
 .PHONY : help
 
 

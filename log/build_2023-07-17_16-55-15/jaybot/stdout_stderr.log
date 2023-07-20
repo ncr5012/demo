@@ -1,0 +1,57 @@
+[ 16%] Built target camera_publisher
+[ 33%] Built target image_debugger
+[ 50%] Built target range_publisher
+[ 66%] Built target motor_controller
+[ 83%] Built target microphone_publisher
+[ 91%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[ 91%] Built target ament_cmake_python_symlink_jaybot
+running egg_info
+writing jaybot.egg-info/PKG-INFO
+writing dependency_links to jaybot.egg-info/dependency_links.txt
+writing top-level names to jaybot.egg-info/top_level.txt
+reading manifest file 'jaybot.egg-info/SOURCES.txt'
+writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[ 91%] Built target ament_cmake_python_build_jaybot_egg
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:68:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSoundCommands[m[K’ is not a member of ‘[01m[Krl_custom_messages::msg[m[K’; did you mean ‘[01m[KMotorCommands[m[K’?
+   68 |   rclcpp::Publisher<rl_custom_messages::msg::[01;31m[KSoundCommands[m[K>::SharedPtr sound_command_publisher_;
+      |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                              [32m[KMotorCommands[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:68:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   68 |   rclcpp::Publisher<rl_custom_messages::msg::SoundCommands[01;31m[K>[m[K::SharedPtr sound_command_publisher_;
+      |                                                           [01;31m[K^[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:68:62:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   68 |   rclcpp::Publisher<rl_custom_messages::msg::SoundCommands>::[01;31m[KSharedPtr[m[K sound_command_publisher_;
+      |                                                              [01;31m[K^~~~~~~~~[m[K
+      |                                                                       [32m[K;[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:68:72:[m[K [01;31m[Kerror: [m[K‘[01m[Ksound_command_publisher_[m[K’ does not name a type
+   68 |   rclcpp::Publisher<rl_custom_messages::msg::SoundCommands>::SharedPtr [01;31m[Ksound_command_publisher_[m[K;
+      |                                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In constructor ‘[01m[KRangeSubscriber::RangeSubscriber()[m[K’:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:25:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksound_command_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmotor_command_publisher_[m[K’?
+   25 |     [01;31m[Ksound_command_publisher_[m[K = this->create_publisher<rl_custom_messages::msg::MotorCommands>("sound_commands", 10);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[Kmotor_command_publisher_[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid RangeSubscriber::service_callback(std::shared_ptr<rl_custom_messages::srv::ObservationService_Request_<std::allocator<void> > >, std::shared_ptr<rl_custom_messages::srv::ObservationService_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:41:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct rl_custom_messages::srv::ObservationService_Request_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::srv::ObservationService_Request_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmotor_action[m[K’; did you mean ‘[01m[Ksound_action[m[K’?
+   41 |     std::copy(request->[01;31m[Kmotor_action[m[K.begin(), request->motor_action.end(), std::back_inserter(motor_commands.commands));
+      |                        [01;31m[K^~~~~~~~~~~~[m[K
+      |                        [32m[Ksound_action[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:41:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct rl_custom_messages::srv::ObservationService_Request_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct rl_custom_messages::srv::ObservationService_Request_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmotor_action[m[K’; did you mean ‘[01m[Ksound_action[m[K’?
+   41 |     std::copy(request->motor_action.begin(), request->[01;31m[Kmotor_action[m[K.end(), std::back_inserter(motor_commands.commands));
+      |                                                       [01;31m[K^~~~~~~~~~~~[m[K
+      |                                                       [32m[Ksound_action[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:62:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksound_command_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmotor_command_publisher_[m[K’?
+   62 |     [01;31m[Ksound_command_publisher_[m[K->publish(sound_commands);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[Kmotor_command_publisher_[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid ImageServer::service_callback(std::shared_ptr<rl_custom_messages::srv::ImageService_Request_<std::allocator<void> > >, std::shared_ptr<rl_custom_messages::srv::ImageService_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:94:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   94 |         [01;35m[Kconst std::shared_ptr<rl_custom_messages::srv::ImageService::Request> request[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid AudioReceiverSubscriber::topic_callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:116:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  116 |     void topic_callback([01;35m[Kconst sensor_msgs::msg::Image::SharedPtr msg[m[K) const
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/rl_server.dir/build.make:76: CMakeFiles/rl_server.dir/src/rl_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/rl_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

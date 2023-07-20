@@ -7,8 +7,11 @@
 module rl_custom_messages {
   module srv {
     typedef int32 int32__12[12];
+    typedef int32 int32__1[1];
     struct ObservationService_Request {
-      int32__12 action;
+      int32__12 motor_action;
+
+      int32__1 sound_action;
     };
     struct ObservationService_Response {
       rl_custom_messages::msg::RangeArray range_data;

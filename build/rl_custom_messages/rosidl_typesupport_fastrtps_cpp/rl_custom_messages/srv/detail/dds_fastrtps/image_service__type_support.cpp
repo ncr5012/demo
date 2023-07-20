@@ -212,29 +212,29 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace rl_custom_messages
+namespace sensor_msgs
 {
 namespace msg
 {
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const rl_custom_messages::msg::ImageArray &,
+  const sensor_msgs::msg::CompressedImage &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
   eprosima::fastcdr::Cdr &,
-  rl_custom_messages::msg::ImageArray &);
+  sensor_msgs::msg::CompressedImage &);
 size_t get_serialized_size(
-  const rl_custom_messages::msg::ImageArray &,
+  const sensor_msgs::msg::CompressedImage &,
   size_t current_alignment);
 size_t
-max_serialized_size_ImageArray(
+max_serialized_size_CompressedImage(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
-}  // namespace rl_custom_messages
+}  // namespace sensor_msgs
 
 
 namespace rl_custom_messages
@@ -253,7 +253,7 @@ cdr_serialize(
   eprosima::fastcdr::Cdr & cdr)
 {
   // Member: image_data
-  rl_custom_messages::msg::typesupport_fastrtps_cpp::cdr_serialize(
+  sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.image_data,
     cdr);
   return true;
@@ -266,7 +266,7 @@ cdr_deserialize(
   rl_custom_messages::srv::ImageService_Response & ros_message)
 {
   // Member: image_data
-  rl_custom_messages::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+  sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.image_data);
 
   return true;
@@ -288,7 +288,7 @@ get_serialized_size(
   // Member: image_data
 
   current_alignment +=
-    rl_custom_messages::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    sensor_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.image_data, current_alignment);
 
   return current_alignment - initial_alignment;
@@ -321,7 +321,7 @@ max_serialized_size_ImageService_Response(
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        rl_custom_messages::msg::typesupport_fastrtps_cpp::max_serialized_size_ImageArray(
+        sensor_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_CompressedImage(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

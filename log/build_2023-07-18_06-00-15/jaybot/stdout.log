@@ -1,0 +1,15 @@
+[ 14%] Built target motor_controller
+[ 28%] Built target range_publisher
+[ 42%] Built target microphone_publisher
+[ 57%] Built target camera_publisher
+[ 71%] Built target rl_server
+[ 78%] [32mBuilding CXX object CMakeFiles/speaker_controller.dir/src/speaker_controller.cpp.o[0m
+[ 78%] Built target ament_cmake_python_symlink_jaybot
+[ 92%] Built target image_debugger
+running egg_info
+writing jaybot.egg-info/PKG-INFO
+writing dependency_links to jaybot.egg-info/dependency_links.txt
+writing top-level names to jaybot.egg-info/top_level.txt
+reading manifest file 'jaybot.egg-info/SOURCES.txt'
+writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[ 92%] Built target ament_cmake_python_build_jaybot_egg

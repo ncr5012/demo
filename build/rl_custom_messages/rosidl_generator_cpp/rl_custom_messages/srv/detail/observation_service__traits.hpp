@@ -25,14 +25,32 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: action
+  // member: motor_action
   {
-    if (msg.action.size() == 0) {
-      out << "action: []";
+    if (msg.motor_action.size() == 0) {
+      out << "motor_action: []";
     } else {
-      out << "action: [";
-      size_t pending_items = msg.action.size();
-      for (auto item : msg.action) {
+      out << "motor_action: [";
+      size_t pending_items = msg.motor_action.size();
+      for (auto item : msg.motor_action) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: sound_action
+  {
+    if (msg.sound_action.size() == 0) {
+      out << "sound_action: []";
+    } else {
+      out << "sound_action: [";
+      size_t pending_items = msg.sound_action.size();
+      for (auto item : msg.sound_action) {
         rosidl_generator_traits::value_to_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
@@ -48,16 +66,36 @@ inline void to_block_style_yaml(
   const ObservationService_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: action
+  // member: motor_action
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.action.size() == 0) {
-      out << "action: []\n";
+    if (msg.motor_action.size() == 0) {
+      out << "motor_action: []\n";
     } else {
-      out << "action:\n";
-      for (auto item : msg.action) {
+      out << "motor_action:\n";
+      for (auto item : msg.motor_action) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: sound_action
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.sound_action.size() == 0) {
+      out << "sound_action: []\n";
+    } else {
+      out << "sound_action:\n";
+      for (auto item : msg.sound_action) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

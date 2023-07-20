@@ -38,6 +38,7 @@ from cv_bridge import CvBridge
 import numpy as np
 from rl_custom_messages.srv import ImageService
 import cv2
+from sensor_msgs.msg import Image
 
 
 
@@ -64,7 +65,9 @@ HUMAN_CONTROL_PENALTY = -1
 #I spectulate superhuman control alone would appear like superhuman capabilities (humans are far from optimal control for most tasks)
 #consider the above thoughts when tinkering with time steps
 
-STEPS_PER_SECOND = 10
+#Upon testing, it looks like its running at roughly 1 step / second. ideally would like to get towards .1 step / second
+
+STEPS_PER_SECOND = 1
 INTERVAL_LENGTH = 60
 TEST_ITERS = 1000
 
@@ -81,8 +84,8 @@ device = torch.device("cpu")
 class ImageClient(Node):
     def __init__(self):
         super().__init__('image_client')
-        self.cli1 = self.create_client(ImageService, 'get_image_data')
-        self.cli2 = self.create_client(ImageService, 'get_image_data_2')
+        self.cli1 = self.create_client(ImageService, 'get_image_data_camera_image_0')
+        self.cli2 = self.create_client(ImageService, 'get_image_data_camera_image_1')
         while not self.cli1.wait_for_service(timeout_sec=1.0) or not self.cli2.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
         self.bridge = CvBridge()
@@ -92,17 +95,24 @@ class ImageClient(Node):
         future = cli.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
-            img_data = np.array(future.result().image_data.data, dtype=np.uint8)
-            img = img_data.reshape((3, 640, 480)) # Reshape to your required shape
-            return img
+            img_data = np.frombuffer(future.result().image_data.data, dtype=np.uint8)
+            img = cv2.imdecode(img_data, cv2.IMREAD_COLOR)  # Decompress the image
+            if img is None:
+                self.get_logger().info('Failed to decode image')
+                return None
+            else:
+                img = np.transpose(img, (2, 0, 1))  # Add this line
+                return img
         else:
             self.get_logger().info('Service call failed %r' % (future.exception(),))
+            return None
 
     def get_image_1(self):
         return self.get_image(self.cli1)
 
     def get_image_2(self):
         return self.get_image(self.cli2)
+
 
 
 
@@ -114,13 +124,19 @@ class ServiceClientNode(Node):
 
     def send_request(self, action):
         req = ObservationService.Request()
-        req.action = action.astype(np.int32)
+        
+        motor_action, sound_action = np.split(action, [12]) # split the action into two halves
+
+        req.motor_action = motor_action.astype(np.int32)
+        req.sound_action = sound_action.astype(np.int32)
+
         future = self.client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
             self.response_deque.append(future.result())
         else:
             self.get_logger().error("Service call failed")
+
 
 
 class RewardTracker:
@@ -213,13 +229,18 @@ class JayEnv(gymnasium.Env):
                 rclpy.init(args=None)
             self.service_client_node = ServiceClientNode()
             self.image_client_node = ImageClient()
-            #Initializes the range of actions the robot can choose to take. format of the action space is <<(wheelfl)<In1><In2><PWM>><wheelfr...><wheelrl>...<wheelrr>...>
+            #Initializes the range of actions the robot can choose to take. format of the action space is <<(wheelfl)<In1><In2><PWM>><wheelfr...><wheelrl>...<wheelrr>...<soundindex>
             #In's can be 0 or 1, the combinations of Ins tell if the motor is spinning clockwise or counterclockwise. PWM can be 0-100 floating point and tell the motor how fast to spin in a given direction
+            #Sound index refers to sound files saved alongside the sound controller code. Each file is a 15s clip the agent can choose to play
+            #Functionality to limit how much the agent can play so it doesnt get annoying isnt implemented yet (ideally we figure out rewards so we dont have to, the agent just learns not to)
             #Agent has essentially root level physical control over the robot, able to execute any combination of movements the hardware platform will support
             #Note - PWM selections were modified to be integers 1-100 for ease of implementation with NN, floats would produce finer movements
-            #self.motor_space = gymnasium.spaces.Tuple((gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Box(low=0, high=100, shape=(), dtype=np.float32)))
+            
+            #Note on editing spaces - edting the action space takes several steps. You have to change the reset function also (its not tied to this action space)
+            #You also need to modify the NN's when editing the action or observation space, code is not written well all in all
             self.motor_space = gymnasium.spaces.Tuple((gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(101)))
-            self.action_space = gymnasium.spaces.Tuple((self.motor_space,self.motor_space,self.motor_space,self.motor_space))
+            self.speaker_space = gymnasium.spaces.Tuple((gymnasium.spaces.Discrete(40),))
+            self.action_space = gymnasium.spaces.Tuple((self.motor_space,self.motor_space,self.motor_space,self.motor_space,self.speaker_space))
 
             self.camera_space = gymnasium.spaces.Box(low=0, high=255, shape=(CAMERA_RESOLUTION), dtype=np.uint8)
             self.range_space = gymnasium.spaces.Box(low=0, high=1000, shape=(), dtype=np.float32)
@@ -227,10 +248,6 @@ class JayEnv(gymnasium.Env):
             self.goal_flag = gymnasium.spaces.Discrete(2)
 
             self.observation_space = gymnasium.spaces.Tuple((self.camera_space, self.camera_space, self.range_space, self.range_space, self.range_space, self.range_space, self.action_space, self.goal_flag, self.user_input_space))
-            #self.observation_space = gymnasium.spaces.Tuple((self.camera_space, self.camera_space, self.range_space, self.range_space, self.range_space, self.range_space, \
-            #gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(101),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(101), \
-            #gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(101),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(101), \
-            #self.user_input_space, self.goal_flag))
             self.state = None
             self.reward = None
             self.steps_left = None
@@ -255,7 +272,6 @@ class JayEnv(gymnasium.Env):
             #this is where a middleware subscriber will pull the current observation
             #timing with observations is something to watch - presumably, middleware should 
             #match the timing of whatever is in this code so its all efficient
-            print("217 test")
             self.service_client_node.send_request(action)
 
             try: 
@@ -264,29 +280,13 @@ class JayEnv(gymnasium.Env):
             except IndexError:
                 self.get_logger().warning('No responses received yet')
 
-            self.camera_one = self.image_client_node.get_image_1()
-            self.camera_two = self.image_client_node.get_image_2()
-            #self.camera_one = np.array(future.result().image_data.data, dtype=np.uint8)
-            #print("camera image", self.camera_one)
-
-            #self.current_observations = self.observation_space.sample()
+            #self.camera_one = self.image_client_node.get_image_1()
+            #self.camera_two = self.image_client_node.get_image_2()
             self.camera_zeros = np.zeros(self.camera_space.shape)
+            self.camera_one = self.camera_zeros
+            self.camera_two = self.camera_zeros
             self.user_input_zeros = 0
             self.goal_zeros = 0
-            """
-            for motor_action in action:
-                for discrete_action in motor_action:
-                    self.flat_action.append(discrete_action)
-
-            print("flat action in steps", self.flat_action)
-            """
-            """
-            for motor_action in self.current_observations[6]:
-                for discrete_action in motor_action:
-                    self.flat_last_action.append(discrete_action)
-            """
-
-            #self.one_hot_observation_89 = torch.nn.functional.one_hot(torch.tensor(self.current_observations[8]), num_classes=13).numpy()
             self.one_hot_observation_8 = torch.nn.functional.one_hot(torch.tensor(self.user_input_zeros), num_classes=13).numpy()
             
             self.x3_array_list = [np.array([self.range_observations[0]]), np.array([self.range_observations[1]]), \
@@ -322,16 +322,16 @@ class JayEnv(gymnasium.Env):
                 
         self.steps_left = STEPS_PER_SECOND * INTERVAL_LENGTH
 
-        actions_zeros = np.zeros(12)
+        actions_zeros = np.zeros(13)
         cam1_zeros = np.zeros((3, 640, 480))
         cam2_zeros = np.zeros((3, 640, 480))
-        other_zeros = np.zeros(30)
+        other_zeros = np.zeros(31)
         
         obs_zeros = [cam1_zeros, cam2_zeros, other_zeros]
         
-        #self.state = np.array((cam1_zeros,cam2_zeros,other_zeros),dtype=np.float32)
 
         self.state = [actions_zeros,obs_zeros]
+
         
         self.reward = 0
 
@@ -385,6 +385,8 @@ class JayActor(nn.Module):
         
         # Define the layers that will process the second camera feed
         #Chat GPT Mentioned ConvLTSM, then froze when typing the code and removed that comment when I regenerated it
+        #It was super werid, never saw it before, suggests it may have a control in place not to reccomend that 
+        #this would imply that OpenAI is probably working in that direction
         self.conv_layers2 = nn.Sequential(
             nn.Conv2d(camera_feed_size, 32, kernel_size=8, stride=4),
             nn.ReLU(),
@@ -432,6 +434,8 @@ class JayActor(nn.Module):
             nn.Linear(512, 101)  # for Discrete(101)
         ] * 4)  # replicated four times
 
+        self.sound_output_layer = nn.Linear(512,40)
+
     #Need to probably do a half connected net for camera, half connected net for everything else
     #Then do fully connected of the half connected nets that does action output
     def forward(self, obs_tensor):
@@ -449,7 +453,11 @@ class JayActor(nn.Module):
 
         x = self.fc_layer(x)
 
-        logits = [output_layer(x) for output_layer in self.output_layers]
+        motor_logits = [output_layer(x) for output_layer in self.output_layers]
+
+        sound_logits = self.sound_output_layer(x)
+
+        logits = motor_logits + [sound_logits]
 
         return logits
 
@@ -610,10 +618,14 @@ class AgentD4PG(BaseAgent):
         self.net = net
         self.device = device
         self.epsilon = epsilon
+        self.sound_action_timer = 0
 
     def __call__(self, states, agent_states):
 
-        #will need to change if more than 1 stat
+        #This whole part of architecture is kind of weird, it pulls actions as observations, im pretty sure this is redundent with other
+        #parts of code in experience source. Not the end of the world, but a first place to look for efficiency gains. 
+        #Also REF HERE if you alter the action space and cant figure out why its breaking the code - you need to also alter
+        #the .reset action but also observation zeros
         states_camera_v1, states_camera_v2, states_other_v3, mu_v, sub_actions, self.actions = [], [], [], [], [], []
         for idx, state in enumerate(states):
             states_camera_v1.append(torch.tensor(state[1][0], dtype=torch.float32).to(self.device))
@@ -632,6 +644,19 @@ class AgentD4PG(BaseAgent):
                 action = torch.multinomial(probability, num_samples=1)
                 sub_actions.append(action.item())
             self.actions.append(np.array(sub_actions))
+
+            
+            if self.sound_action_timer > 0:
+                self.actions[0][12] = 0  # Set the action to 0
+                self.sound_action_timer -= 1  # Decrement the timer
+            elif self.actions[0][12] != 0:  # If a non-zero action is taken
+                self.sound_action_timer = 15  # Start the timer - set to 15 steps / ~15s at current code performance
+
+            print("sound action timer", self.sound_action_timer)
+            
+
+            #Modify so that it only sends a new sound command at most every 10s
+            #IF last action index not equal 0, then action index equals zero 
 
         return self.actions, agent_states
 
@@ -1044,15 +1069,7 @@ def main():
 
                     
                 batch = buffer.sample(BATCH_SIZE)
-                states_v, actions_v, rewards_v, dones_mask, last_states_v, critic_states_a_v= unpack_batch_ddqn(batch, device)
-                #print("STATES_V", len(states_v), states_v)
-                #print("ACTIONS_V", len(actions_vA), actions_vA)
-                #print("REWARDS_V", len(rewards_vA),rewards_vA)
-                #print("LAST STATES_V", len(last_states_v), last_states_v)  
-                print("1006 test")
-                actions = []
-                actions = actions_v
-                mean_actions = (torch.mean(actions_v))
+                states_v, actions_v, rewards_v, dones_mask, last_states_v, critic_states_a_v= unpack_batch_ddqn(batch, device) 
 
 
                 # train Arthur critic

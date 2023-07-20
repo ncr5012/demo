@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/audio_data__type_support.cpp.o"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/audio_data__type_support.cpp.o.d"
-  "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__type_support.cpp.o"
-  "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__type_support.cpp.o.d"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp.o.d"
   "CMakeFiles/rl_custom_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__type_support.cpp.o"
@@ -15,8 +13,6 @@ file(REMOVE_RECURSE
   "librl_custom_messages__rosidl_typesupport_introspection_cpp.so"
   "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/audio_data__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/audio_data__type_support.cpp"
-  "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__rosidl_typesupport_introspection_cpp.hpp"
-  "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/image_array__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/motor_commands__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_introspection_cpp.hpp"

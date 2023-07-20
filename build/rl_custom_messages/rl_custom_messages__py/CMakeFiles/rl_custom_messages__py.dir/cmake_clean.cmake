@@ -5,8 +5,6 @@ file(REMOVE_RECURSE
   "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/__init__.py"
   "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_audio_data.py"
   "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_audio_data_s.c"
-  "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_image_array.py"
-  "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_image_array_s.c"
   "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_motor_commands.py"
   "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c"
   "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/msg/_range_array.py"

@@ -2,7 +2,7 @@
 // with input from rl_custom_messages/srv/ImageService.srv
 // generated code does not contain a copyright notice
 
-#include "rl_custom_messages/msg/ImageArray.idl"
+#include "sensor_msgs/msg/CompressedImage.idl"
 
 module rl_custom_messages {
   module srv {
@@ -12,7 +12,7 @@ module rl_custom_messages {
       uint8 structure_needs_at_least_one_member;
     };
     struct ImageService_Response {
-      rl_custom_messages::msg::ImageArray image_data;
+      sensor_msgs::msg::CompressedImage image_data;
     };
   };
 };

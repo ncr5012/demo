@@ -7,7 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
-# Member 'action'
+# Member 'motor_action'
+# Member 'sound_action'
 import numpy  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
@@ -58,26 +59,34 @@ class ObservationService_Request(metaclass=Metaclass_ObservationService_Request)
     """Message class 'ObservationService_Request'."""
 
     __slots__ = [
-        '_action',
+        '_motor_action',
+        '_sound_action',
     ]
 
     _fields_and_field_types = {
-        'action': 'int32[12]',
+        'motor_action': 'int32[12]',
+        'sound_action': 'int32[1]',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('int32'), 12),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('int32'), 1),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        if 'action' not in kwargs:
-            self.action = numpy.zeros(12, dtype=numpy.int32)
+        if 'motor_action' not in kwargs:
+            self.motor_action = numpy.zeros(12, dtype=numpy.int32)
         else:
-            self.action = numpy.array(kwargs.get('action'), dtype=numpy.int32)
-            assert self.action.shape == (12, )
+            self.motor_action = numpy.array(kwargs.get('motor_action'), dtype=numpy.int32)
+            assert self.motor_action.shape == (12, )
+        if 'sound_action' not in kwargs:
+            self.sound_action = numpy.zeros(1, dtype=numpy.int32)
+        else:
+            self.sound_action = numpy.array(kwargs.get('sound_action'), dtype=numpy.int32)
+            assert self.sound_action.shape == (1, )
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -108,7 +117,9 @@ class ObservationService_Request(metaclass=Metaclass_ObservationService_Request)
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if all(self.action != other.action):
+        if all(self.motor_action != other.motor_action):
+            return False
+        if all(self.sound_action != other.sound_action):
             return False
         return True
 
@@ -118,18 +129,18 @@ class ObservationService_Request(metaclass=Metaclass_ObservationService_Request)
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def action(self):
-        """Message field 'action'."""
-        return self._action
+    def motor_action(self):
+        """Message field 'motor_action'."""
+        return self._motor_action
 
-    @action.setter
-    def action(self, value):
+    @motor_action.setter
+    def motor_action(self, value):
         if isinstance(value, numpy.ndarray):
             assert value.dtype == numpy.int32, \
-                "The 'action' numpy.ndarray() must have the dtype of 'numpy.int32'"
+                "The 'motor_action' numpy.ndarray() must have the dtype of 'numpy.int32'"
             assert value.size == 12, \
-                "The 'action' numpy.ndarray() must have a size of 12"
-            self._action = value
+                "The 'motor_action' numpy.ndarray() must have a size of 12"
+            self._motor_action = value
             return
         if __debug__:
             from collections.abc import Sequence
@@ -145,8 +156,39 @@ class ObservationService_Request(metaclass=Metaclass_ObservationService_Request)
                  len(value) == 12 and
                  all(isinstance(v, int) for v in value) and
                  all(val >= -2147483648 and val < 2147483648 for val in value)), \
-                "The 'action' field must be a set or sequence with length 12 and each value of type 'int' and each integer in [-2147483648, 2147483647]"
-        self._action = numpy.array(value, dtype=numpy.int32)
+                "The 'motor_action' field must be a set or sequence with length 12 and each value of type 'int' and each integer in [-2147483648, 2147483647]"
+        self._motor_action = numpy.array(value, dtype=numpy.int32)
+
+    @builtins.property
+    def sound_action(self):
+        """Message field 'sound_action'."""
+        return self._sound_action
+
+    @sound_action.setter
+    def sound_action(self, value):
+        if isinstance(value, numpy.ndarray):
+            assert value.dtype == numpy.int32, \
+                "The 'sound_action' numpy.ndarray() must have the dtype of 'numpy.int32'"
+            assert value.size == 1, \
+                "The 'sound_action' numpy.ndarray() must have a size of 1"
+            self._sound_action = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 1 and
+                 all(isinstance(v, int) for v in value) and
+                 all(val >= -2147483648 and val < 2147483648 for val in value)), \
+                "The 'sound_action' field must be a set or sequence with length 1 and each value of type 'int' and each integer in [-2147483648, 2147483647]"
+        self._sound_action = numpy.array(value, dtype=numpy.int32)
 
 
 # Import statements for member types

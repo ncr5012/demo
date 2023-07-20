@@ -97,7 +97,7 @@ struct is_message<rl_custom_messages::srv::ImageService_Request>
 
 // Include directives for member types
 // Member 'image_data'
-#include "rl_custom_messages/msg/detail/image_array__traits.hpp"
+#include "sensor_msgs/msg/detail/compressed_image__traits.hpp"
 
 namespace rl_custom_messages
 {
@@ -178,11 +178,11 @@ inline const char * name<rl_custom_messages::srv::ImageService_Response>()
 
 template<>
 struct has_fixed_size<rl_custom_messages::srv::ImageService_Response>
-  : std::integral_constant<bool, has_fixed_size<rl_custom_messages::msg::ImageArray>::value> {};
+  : std::integral_constant<bool, has_fixed_size<sensor_msgs::msg::CompressedImage>::value> {};
 
 template<>
 struct has_bounded_size<rl_custom_messages::srv::ImageService_Response>
-  : std::integral_constant<bool, has_bounded_size<rl_custom_messages::msg::ImageArray>::value> {};
+  : std::integral_constant<bool, has_bounded_size<sensor_msgs::msg::CompressedImage>::value> {};
 
 template<>
 struct is_message<rl_custom_messages::srv::ImageService_Response>

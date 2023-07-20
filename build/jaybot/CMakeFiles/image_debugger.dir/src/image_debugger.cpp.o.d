@@ -599,19 +599,14 @@ CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp \
- /usr/include/opencv4/opencv2/core/core.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+ /usr/include/opencv4/opencv2/opencv.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
  /usr/include/opencv4/opencv2/core/version.hpp \
@@ -622,9 +617,7 @@ CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
- /usr/include/opencv4/opencv2/core/base.hpp \
- /usr/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/include/c++/11/climits \
+ /usr/include/opencv4/opencv2/core/base.hpp /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -655,14 +648,6 @@ CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o: \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
- /usr/include/opencv4/opencv2/imgproc/types_c.h \
- /usr/include/opencv4/opencv2/core/core_c.h \
- /usr/include/opencv4/opencv2/core/types_c.h \
- /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h \
- /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/calib3d.hpp \
  /usr/include/opencv4/opencv2/features2d.hpp \
  /usr/include/opencv4/opencv2/flann/miniflann.hpp \
@@ -712,6 +697,8 @@ CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o: \
  /usr/include/opencv4/opencv2/highgui.hpp \
  /usr/include/opencv4/opencv2/imgcodecs.hpp \
  /usr/include/opencv4/opencv2/videoio.hpp \
+ /usr/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/include/opencv4/opencv2/ml.hpp \
  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
  /usr/include/opencv4/opencv2/objdetect.hpp \

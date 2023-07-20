@@ -49,10 +49,17 @@ static bool _ObservationService_Request__cdr_serialize(
     return false;
   }
   const _ObservationService_Request__ros_msg_type * ros_message = static_cast<const _ObservationService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: action
+  // Field name: motor_action
   {
     size_t size = 12;
-    auto array_ptr = ros_message->action;
+    auto array_ptr = ros_message->motor_action;
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: sound_action
+  {
+    size_t size = 1;
+    auto array_ptr = ros_message->sound_action;
     cdr.serializeArray(array_ptr, size);
   }
 
@@ -68,10 +75,17 @@ static bool _ObservationService_Request__cdr_deserialize(
     return false;
   }
   _ObservationService_Request__ros_msg_type * ros_message = static_cast<_ObservationService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: action
+  // Field name: motor_action
   {
     size_t size = 12;
-    auto array_ptr = ros_message->action;
+    auto array_ptr = ros_message->motor_action;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: sound_action
+  {
+    size_t size = 1;
+    auto array_ptr = ros_message->sound_action;
     cdr.deserializeArray(array_ptr, size);
   }
 
@@ -92,10 +106,19 @@ size_t get_serialized_size_rl_custom_messages__srv__ObservationService_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name action
+  // field.name motor_action
   {
     size_t array_size = 12;
-    auto array_ptr = ros_message->action;
+    auto array_ptr = ros_message->motor_action;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name sound_action
+  {
+    size_t array_size = 1;
+    auto array_ptr = ros_message->sound_action;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -128,9 +151,16 @@ size_t max_serialized_size_rl_custom_messages__srv__ObservationService_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: action
+  // member: motor_action
   {
     size_t array_size = 12;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: sound_action
+  {
+    size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

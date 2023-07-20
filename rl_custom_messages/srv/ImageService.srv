@@ -1,4 +1,4 @@
 # This Service takes an empty request and provides an ImageArray as a response
 ---
-rl_custom_messages/ImageArray image_data
+sensor_msgs/CompressedImage image_data
 

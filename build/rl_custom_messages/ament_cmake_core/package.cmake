@@ -1,7 +1,7 @@
 set(_AMENT_PACKAGE_NAME "rl_custom_messages")
 set(rl_custom_messages_VERSION "0.0.0")
 set(rl_custom_messages_MAINTAINER "rlagent <rlagent@todo.todo>")
-set(rl_custom_messages_BUILD_DEPENDS )
+set(rl_custom_messages_BUILD_DEPENDS "sensor_msgs")
 set(rl_custom_messages_BUILDTOOL_DEPENDS "ament_cmake" "rosidl_default_generators")
 set(rl_custom_messages_BUILD_EXPORT_DEPENDS )
 set(rl_custom_messages_BUILDTOOL_EXPORT_DEPENDS )

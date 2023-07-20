@@ -102,9 +102,9 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 // Include directives for member types
 // Member `image_data`
-#include "rl_custom_messages/msg/image_array.h"
+#include "sensor_msgs/msg/compressed_image.h"
 // Member `image_data`
-#include "rl_custom_messages/msg/detail/image_array__rosidl_typesupport_introspection_c.h"
+#include "sensor_msgs/msg/detail/compressed_image__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -167,7 +167,7 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_rl_custom_messages
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rl_custom_messages, srv, ImageService_Response)() {
   rl_custom_messages__srv__ImageService_Response__rosidl_typesupport_introspection_c__ImageService_Response_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rl_custom_messages, msg, ImageArray)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sensor_msgs, msg, CompressedImage)();
   if (!rl_custom_messages__srv__ImageService_Response__rosidl_typesupport_introspection_c__ImageService_Response_message_type_support_handle.typesupport_identifier) {
     rl_custom_messages__srv__ImageService_Response__rosidl_typesupport_introspection_c__ImageService_Response_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

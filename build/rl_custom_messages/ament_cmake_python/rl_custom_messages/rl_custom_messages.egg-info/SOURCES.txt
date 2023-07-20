@@ -6,7 +6,6 @@ rl_custom_messages.egg-info/dependency_links.txt
 rl_custom_messages.egg-info/top_level.txt
 rl_custom_messages/msg/__init__.py
 rl_custom_messages/msg/_audio_data.py
-rl_custom_messages/msg/_image_array.py
 rl_custom_messages/msg/_motor_commands.py
 rl_custom_messages/msg/_range_array.py
 rl_custom_messages/srv/__init__.py

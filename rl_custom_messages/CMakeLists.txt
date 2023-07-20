@@ -8,14 +8,15 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RangeArray.msg"
   "msg/MotorCommands.msg"
-  "msg/ImageArray.msg"
   "msg/AudioData.msg"
   "srv/ObservationService.srv"
   "srv/ImageService.srv"
+  DEPENDENCIES sensor_msgs
 )
 
 

@@ -211,20 +211,23 @@ extern "C"
 {
 #endif
 
-#include "rl_custom_messages/msg/detail/image_array__functions.h"  // image_data
+#include "sensor_msgs/msg/detail/compressed_image__functions.h"  // image_data
 
 // forward declare type support functions
-size_t get_serialized_size_rl_custom_messages__msg__ImageArray(
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rl_custom_messages
+size_t get_serialized_size_sensor_msgs__msg__CompressedImage(
   const void * untyped_ros_message,
   size_t current_alignment);
 
-size_t max_serialized_size_rl_custom_messages__msg__ImageArray(
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rl_custom_messages
+size_t max_serialized_size_sensor_msgs__msg__CompressedImage(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rl_custom_messages
 const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, rl_custom_messages, msg, ImageArray)();
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, sensor_msgs, msg, CompressedImage)();
 
 
 using _ImageService_Response__ros_msg_type = rl_custom_messages__srv__ImageService_Response;
@@ -243,7 +246,7 @@ static bool _ImageService_Response__cdr_serialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, rl_custom_messages, msg, ImageArray
+        rosidl_typesupport_fastrtps_c, sensor_msgs, msg, CompressedImage
       )()->data);
     if (!callbacks->cdr_serialize(
         &ros_message->image_data, cdr))
@@ -269,7 +272,7 @@ static bool _ImageService_Response__cdr_deserialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, rl_custom_messages, msg, ImageArray
+        rosidl_typesupport_fastrtps_c, sensor_msgs, msg, CompressedImage
       )()->data);
     if (!callbacks->cdr_deserialize(
         cdr, &ros_message->image_data))
@@ -297,7 +300,7 @@ size_t get_serialized_size_rl_custom_messages__srv__ImageService_Response(
 
   // field.name image_data
 
-  current_alignment += get_serialized_size_rl_custom_messages__msg__ImageArray(
+  current_alignment += get_serialized_size_sensor_msgs__msg__CompressedImage(
     &(ros_message->image_data), current_alignment);
 
   return current_alignment - initial_alignment;
@@ -335,7 +338,7 @@ size_t max_serialized_size_rl_custom_messages__srv__ImageService_Response(
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        max_serialized_size_rl_custom_messages__msg__ImageArray(
+        max_serialized_size_sensor_msgs__msg__CompressedImage(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

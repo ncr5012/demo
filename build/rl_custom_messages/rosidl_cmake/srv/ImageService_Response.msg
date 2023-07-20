@@ -1,3 +1,3 @@
 
-rl_custom_messages/ImageArray image_data
+sensor_msgs/CompressedImage image_data
 

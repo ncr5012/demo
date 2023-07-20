@@ -38,30 +38,42 @@ struct ObservationService_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      std::fill<typename std::array<int32_t, 12>::iterator, int32_t>(this->action.begin(), this->action.end(), 0l);
+      std::fill<typename std::array<int32_t, 12>::iterator, int32_t>(this->motor_action.begin(), this->motor_action.end(), 0l);
+      std::fill<typename std::array<int32_t, 1>::iterator, int32_t>(this->sound_action.begin(), this->sound_action.end(), 0l);
     }
   }
 
   explicit ObservationService_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : action(_alloc)
+  : motor_action(_alloc),
+    sound_action(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      std::fill<typename std::array<int32_t, 12>::iterator, int32_t>(this->action.begin(), this->action.end(), 0l);
+      std::fill<typename std::array<int32_t, 12>::iterator, int32_t>(this->motor_action.begin(), this->motor_action.end(), 0l);
+      std::fill<typename std::array<int32_t, 1>::iterator, int32_t>(this->sound_action.begin(), this->sound_action.end(), 0l);
     }
   }
 
   // field types and members
-  using _action_type =
+  using _motor_action_type =
     std::array<int32_t, 12>;
-  _action_type action;
+  _motor_action_type motor_action;
+  using _sound_action_type =
+    std::array<int32_t, 1>;
+  _sound_action_type sound_action;
 
   // setters for named parameter idiom
-  Type & set__action(
+  Type & set__motor_action(
     const std::array<int32_t, 12> & _arg)
   {
-    this->action = _arg;
+    this->motor_action = _arg;
+    return *this;
+  }
+  Type & set__sound_action(
+    const std::array<int32_t, 1> & _arg)
+  {
+    this->sound_action = _arg;
     return *this;
   }
 
@@ -107,7 +119,10 @@ struct ObservationService_Request_
   // comparison operators
   bool operator==(const ObservationService_Request_ & other) const
   {
-    if (this->action != other.action) {
+    if (this->motor_action != other.motor_action) {
+      return false;
+    }
+    if (this->sound_action != other.sound_action) {
       return false;
     }
     return true;

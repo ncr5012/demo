@@ -143,9 +143,9 @@ class Metaclass_ImageService_Response(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__image_service__response
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__image_service__response
 
-            from rl_custom_messages.msg import ImageArray
-            if ImageArray.__class__._TYPE_SUPPORT is None:
-                ImageArray.__class__.__import_type_support__()
+            from sensor_msgs.msg import CompressedImage
+            if CompressedImage.__class__._TYPE_SUPPORT is None:
+                CompressedImage.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -164,19 +164,19 @@ class ImageService_Response(metaclass=Metaclass_ImageService_Response):
     ]
 
     _fields_and_field_types = {
-        'image_data': 'rl_custom_messages/ImageArray',
+        'image_data': 'sensor_msgs/CompressedImage',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['rl_custom_messages', 'msg'], 'ImageArray'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['sensor_msgs', 'msg'], 'CompressedImage'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from rl_custom_messages.msg import ImageArray
-        self.image_data = kwargs.get('image_data', ImageArray())
+        from sensor_msgs.msg import CompressedImage
+        self.image_data = kwargs.get('image_data', CompressedImage())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -224,10 +224,10 @@ class ImageService_Response(metaclass=Metaclass_ImageService_Response):
     @image_data.setter
     def image_data(self, value):
         if __debug__:
-            from rl_custom_messages.msg import ImageArray
+            from sensor_msgs.msg import CompressedImage
             assert \
-                isinstance(value, ImageArray), \
-                "The 'image_data' field must be a sub message of type 'ImageArray'"
+                isinstance(value, CompressedImage), \
+                "The 'image_data' field must be a sub message of type 'CompressedImage'"
         self._image_data = value
 
 
