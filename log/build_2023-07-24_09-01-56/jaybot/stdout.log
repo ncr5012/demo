@@ -1,0 +1,8 @@
+[ 14%] Built target microphone_publisher
+[ 28%] Built target range_publisher
+[ 42%] Built target motor_controller
+[ 57%] Built target camera_publisher
+[ 64%] [32mBuilding CXX object CMakeFiles/speaker_controller.dir/src/speaker_controller.cpp.o[0m
+[ 78%] Built target rl_server
+[ 92%] Built target image_debugger
+[ 92%] Built target ament_cmake_python_symlink_jaybot

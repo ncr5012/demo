@@ -239,13 +239,13 @@ class JayEnv(gymnasium.Env):
             #Note on editing spaces - edting the action space takes several steps. You have to change the reset function also (its not tied to this action space)
             #You also need to modify the NN's when editing the action or observation space, code is not written well all in all
             self.motor_space = gymnasium.spaces.Tuple((gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(2),gymnasium.spaces.Discrete(101)))
-            self.speaker_space = gymnasium.spaces.Tuple((gymnasium.spaces.Discrete(40),))
+            self.speaker_space = gymnasium.spaces.Tuple((gymnasium.spaces.Discrete(3),))
             self.action_space = gymnasium.spaces.Tuple((self.motor_space,self.motor_space,self.motor_space,self.motor_space,self.speaker_space))
 
             self.camera_space = gymnasium.spaces.Box(low=0, high=255, shape=(CAMERA_RESOLUTION), dtype=np.uint8)
             self.range_space = gymnasium.spaces.Box(low=0, high=1000, shape=(), dtype=np.float32)
             self.user_input_space = gymnasium.spaces.Discrete(13)
-            self.goal_flag = gymnasium.spaces.Discrete(2)
+            self.goal_flag = gymnasium.spaces.Discrete(4)
 
             self.observation_space = gymnasium.spaces.Tuple((self.camera_space, self.camera_space, self.range_space, self.range_space, self.range_space, self.range_space, self.action_space, self.goal_flag, self.user_input_space))
             self.state = None
@@ -434,7 +434,7 @@ class JayActor(nn.Module):
             nn.Linear(512, 101)  # for Discrete(101)
         ] * 4)  # replicated four times
 
-        self.sound_output_layer = nn.Linear(512,40)
+        self.sound_output_layer = nn.Linear(512,4)
 
     #Need to probably do a half connected net for camera, half connected net for everything else
     #Then do fully connected of the half connected nets that does action output

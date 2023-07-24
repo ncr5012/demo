@@ -1,0 +1,3 @@
+Playing WAVE '/home/rlcontrol/jay_ws/jaybot/src/sounds/sound3.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+Aborted by signal Interrupt...
+aplay: pcm_write:2127: write error: Interrupted system call

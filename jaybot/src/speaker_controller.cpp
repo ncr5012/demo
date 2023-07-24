@@ -1,10 +1,8 @@
-//ALSA is screwy on the raspberry pi - make sure to check alsamixer and the defaults if using the usb speaker
-
 #include <rclcpp/rclcpp.hpp>
 #include "rl_custom_messages/msg/motor_commands.hpp"
 #include <stdlib.h> // For system()
 #include <functional>
-
+#include <sstream>
 
 class SoundPlayer : public rclcpp::Node
 {
@@ -19,35 +17,44 @@ public:
 private:
   void topic_callback(const rl_custom_messages::msg::MotorCommands::SharedPtr msg)
   {
-      for(auto i = msg->commands.begin(); i != msg->commands.end(); i++)
-      {
-          RCLCPP_INFO(this->get_logger(), "Received command: '%d'", *i);
-      }
+    if(msg->commands.empty())
+    {
+      RCLCPP_INFO(this->get_logger(), "Received empty command list");
+      return;
+    }
 
-      auto it = std::find(msg->commands.begin(), msg->commands.end(), 1);
-      if (it != msg->commands.end())
-      {
-          int sound_index = std::distance(msg->commands.begin(), it);
-          RCLCPP_INFO(this->get_logger(), "Playing sound file index: '%d'", sound_index);
-          if(sound_index != 0)  // Don't play sound for index 0
-          {
-            play_sound(sound_index);
-          }
-      }
+    int sound_index = msg->commands[0];
+
+    std::stringstream ss;
+    ss << sound_index;
+    RCLCPP_INFO(this->get_logger(), "Received command: '%s'", ss.str().c_str());
+
+    if(sound_index == 0)  // Do nothing for command 0
+    {
+      RCLCPP_INFO(this->get_logger(), "Received command 0, doing nothing");
+      return;
+    }
+    else
+    {
+      RCLCPP_INFO(this->get_logger(), "Playing sound file index: '%d'", sound_index);
+      play_sound(sound_index);  // Pass the command value as the sound index
+    }
   }
 
   void play_sound(int sound_index)
   {
-    std::string command = "aplay /home/rlcontrol/jay_ws/jaybot/src/sounds/sound" + std::to_string(sound_index) + ".wav > /home/rlcontrol/jay_ws/jaybot/src/sounds/log.txt 2>&1";
+    std::string command;
+    command = "aplay /home/rlcontrol/jay_ws/jaybot/src/sounds/sound" + std::to_string(sound_index) + ".wav";
+
     RCLCPP_INFO(this->get_logger(), "Executing command: '%s'", command.c_str());
     int result = system(command.c_str());
     if(result == -1)
     {
-        RCLCPP_ERROR(this->get_logger(), "Error executing system command");
+      RCLCPP_ERROR(this->get_logger(), "Error executing system command");
     }
     else if(result != 0)
     {
-        RCLCPP_ERROR(this->get_logger(), "Error playing sound file with exit status: %d", WEXITSTATUS(result));
+      RCLCPP_ERROR(this->get_logger(), "Error playing sound file with exit status: %d", WEXITSTATUS(result));
     }
   }
 
@@ -61,4 +68,3 @@ int main(int argc, char * argv[])
   rclcpp::shutdown();
   return 0;
 }
-

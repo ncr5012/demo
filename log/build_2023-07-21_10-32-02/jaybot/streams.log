@@ -1,0 +1,119 @@
+[0.023s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake /home/rlcontrol/jay_ws/jaybot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rlcontrol/jay_ws/install/jaybot
+[0.183s] -- The C compiler identification is GNU 11.3.0
+[0.314s] -- The CXX compiler identification is GNU 11.3.0
+[0.338s] -- Detecting C compiler ABI info
+[0.485s] -- Detecting C compiler ABI info - done
+[0.503s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.504s] -- Detecting C compile features
+[0.505s] -- Detecting C compile features - done
+[0.511s] -- Detecting CXX compiler ABI info
+[0.680s] -- Detecting CXX compiler ABI info - done
+[0.698s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.699s] -- Detecting CXX compile features
+[0.699s] -- Detecting CXX compile features - done
+[0.706s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.418s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[1.529s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.589s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[1.682s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.693s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.713s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.745s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.792s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.952s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.958s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.188s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.239s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.334s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.354s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.509s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.512s] -- Found Threads: TRUE  
+[2.858s] -- Found rclpy: 3.3.8 (/opt/ros/humble/share/rclpy/cmake)
+[2.860s] -- Found rl_custom_messages: 0.0.0 (/home/rlcontrol/jay_ws/install/rl_custom_messages/share/rl_custom_messages/cmake)
+[3.337s] -- Found OpenCV: /usr (found version "4.5.4") 
+[3.339s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[3.645s] -- Configuring done (3.6s)
+[3.773s] -- Generating done (0.1s)
+[3.780s] -- Build files have been written to: /home/rlcontrol/jay_ws/build/jaybot
+[3.803s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake /home/rlcontrol/jay_ws/jaybot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rlcontrol/jay_ws/install/jaybot
+[3.806s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[3.933s] [  7%] [32mBuilding CXX object CMakeFiles/range_publisher.dir/src/range_publisher.cpp.o[0m
+[3.943s] [ 14%] [32mBuilding CXX object CMakeFiles/rl_server.dir/src/rl_server.cpp.o[0m
+[3.946s] [ 21%] [32mBuilding CXX object CMakeFiles/motor_controller.dir/src/motor_controller.cpp.o[0m
+[3.950s] [ 28%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+[3.953s] [ 35%] [32mBuilding CXX object CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o[0m
+[3.956s] [ 42%] [32mBuilding CXX object CMakeFiles/speaker_controller.dir/src/speaker_controller.cpp.o[0m
+[12.219s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid ImageServer::service_callback(std::shared_ptr<rl_custom_messages::srv::ImageService_Request_<std::allocator<void> > >, std::shared_ptr<rl_custom_messages::srv::ImageService_Response_<std::allocator<void> > >)[m[K’:
+[12.219s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:94:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.219s]    94 |         [01;35m[Kconst std::shared_ptr<rl_custom_messages::srv::ImageService::Request> request[m[K,
+[12.219s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[12.432s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:[m[K In member function ‘[01m[Kvoid AudioReceiverSubscriber::topic_callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr) const[m[K’:
+[12.432s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/rl_server.cpp:116:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.432s]   116 |     void topic_callback([01;35m[Kconst sensor_msgs::msg::Image::SharedPtr msg[m[K) const
+[12.432s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[13.884s] [ 50%] [32m[1mLinking CXX executable microphone_publisher[0m
+[14.219s] [ 57%] [32m[1mLinking CXX executable range_publisher[0m
+[14.454s] [ 57%] Built target microphone_publisher
+[14.573s] [ 64%] [32mBuilding CXX object CMakeFiles/image_debugger.dir/src/image_debugger.cpp.o[0m
+[14.853s] [ 64%] Built target range_publisher
+[14.943s] [ 64%] Built target ament_cmake_python_symlink_jaybot
+[15.992s] running egg_info
+[15.993s] creating jaybot.egg-info
+[15.993s] writing jaybot.egg-info/PKG-INFO
+[15.994s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[15.995s] writing top-level names to jaybot.egg-info/top_level.txt
+[15.996s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[16.001s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[16.002s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[16.057s] [ 64%] Built target ament_cmake_python_build_jaybot_egg
+[18.714s] [ 71%] [32m[1mLinking CXX executable camera_publisher[0m
+[20.328s] [ 71%] Built target camera_publisher
+[21.403s] [ 78%] [32m[1mLinking CXX executable motor_controller[0m
+[22.328s] [ 78%] Built target motor_controller
+[22.587s] [ 85%] [32m[1mLinking CXX executable speaker_controller[0m
+[23.405s] [ 85%] Built target speaker_controller
+[32.216s] [ 92%] [32m[1mLinking CXX executable image_debugger[0m
+[33.576s] [ 92%] Built target image_debugger
+[37.104s] [100%] [32m[1mLinking CXX executable rl_server[0m
+[38.845s] [100%] Built target rl_server
+[38.862s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[39.076s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
+[39.131s] -- Install configuration: ""
+[39.132s] -- Execute custom install script
+[39.133s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/range_publisher
+[39.141s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/motor_controller
+[39.149s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/camera_publisher
+[39.156s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/microphone_publisher
+[39.164s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/speaker_controller
+[39.172s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_server
+[39.179s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/image_debugger
+[39.188s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/RangeSensor.h
+[39.195s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/include/jaybot/motor_controller.h
+[39.203s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.sh
+[39.210s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/pythonpath.dsv
+[39.218s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/PKG-INFO
+[39.225s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/SOURCES.txt
+[39.233s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/dependency_links.txt
+[39.240s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot-0.0.0-py3.10.egg-info/top_level.txt
+[39.248s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot/__init__.py
+[39.256s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/rl_mind.py
+[39.263s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/lib/jaybot/face_detection_test.py
+[39.271s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/package_run_dependencies/jaybot
+[39.278s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/parent_prefix_path/jaybot
+[39.286s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.sh
+[39.293s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/ament_prefix_path.dsv
+[39.301s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.sh
+[39.308s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/environment/path.dsv
+[39.316s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.bash
+[39.323s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.sh
+[39.331s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.zsh
+[39.339s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/local_setup.dsv
+[39.346s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.dsv
+[39.354s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/ament_index/resource_index/packages/jaybot
+[39.362s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/ament_cmake_export_dependencies-extras.cmake
+[39.369s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig.cmake
+[39.377s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/cmake/jaybotConfig-version.cmake
+[39.385s] -- Symlinking: /home/rlcontrol/jay_ws/install/jaybot/share/jaybot/package.xml
+[39.453s] Listing '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot'...
+[39.453s] Compiling '/home/rlcontrol/jay_ws/install/jaybot/local/lib/python3.10/dist-packages/jaybot/__init__.py'...
+[39.470s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '0': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --install /home/rlcontrol/jay_ws/build/jaybot
