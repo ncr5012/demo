@@ -264,4 +264,7 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_c__pyext.dir/rosidl_generator_
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
  /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/srv/detail/image_service__functions.h
+ /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__type_support.h
+ /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__struct.h
+ /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__functions.h
 

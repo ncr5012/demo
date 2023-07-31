@@ -16,6 +16,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/AudioData.msg"
   "srv/ObservationService.srv"
   "srv/ImageService.srv"
+  "srv/EmotionService.srv"
   DEPENDENCIES sensor_msgs
 )
 

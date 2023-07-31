@@ -26,17 +26,20 @@ while True:
     if isinstance(results, list):
         for result in results:
             x, y, w, h = result['region']['x'], result['region']['y'], result['region']['w'], result['region']['h']
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)  # Draw a rectangle around the face
-            
-            # Append current timestamp and emotion data to deque
-            emotion_deque.append((time.time(), result['emotion']))
+            if x == 0 and y == 0:
+                print("No face detected")
+            else:
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)  # Draw a rectangle around the face
 
-            # Compute the average of each emotion over the last 1 second
-            one_second_ago = time.time() - 1
-            recent_emotions = [emotions for timestamp, emotions in emotion_deque if timestamp >= one_second_ago]
-            if recent_emotions:
-                average_emotions = {emotion: round(np.mean([emo[emotion] for emo in recent_emotions])) for emotion in recent_emotions[0]}
-                print(average_emotions)
+                # Append current timestamp and emotion data to deque
+                emotion_deque.append((time.time(), result['emotion']))
+
+                # Compute the average of each emotion over the last 1 second
+                one_second_ago = time.time() - 1
+                recent_emotions = [emotions for timestamp, emotions in emotion_deque if timestamp >= one_second_ago]
+                if recent_emotions:
+                    average_emotions = {emotion: round(np.mean([emo[emotion] for emo in recent_emotions])) for emotion in recent_emotions[0]}
+                    print(average_emotions)
     else:
         print("No face detected")
 

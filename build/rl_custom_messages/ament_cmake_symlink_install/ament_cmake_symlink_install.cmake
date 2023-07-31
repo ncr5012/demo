@@ -373,6 +373,9 @@ ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FI
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ImageService.idl" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/ImageService.idl" "DESTINATION" "share/rl_custom_messages/srv")
 
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/EmotionService.idl" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_adapter/rl_custom_messages/srv/EmotionService.idl" "DESTINATION" "share/rl_custom_messages/srv")
+
 # install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/msg/RangeArray.msg" "DESTINATION" "share/rl_custom_messages/msg")
 
@@ -399,6 +402,15 @@ ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FI
 
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ImageService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/ImageService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/EmotionService.srv" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/rl_custom_messages/srv/EmotionService.srv" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/EmotionService_Request.msg" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/EmotionService_Request.msg" "DESTINATION" "share/rl_custom_messages/srv")
+
+# install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/EmotionService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
+ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_cmake/srv/EmotionService_Response.msg" "DESTINATION" "share/rl_custom_messages/srv")
 
 # install(FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rl_custom_messages" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/rlcontrol/jay_ws/rl_custom_messages" FILES "/home/rlcontrol/jay_ws/build/rl_custom_messages/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rl_custom_messages" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

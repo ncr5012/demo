@@ -1,89 +1,109 @@
 #!/usr/bin/env python3
+from asyncio.format_helpers import _format_callback_source
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import CompressedImage
+import numpy as np
 import cv2
 from deepface import DeepFace
 from collections import deque
 import time
-import numpy as np
-import rclpy
-from rclpy.node import Node
-from sensor_msgs.msg import CompressedImage
-from cv_bridge import CvBridge
-import threading
+from rl_custom_messages.srv import ImageService
+from rl_custom_messages.srv import EmotionService  # Import your new service
+import json
 
-class FacialDetectionSubscriber(Node):
-    def __init__(self, camera_id):
-        super().__init__('facial_detection_subscriber_' + camera_id)
-        self.camera_id = camera_id
-        self.bridge = CvBridge()
-        self.emotion_deque = deque(maxlen=15) # assuming 30 frames per second
-        self.cv_window = cv2.namedWindow('Video Feed ' + camera_id, cv2.WINDOW_AUTOSIZE)
-        self.subscription = self.create_subscription(CompressedImage, 'camera_image_' + camera_id, self.topic_callback, 10)
-        self.frame = None
-        self.display_thread = threading.Thread(target=self.display_image)
-        self.display_thread.start()
+class ImageDisplayNode(Node):
+    def __init__(self):
+        super().__init__('image_display_node')
+        # Additional service setup
+        self.srv = self.create_service(EmotionService, 'emotion_service', self.emotion_service_callback)
 
-    def topic_callback(self, msg):
-        np_arr = np.frombuffer(msg.data, dtype=np.uint8)
-        frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+        self.declare_parameter('camera_service_0', '/get_image_data_camera_image_0')
+        self.declare_parameter('camera_service_1', '/get_image_data_camera_image_1')
+        
+        self.client0_ = self.create_client(
+            ImageService,
+            self.get_parameter('camera_service_0').value)
+        
+        self.client1_ = self.create_client(
+            ImageService,
+            self.get_parameter('camera_service_1').value)
 
-        if frame is None:
-            self.get_logger().error('Could not decode image data from Camera ' + self.camera_id)
-            return
+        self.emotion_deque = deque(maxlen=30) # assuming 30 frames per second
 
+        self.timer0 = self.create_timer(0.033, self.timer_callback_0)
+        self.timer1 = self.create_timer(0.033, self.timer_callback_1)
+        self.results = {'Video Feed 0': {'face_detected': False, 'emotions': None},
+                        'Video Feed 1': {'face_detected': False, 'emotions': None}}
+
+    def emotion_service_callback(self, request, response):
+        response.results = json.dumps(self.results)
+        return response
+
+    def timer_callback_0(self):
+        req = ImageService.Request()
+        self.client0_.call_async(req).add_done_callback(self.service_response_callback_0)
+
+    def timer_callback_1(self):
+        req = ImageService.Request()
+        self.client1_.call_async(req).add_done_callback(self.service_response_callback_1)
+
+    def service_response_callback_0(self, future):
+        msg = future.result()
+        np_arr = np.frombuffer(msg.image_data.data, np.uint8)
+        if np_arr.size > 0:
+            frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+            self.analyze_frame(frame, 'Video Feed 0')
+
+    def service_response_callback_1(self, future):
+        msg = future.result()
+        np_arr = np.frombuffer(msg.image_data.data, np.uint8)
+        if np_arr.size > 0:
+            frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+            self.analyze_frame(frame, 'Video Feed 1')
+
+    def analyze_frame(self, frame, window_name):
         # Convert to RGB for DeepFace
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Detect emotions in the frame
-        results = DeepFace.analyze(rgb_frame, actions = ['emotion'], enforce_detection=False)
+        results = DeepFace.analyze(rgb_frame, actions = ['emotion'], enforce_detection = False)
 
-        self.frame = frame  # moved this line before checking for face detection
+        if isinstance(results, list):
+            for result in results:
+                x, y, w, h = result['region']['x'], result['region']['y'], result['region']['w'], result['region']['h']
+                if x == 0 and y == 0:
+                    self.results[window_name]['face_detected'] = False
+                    self.results[window_name]['emotions'] = None
+                else:
+                    cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)  # Draw a rectangle around the face
+                    self.results[window_name]['face_detected'] = True
+                    # Append current timestamp and emotion data to deque
+                    self.emotion_deque.append((time.time(), result['emotion']))
 
-        # Check if any face is detected
-        if 'region' in results and all(key in results['region'] for key in ['x', 'y', 'w', 'h']):
-            x, y, w, h = results['region']['x'], results['region']['y'], results['region']['w'], results['region']['h']
-            cv2.rectangle(self.frame, (x, y), (x+w, y+h), (255, 0, 0), 2)  # Draw a rectangle around the face
-
-            # Append current timestamp and emotion data to deque
-            self.emotion_deque.append((time.time(), results['emotion']))
-
-            # Compute the average of each emotion over the last 1 second
-            one_second_ago = time.time() - 1
-            recent_emotions = [emotions for timestamp, emotions in self.emotion_deque if timestamp >= one_second_ago]
-            if recent_emotions:
-                average_emotions = {emotion: round(np.mean([emo[emotion] for emo in recent_emotions])) for emotion in recent_emotions[0]}
-                self.get_logger().info('Camera ' + self.camera_id + ' average emotions: ' + str(average_emotions))
+                    # Compute the average of each emotion over the last 1 second
+                    one_second_ago = time.time() - 1
+                    recent_emotions = [emotions for timestamp, emotions in self.emotion_deque if timestamp >= one_second_ago]
+                    if recent_emotions:
+                        average_emotions = {emotion: round(np.mean([emo[emotion] for emo in recent_emotions])) for emotion in recent_emotions[0]}
+                        self.results[window_name]['emotions'] = average_emotions
         else:
-            self.get_logger().info('No face detected in Camera ' + self.camera_id)
+            self.results[window_name]['face_detected'] = False
+            self.results[window_name]['emotions'] = None
 
-    def display_image(self):
-        while rclpy.ok():
-            if self.frame is not None:
-                cv2.imshow('Video Feed ' + self.camera_id, self.frame)
-                if cv2.waitKey(1) & 0xFF == ord('q'):
-                    rclpy.shutdown()
+        # Show the frame with any detected faces highlighted
+        cv2.imshow(window_name, frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            cv2.destroyAllWindows()
+
+        print(self.results[window_name])
 
 def main(args=None):
     rclpy.init(args=args)
-    facial_detection_subscriber_0 = FacialDetectionSubscriber('0')
-    facial_detection_subscriber_1 = FacialDetectionSubscriber('1')
-
-    executor = rclpy.executors.MultiThreadedExecutor()
-    executor.add_node(facial_detection_subscriber_0)
-    executor.add_node(facial_detection_subscriber_1)
-    
-    try:
-        executor.spin()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        if facial_detection_subscriber_0.display_thread.is_alive():
-            facial_detection_subscriber_0.display_thread.join()
-        if facial_detection_subscriber_1.display_thread.is_alive():
-            facial_detection_subscriber_1.display_thread.join()
-
-        facial_detection_subscriber_0.destroy_node()
-        facial_detection_subscriber_1.destroy_node()
-        rclpy.shutdown()
+    image_display_node = ImageDisplayNode()
+    rclpy.spin(image_display_node)
+    image_display_node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

@@ -4,6 +4,10 @@ msg/MotorCommands.idl
 msg/MotorCommands.msg
 msg/RangeArray.idl
 msg/RangeArray.msg
+srv/EmotionService.idl
+srv/EmotionService.srv
+srv/EmotionService_Request.msg
+srv/EmotionService_Response.msg
 srv/ImageService.idl
 srv/ImageService.srv
 srv/ImageService_Request.msg

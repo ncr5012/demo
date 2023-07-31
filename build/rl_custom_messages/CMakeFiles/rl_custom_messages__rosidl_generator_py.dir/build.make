@@ -139,13 +139,28 @@ CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_cu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_image_service_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/srv/_image_service_s.c -o CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_image_service_s.c.s
 
+CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/flags.make
+CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o: rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c
+CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o -MF CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o.d -o CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c
+
+CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c > CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.i
+
+CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c -o CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.s
+
 # Object files for target rl_custom_messages__rosidl_generator_py
 rl_custom_messages__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_range_array_s.c.o" \
 "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_motor_commands_s.c.o" \
 "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_audio_data_s.c.o" \
 "CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_observation_service_s.c.o" \
-"CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_image_service_s.c.o"
+"CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_image_service_s.c.o" \
+"CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o"
 
 # External object files for target rl_custom_messages__rosidl_generator_py
 rl_custom_messages__rosidl_generator_py_EXTERNAL_OBJECTS =
@@ -155,6 +170,7 @@ rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_p
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/msg/_audio_data_s.c.o
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_observation_service_s.c.o
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_image_service_s.c.o
+rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/rosidl_generator_py/rl_custom_messages/srv/_emotion_service_s.c.o
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/build.make
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: librl_custom_messages__rosidl_typesupport_c.so
@@ -175,7 +191,7 @@ rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_p
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so: CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library rosidl_generator_py/rl_custom_messages/librl_custom_messages__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rl_custom_messages__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

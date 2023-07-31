@@ -262,8 +262,17 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_g
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
-  rosidl_generator_c/rl_custom_messages/srv/detail/image_service__functions.h
+  rosidl_generator_c/rl_custom_messages/srv/detail/image_service__functions.h \
+  rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__type_support.h \
+  rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__struct.h \
+  rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__functions.h
 
+
+rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__functions.h:
+
+rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__struct.h:
+
+rosidl_generator_c/rl_custom_messages/srv/detail/emotion_service__type_support.h:
 
 rosidl_generator_c/rl_custom_messages/srv/detail/image_service__functions.h:
 

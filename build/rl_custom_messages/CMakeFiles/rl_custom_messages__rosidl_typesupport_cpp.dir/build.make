@@ -80,6 +80,7 @@ rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: ros
 rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: rosidl_adapter/rl_custom_messages/msg/AudioData.idl
 rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: rosidl_adapter/rl_custom_messages/srv/ObservationService.idl
 rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: rosidl_adapter/rl_custom_messages/srv/ImageService.idl
+rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: rosidl_adapter/rl_custom_messages/srv/EmotionService.idl
 rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: /opt/ros/humble/share/sensor_msgs/msg/BatteryState.idl
 rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: /opt/ros/humble/share/sensor_msgs/msg/CameraInfo.idl
 rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp: /opt/ros/humble/share/sensor_msgs/msg/ChannelFloat32.idl
@@ -184,6 +185,9 @@ rosidl_typesupport_cpp/rl_custom_messages/srv/observation_service__type_support.
 rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp: rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp
 
+rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp: rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp
+
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp.o: rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/compiler_depend.ts
@@ -254,13 +258,28 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp -o CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp.s
 
+CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o: rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp
+CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o -MF CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o.d -o CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp
+
+CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp > CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.i
+
+CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp -o CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.s
+
 # Object files for target rl_custom_messages__rosidl_typesupport_cpp
 rl_custom_messages__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/motor_commands__type_support.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/audio_data__type_support.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/observation_service__type_support.cpp.o" \
-"CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp.o"
+"CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp.o" \
+"CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o"
 
 # External object files for target rl_custom_messages__rosidl_typesupport_cpp
 rl_custom_messages__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
@@ -270,6 +289,7 @@ librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages_
 librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/msg/audio_data__type_support.cpp.o
 librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/observation_service__type_support.cpp.o
 librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp.o
+librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp.o
 librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/build.make
 librl_custom_messages__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 librl_custom_messages__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
@@ -280,7 +300,7 @@ librl_custom_messages__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_
 librl_custom_messages__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librl_custom_messages__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librcutils.so
 librl_custom_messages__rosidl_typesupport_cpp.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library librl_custom_messages__rosidl_typesupport_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library librl_custom_messages__rosidl_typesupport_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -294,6 +314,7 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/clean:
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rl_custom_messages/msg/audio_data__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rl_custom_messages/msg/motor_commands__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rl_custom_messages/msg/range_array__type_support.cpp
+CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rl_custom_messages/srv/emotion_service__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rl_custom_messages/srv/image_service__type_support.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rl_custom_messages/srv/observation_service__type_support.cpp
 	cd /home/rlcontrol/jay_ws/build/rl_custom_messages && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rlcontrol/jay_ws/rl_custom_messages /home/rlcontrol/jay_ws/rl_custom_messages /home/rlcontrol/jay_ws/build/rl_custom_messages /home/rlcontrol/jay_ws/build/rl_custom_messages /home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles/rl_custom_messages__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)

@@ -73,6 +73,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/rl_mind.py
   scripts/face_detection_test.py
+  scripts/emotion_server.py
   DESTINATION lib/${PROJECT_NAME}
 )
 ament_export_dependencies(rclcpp rl_custom_messages sensor_msgs)

@@ -39,6 +39,9 @@ import numpy as np
 from rl_custom_messages.srv import ImageService
 import cv2
 from sensor_msgs.msg import Image
+from rl_custom_messages.srv import EmotionService
+import json
+
 
 
 
@@ -101,7 +104,7 @@ class ImageClient(Node):
                 self.get_logger().info('Failed to decode image')
                 return None
             else:
-                img = np.transpose(img, (2, 0, 1))  # Add this line
+                img = np.transpose(img, (2, 1, 0))  # Add this line
                 return img
         else:
             self.get_logger().info('Service call failed %r' % (future.exception(),))
@@ -137,6 +140,22 @@ class ServiceClientNode(Node):
         else:
             self.get_logger().error("Service call failed")
 
+class EmotionClient(Node):
+    def __init__(self):
+        super().__init__('emotion_client')
+        self.cli = self.create_client(EmotionService, 'emotion_service')
+        while not self.cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...')
+        self.req = EmotionService.Request()
+
+    def get_emotions(self):
+        future = self.cli.call_async(self.req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            return json.loads(future.result().results)
+        else:
+            self.get_logger().info('Service call failed %r' % (future.exception(),))
+            return None, None, None, None
 
 
 class RewardTracker:
@@ -229,6 +248,7 @@ class JayEnv(gymnasium.Env):
                 rclpy.init(args=None)
             self.service_client_node = ServiceClientNode()
             self.image_client_node = ImageClient()
+            self.emotion_client_node = EmotionClient()
             #Initializes the range of actions the robot can choose to take. format of the action space is <<(wheelfl)<In1><In2><PWM>><wheelfr...><wheelrl>...<wheelrr>...<soundindex>
             #In's can be 0 or 1, the combinations of Ins tell if the motor is spinning clockwise or counterclockwise. PWM can be 0-100 floating point and tell the motor how fast to spin in a given direction
             #Sound index refers to sound files saved alongside the sound controller code. Each file is a 15s clip the agent can choose to play
@@ -246,8 +266,21 @@ class JayEnv(gymnasium.Env):
             self.range_space = gymnasium.spaces.Box(low=0, high=1000, shape=(), dtype=np.float32)
             self.user_input_space = gymnasium.spaces.Discrete(13)
             self.goal_flag = gymnasium.spaces.Discrete(4)
+            self.emotion_space = gymnasium.spaces.Dict({
+                'face': gymnasium.spaces.Discrete(2),
+                'emotions': gymnasium.spaces.Dict({
+                    'angry': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                    'disgust': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                    'fear': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                    'happy': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                    'sad': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                    'surprise': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                    'neutral': gymnasium.spaces.Box(low=0, high=100, shape=(1,), dtype=np.int32),
+                })
+            })
 
-            self.observation_space = gymnasium.spaces.Tuple((self.camera_space, self.camera_space, self.range_space, self.range_space, self.range_space, self.range_space, self.action_space, self.goal_flag, self.user_input_space))
+
+            self.observation_space = gymnasium.spaces.Tuple((self.camera_space, self.camera_space, self.range_space, self.range_space, self.range_space, self.range_space, self.action_space, self.goal_flag, self.user_input_space, self.emotion_space))
             self.state = None
             self.reward = None
             self.steps_left = None
@@ -280,11 +313,44 @@ class JayEnv(gymnasium.Env):
             except IndexError:
                 self.get_logger().warning('No responses received yet')
 
-            #self.camera_one = self.image_client_node.get_image_1()
-            #self.camera_two = self.image_client_node.get_image_2()
-            self.camera_zeros = np.zeros(self.camera_space.shape)
-            self.camera_one = self.camera_zeros
-            self.camera_two = self.camera_zeros
+            #if you want to test other functionality without a video feed/physical robot
+            #comment the camrea_number variables and uncomment the camera zeros variables
+            self.camera_one = self.image_client_node.get_image_1()
+            self.camera_two = self.image_client_node.get_image_2()
+            #self.camera_zeros = np.zeros(self.camera_space.shape)
+            #self.camera_one = self.camera_zeros
+            #self.camera_two = self.camera_zeros
+            self.emotions_check = self.emotion_client_node.get_emotions()
+            #print("312 emotions check", self.emotions_check)
+            #print("313 Camera 1 face", self.emotions_check['Video Feed 0']['face_detected'])
+            #print("314 camera 1 emotions", self.emotions_check['Video Feed 0']['emotions'])
+            #print("315 Camera 2 face", self.emotions_check['Video Feed 1']['face_detected'])
+            #print("314 camera 2 emotions", self.emotions_check['Video Feed 1']['emotions'])
+
+            self.flattened_emotions = []
+    
+            # Add data for each video feed to the flattened list
+            for feed in ['Video Feed 0', 'Video Feed 1']:
+                face_detected = self.emotions_check[feed]['face_detected']
+                emotions = self.emotions_check[feed]['emotions']
+
+                # Add face_detected to the list (it will become 1 if True, else 0)
+                self.flattened_emotions.append(int(face_detected))
+
+                # For emotions, ensure you have a consistent order
+                ordered_emotions = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
+
+                for emotion in ordered_emotions:
+                    # If emotion is not None, add its values to the list
+                    if emotions is not None:
+                        self.flattened_emotions.append(emotions[emotion])
+                    else:
+                        # If it's None, add zeroes for all emotions
+                        self.flattened_emotions.extend([0]*len(ordered_emotions))
+                        break  # No need to check other emotion
+
+            print("352 flattened emotions",self.flattened_emotions)
+            #self.camera_zeros = np.zeros(self.camera_space.shape)
             self.user_input_zeros = 0
             self.goal_zeros = 0
             self.one_hot_observation_8 = torch.nn.functional.one_hot(torch.tensor(self.user_input_zeros), num_classes=13).numpy()
@@ -292,7 +358,7 @@ class JayEnv(gymnasium.Env):
             self.x3_array_list = [np.array([self.range_observations[0]]), np.array([self.range_observations[1]]), \
                 np.array([self.range_observations[2]]), np.array([self.range_observations[3]])] \
                 + [np.array(action)] + [np.array([self.goal_zeros])] + \
-                [np.array(self.one_hot_observation_8)]
+                [np.array(self.one_hot_observation_8)] + [np.array(self.flattened_emotions)]
 
 
             # Now concatenate along the first axis
@@ -301,6 +367,9 @@ class JayEnv(gymnasium.Env):
             self.x3_flat_list = [item for sublist in self.x3_array_list for item in sublist]
 
             self.processed_observations = np.array([self.camera_one, self.camera_two, np.array(self.x3_flat_list)])
+
+            print("shape 305 cam 1", self.processed_observations[0].shape)
+            print("shape 306 cam 2", self.processed_observations[1].shape)
 
             self.state = np.array([action, self.processed_observations])
 
@@ -325,7 +394,8 @@ class JayEnv(gymnasium.Env):
         actions_zeros = np.zeros(13)
         cam1_zeros = np.zeros((3, 640, 480))
         cam2_zeros = np.zeros((3, 640, 480))
-        other_zeros = np.zeros(31)
+        #other_zeros = np.zeros(31) pre emotions
+        other_zeros = np.zeros(47)
         
         obs_zeros = [cam1_zeros, cam2_zeros, other_zeros]
         
@@ -359,7 +429,8 @@ class JayActor(nn.Module):
         action_state_size = len(flattened_action_space)
         user_input_size = 13
         goal_size = 1
-        linear_input_size = range_feed_size + action_state_size + user_input_size + goal_size
+        emotions_size = 16
+        linear_input_size = range_feed_size + action_state_size + user_input_size + goal_size + emotions_size
 
         #Seperate net for each camera feed. Not 100% sure this is how eyes work
         #I think this is right, becuase you can close 1 eye and it doesnt really effect the other eye signifigantly
@@ -474,7 +545,8 @@ class JayCritic(nn.Module):
         action_state_size = len(flattened_action_space)
         user_input_size = 13
         goal_size = 1
-        linear_input_size = range_feed_size + action_state_size + user_input_size + goal_size
+        emotions_size = 16
+        linear_input_size = range_feed_size + action_state_size + user_input_size + goal_size + emotions_size
         self.delta = (v_max-v_min) / (n_atoms - 1)
         self.v_min = v_min
         self.v_max = v_max

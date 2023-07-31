@@ -82,6 +82,7 @@ rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_
 rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/rl_custom_messages/msg/AudioData.idl
 rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/rl_custom_messages/srv/ObservationService.idl
 rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/rl_custom_messages/srv/ImageService.idl
+rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/rl_custom_messages/srv/EmotionService.idl
 rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/sensor_msgs/msg/BatteryState.idl
 rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/sensor_msgs/msg/CameraInfo.idl
 rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/sensor_msgs/msg/ChannelFloat32.idl
@@ -201,6 +202,12 @@ rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__rosid
 rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp
 
+rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp
+
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__type_support_c.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__type_support_c.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__type_support_c.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
@@ -271,13 +278,28 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp -o CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp.s
 
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o -MF CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o.d -o CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o -c /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp
+
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp > CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.i
+
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp -o CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.s
+
 # Object files for target rl_custom_messages__rosidl_typesupport_fastrtps_c
 rl_custom_messages__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__type_support_c.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/motor_commands__type_support_c.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/audio_data__type_support_c.cpp.o" \
 "CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/observation_service__type_support_c.cpp.o" \
-"CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp.o"
+"CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp.o" \
+"CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o"
 
 # External object files for target rl_custom_messages__rosidl_typesupport_fastrtps_c
 rl_custom_messages__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -287,6 +309,7 @@ librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_me
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/audio_data__type_support_c.cpp.o
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/observation_service__type_support_c.cpp.o
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp.o
+librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp.o
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/build.make
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: librl_custom_messages__rosidl_generator_c.so
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
@@ -304,7 +327,7 @@ librl_custom_messages__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/lib
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 librl_custom_messages__rosidl_typesupport_fastrtps_c.so: CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library librl_custom_messages__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rlcontrol/jay_ws/build/rl_custom_messages/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library librl_custom_messages__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -321,6 +344,8 @@ CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/motor_commands__type_support_c.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/msg/detail/range_array__type_support_c.cpp
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/emotion_service__type_support_c.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/image_service__type_support_c.cpp
 CMakeFiles/rl_custom_messages__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/rl_custom_messages/srv/detail/observation_service__rosidl_typesupport_fastrtps_c.h

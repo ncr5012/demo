@@ -75,6 +75,9 @@ CMakeFiles/rl_custom_messages: rosidl_cmake/srv/ObservationService_Response.msg
 CMakeFiles/rl_custom_messages: /home/rlcontrol/jay_ws/rl_custom_messages/srv/ImageService.srv
 CMakeFiles/rl_custom_messages: rosidl_cmake/srv/ImageService_Request.msg
 CMakeFiles/rl_custom_messages: rosidl_cmake/srv/ImageService_Response.msg
+CMakeFiles/rl_custom_messages: /home/rlcontrol/jay_ws/rl_custom_messages/srv/EmotionService.srv
+CMakeFiles/rl_custom_messages: rosidl_cmake/srv/EmotionService_Request.msg
+CMakeFiles/rl_custom_messages: rosidl_cmake/srv/EmotionService_Response.msg
 CMakeFiles/rl_custom_messages: /opt/ros/humble/share/sensor_msgs/msg/BatteryState.idl
 CMakeFiles/rl_custom_messages: /opt/ros/humble/share/sensor_msgs/msg/CameraInfo.idl
 CMakeFiles/rl_custom_messages: /opt/ros/humble/share/sensor_msgs/msg/ChannelFloat32.idl
