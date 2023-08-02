@@ -368,16 +368,34 @@ class JayEnv(gymnasium.Env):
 
             self.processed_observations = np.array([self.camera_one, self.camera_two, np.array(self.x3_flat_list)])
 
-            print("shape 305 cam 1", self.processed_observations[0].shape)
-            print("shape 306 cam 2", self.processed_observations[1].shape)
-
             self.state = np.array([action, self.processed_observations])
 
-            if all(observation > 10 for observation in self.range_observations):
-                self.goal += 1
-            elif any(observation < 10 for observation in self.range_observations):
-                self.penalty += -100
+            #wall avoidance goals
 
+            if all(observation > 10 for observation in self.range_observations):
+                self.goal += 0
+            elif any(observation < 10 for observation in self.range_observations):
+                self.penalty += -50
+
+            #Human interaction goals
+
+            #Interesting idea - originally, i was going to write logic so theres not double rewarding of a smiling face
+            #if both cameras detect it, i decided against it, as the face detection algorithm isnt perfect
+            #and double rewarding both detection and happy seems like it should incentivize the robot to optimize camera positioning for us automatically
+            #to have maximal probability of a detection if possible for the platform. 
+            #Deeper insight is that the details of a reward scheme can be used to solve engineering problems in unexpected ways
+            #Always think "is there a way we can automate a problem we cant solve by modifying the rewards scheme?"
+
+            if self.emotions_check["Video Feed 0"]['face_detected'] == True:
+                self.goal += 1
+                if self.emotions_check["Video Feed 0"]['emotions']['happy'] >= 20:
+                    self.goal += 100
+
+            elif self.emotions_check["Video Feed 1"]['face_detected'] == True:
+                self.goal += 1
+                if self.emotions_check["Video Feed 1"]['emotions']['happy'] >= 20:
+                    self.goal += 100
+            
             self.reward = self.goal + self.penalty
 
             print("286 penalty", self.penalty)

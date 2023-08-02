@@ -67,7 +67,7 @@ class ImageDisplayNode(Node):
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Detect emotions in the frame
-        results = DeepFace.analyze(rgb_frame, actions = ['emotion'], enforce_detection = False)
+        results = DeepFace.analyze(rgb_frame, actions = ['emotion'], enforce_detection = False, silent=True)
 
         if isinstance(results, list):
             for result in results:
@@ -87,6 +87,7 @@ class ImageDisplayNode(Node):
                     if recent_emotions:
                         average_emotions = {emotion: round(np.mean([emo[emotion] for emo in recent_emotions])) for emotion in recent_emotions[0]}
                         self.results[window_name]['emotions'] = average_emotions
+                        print(self.results[window_name]['emotions'])
         else:
             self.results[window_name]['face_detected'] = False
             self.results[window_name]['emotions'] = None
@@ -96,7 +97,6 @@ class ImageDisplayNode(Node):
         if cv2.waitKey(1) & 0xFF == ord('q'):
             cv2.destroyAllWindows()
 
-        print(self.results[window_name])
 
 def main(args=None):
     rclpy.init(args=args)
