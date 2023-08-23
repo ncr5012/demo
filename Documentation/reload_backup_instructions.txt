@@ -1,0 +1,92 @@
+Steps to load/reload/configure a new/corrupted sd rlbot from scratch:
+
+1.	Use Raspberry Pi imager tool to install Unbuntu Server 
+a.	Select other os and the server image you download from unbuntu website
+b.	Select advanced options
+i.	Select SSH etc, set username as jaybot, password as d2iid2ii
+ii.	Set up wifi
+iii.	Write the sd to a disk
+2.	Boot Unbuntu on the raspberry pi, do initial configure (have keyboard and HDMI plugged in or guess the ip with ssh until you hit – arp -a often doesn’t reveal ip until its been ssh to, but you can see ip if you pay attention on first boot
+a.	Wait for cloud-init to finish before typing your login / password 
+b.	Run sudo apt update/upgrade
+c.	Sudo reboot (you can do SSH from here on out)
+3.	(Raspberry Pi 3A+ or Zero ONLY) Reconfigure memory swap on SD card to enable feasible ROS2 build times
+a.	Sure, increasing the swap space on your Raspberry Pi could help with compiling large programs. Here are the steps to do it on Ubuntu Server:
+b.	
+c.	1. **Check the current swap space:** You can use the `free` command to check the current swap space. Open a terminal and type:
+d.	    ```bash
+e.	    free -m
+f.	    ```
+g.	    The 'Swap' line will tell you the total swap space and how much is being used.
+h.	
+i.	2. **Disable the current swap space:** Before creating a new swap space, we need to disable the current one. Use the `swapoff` command:
+j.	    ```bash
+k.	    sudo swapoff /swapfile
+l.	    ```
+m.	
+n.	3. **Remove the current swap file:** Now, we should remove the current swap file:
+o.	    ```bash
+p.	    sudo rm /swapfile
+q.	    ```
+r.	
+s.	4. **Create a new swap file:** The `fallocate` command can be used to create a new swap file. If you want to allocate 4GB, for example, you can use:
+t.	    ```bash
+u.	    sudo fallocate -l 4G /swapfile
+v.	    ```
+w.	
+x.	5. **Set up the swap file:** Before we can use the new swap file, we need to set it up with the `mkswap` command:
+y.	    ```bash
+z.	    sudo mkswap /swapfile
+aa.	    ```
+bb.	
+cc.	6. **Enable the new swap file:** We can now enable the new swap file with the `swapon` command:
+dd.	    ```bash
+ee.	    sudo swapon /swapfile
+ff.	    ```
+gg.	
+hh.	7. **Make the swap file permanent:** To make sure the new swap file is used after a reboot, we need to add it to the `/etc/fstab` file:
+ii.	    ```bash
+jj.	    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+kk.	    ```
+ll.	
+mm.	8. **Confirm the changes:** You can use the `free` command again to confirm the new swap space:
+nn.	    ```bash
+oo.	    free -m
+pp.	    ```
+qq.	Now your system should be using the new swap space, which should help with compiling your C code.
+rr.	
+ss.	Remember to be careful when modifying system files and parameters. Also, be aware that using a swap file on an SD card could shorten its lifespan due to the extra read and write operations.Install ROS2
+4.	Install ROS2 by following the directions on the ROS2 website
+a.	Remember to set Domain ID to 0
+5.	Install the following libraries:
+a.	Pigpio - http://abyz.me.uk/rpi/pigpio/download.html
+b.	Install OpenCV – DO NOT BUILD IT FROM SOURCE – theres a sudo apt command I cant remember, but its like python3 opencv or something. Just don’t try to build it, the pis are too slow. 
+c.	Sudo apt install libasound2-dev
+d.	Sudo apt install ros-humble-cv-bridge
+e.	 	Sudo apt install raspi-config
+i.	MUST ENABLE LEGACY CAMERA PORT via raspi-config
+ii.	Same with GPIO 
+
+
+
+Steps to create an image:
+
+Snapsot on VMware for linux
+
+For SD Card:
+
+
+
+
+
+Steps to reload a functional image:
+
+Plug in new SD card
+
+1.	Insert the SD card you want to copy in the computer
+2.	Run lsblk in the terminal and see its name (might be /dev/sdb)
+3.	Insert the blank/overwrite card you want to store the image in the computer
+4.	Run lsblk in the terminal and see its name (might be /dev/sdc)
+5.	DOUBLE CHECK BEFORE RUNNING – OVERWRITE CHANCE – run <sudo dd if=<input card name, might be /dev/sdb> of=<output card name, might be /dev/sdc> bs=4M status=progress
+Allow to complete, then sudo eject both c
+

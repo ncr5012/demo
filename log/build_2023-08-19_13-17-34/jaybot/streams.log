@@ -1,0 +1,24 @@
+[0.016s] Invoking command in '/home/rlcontrol/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6
+[0.104s] [ 14%] Built target motor_controller
+[0.105s] [ 28%] Built target range_publisher
+[0.106s] [ 42%] Built target microphone_publisher
+[0.107s] [ 57%] Built target speaker_controller
+[0.109s] [ 64%] [32mBuilding CXX object CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o[0m
+[0.111s] [ 78%] Built target rl_server
+[0.136s] [ 78%] Built target ament_cmake_python_symlink_jaybot
+[0.139s] [ 92%] Built target image_debugger
+[0.459s] running egg_info
+[0.460s] writing jaybot.egg-info/PKG-INFO
+[0.460s] writing dependency_links to jaybot.egg-info/dependency_links.txt
+[0.460s] writing top-level names to jaybot.egg-info/top_level.txt
+[0.463s] reading manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.463s] writing manifest file 'jaybot.egg-info/SOURCES.txt'
+[0.483s] [ 92%] Built target ament_cmake_python_build_jaybot_egg
+[0.980s] [01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:6:10:[m[K [01;31m[Kfatal error: [m[Krl_custom_messages.srv/ImageService.hpp: No such file or directory
+[0.980s]     6 | #include [01;31m[K"rl_custom_messages.srv/ImageService.hpp"[m[K
+[0.980s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.980s] compilation terminated.
+[0.983s] gmake[2]: *** [CMakeFiles/camera_publisher.dir/build.make:76: CMakeFiles/camera_publisher.dir/src/camera_publisher.cpp.o] Error 1
+[0.983s] gmake[1]: *** [CMakeFiles/Makefile2:204: CMakeFiles/camera_publisher.dir/all] Error 2
+[0.984s] gmake: *** [Makefile:146: all] Error 2
+[0.989s] Invoked command in '/home/rlcontrol/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/home/rlcontrol/jay_ws/install/rl_custom_messages:/home/rlcontrol/jay_ws/install/jaybot:/opt/ros/humble /home/rlcontrol/.local/bin/cmake --build /home/rlcontrol/jay_ws/build/jaybot -- -j6 -l6

@@ -1,0 +1,4 @@
+1. open a terminal
+2. cd jay_ws
+3. source install/setup.bash
+4. run ros2 run jaybot <package> for <rl_server> <face_detection_test.py> and <rl_mind.py> Note, face_detection_test.py is dependant on rl_server, which is unecessary in the current architecture and should be modified eventually (wanted to keep all data in sync, but this is controlled by making rl_mind send client requests to multiple different servers). 

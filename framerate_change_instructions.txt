@@ -1,0 +1,6 @@
+1. Power on robot (no batteries to wheels unless you want a motor to spin untill you run the motor controller)
+2. ssh into 4x windows
+3. cd jay_ws, source install/setup.bash in each window
+4. In one terminal, run sudo pigpiod to initialize the GPIO
+5. In one terminal, v4l2-ctl --list-devices to determine camera names, v4l2-ctl -d /dev/<videoX> --set-parm=<framerate> found in camera_publisher.cpp
+6. in each terminal, run ros2 run jaybot <package> for <motor_controller> <range_publisher> <speaker_controller> and <camera_publisher> or <camera_publisher02> depending on how the pi named the cameras observed in step 5. (if you get an error on camera_publisher, they are probably named for camera_publisher02 and vice versa)

@@ -33,8 +33,8 @@ target_link_libraries(motor_controller ${catkin_LIBRARIES} pigpiod_if2)
 ament_target_dependencies(motor_controller rclcpp rl_custom_messages)
 
 add_executable(camera_publisher src/camera_publisher.cpp)
-target_link_libraries(camera_publisher ${OpenCV_LIBS} ${sensor_msgs_LIBS} ${cv_bridge_LIBS})
-ament_target_dependencies(camera_publisher rclcpp sensor_msgs cv_bridge)
+target_link_libraries(camera_publisher ${OpenCV_LIBS} ${cv_bridge_LIBS})
+ament_target_dependencies(camera_publisher rclcpp rl_custom_messages cv_bridge)
 
 add_executable(microphone_publisher src/microphone_publisher.cpp)
 target_link_libraries(microphone_publisher ${sensor_msgs_LIBS} asound)

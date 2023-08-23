@@ -48,10 +48,10 @@ import json
 CAMERA_RESOLUTION = (3,640,480)
 
 GAMMA = 0.99
-BATCH_SIZE = 1
+BATCH_SIZE = 30
 LEARNING_RATE = 1e-4
 REPLAY_SIZE = 100000
-REPLAY_INITIAL = 10
+REPLAY_INITIAL = 30
 REWARD_STEPS = 5
 EPSILON = 0.3
 NUM_ENVS = 1
@@ -70,8 +70,8 @@ HUMAN_CONTROL_PENALTY = -1
 
 #Upon testing, it looks like its running at roughly 1 step / second. ideally would like to get towards .1 step / second
 
-STEPS_PER_SECOND = 1
-INTERVAL_LENGTH = 60
+STEPS_PER_SECOND = 30
+INTERVAL_LENGTH = 4
 TEST_ITERS = 1000
 
 VMAX = 2000
@@ -156,7 +156,6 @@ class EmotionClient(Node):
         else:
             self.get_logger().info('Service call failed %r' % (future.exception(),))
             return None, None, None, None
-
 
 class RewardTracker:
     def __init__(self, writer, stop_reward):
@@ -288,6 +287,23 @@ class JayEnv(gymnasium.Env):
 
             self.observation_space2 = gymnasium.spaces.Box(low=0, high=100,shape=(4,), dtype=np.float32)
 
+     def measure_interval(func):
+        last_called_time = [None]
+        def wrapper(*args, **kwargs):
+            current_time = time.time()
+
+            if last_called_time[0] is not None:
+                interval = current_time - last_called_time[0]
+                print(f"Time since last call: {interval} seconds")
+
+            result = func(*args, **kwargs)
+            last_called_time[0] = current_time
+
+            return result
+
+        return wrapper
+
+     @measure_interval
      def step(self, action):
             
             print("205 action", action)
@@ -399,6 +415,8 @@ class JayEnv(gymnasium.Env):
             self.reward = self.goal + self.penalty
 
             print("286 penalty", self.penalty)
+
+            print("403 goal", self.goal)
 
             print("286 reward", self.reward)
 
@@ -534,7 +552,7 @@ class JayActor(nn.Module):
         x3 = self.range_layers(x3)
         x1 = x1.view(1, -1)
         x2 = x2.view(1, -1)
-        x3 = x3.view(1, 64)
+        x3 = x3.view(1, -1)
 
         
         # concatenate the outputs along the feature dimension
@@ -622,15 +640,13 @@ class JayCritic(nn.Module):
         x1 = self.conv_layers1(x1)
         x2 = self.conv_layers2(x2)
         x3 = self.range_layers(x3)
-        x1 = x1.view(1, -1)
-        x2 = x2.view(1, -1)
-        x3 = x3.view(1, 64)
+        x1 = x1.view(x1.size(0), -1)
+        x2 = x2.view(x2.size(0), -1)
+        x3 = x3.view(x3.size(0), -1)
         x_state = torch.cat((x1, x2, x3), dim=1)
         x_state = self.fc_layer(x_state)
-        
         # Action processing
         x_action = self.action_processor(action)
-        
         # Combining state and action
         x_combined = torch.cat((x_state, x_action), dim=1)
         x_combined = self.combined_processor(x_combined)
@@ -742,7 +758,7 @@ class AgentD4PG(BaseAgent):
             elif self.actions[0][12] != 0:  # If a non-zero action is taken
                 self.sound_action_timer = 15  # Start the timer - set to 15 steps / ~15s at current code performance
 
-            print("sound action timer", self.sound_action_timer)
+            #print("sound action timer", self.sound_action_timer)
             
 
             #Modify so that it only sends a new sound command at most every 10s
@@ -1046,33 +1062,73 @@ def test_net(net, env, count=NUM_ENVS, device=device):
                 break
     return rewards / count
 
-def unpack_batch_ddqn(batch, device=device):
-    states, actions, rewards, dones, last_states, critic_states_a_v = [], [], [], [], [], []
+def unpack_batch_ddqn(batch, device):
+    states_actions = []
+    states_cam1 = []
+    states_cam2 = []
+    states_other = []
+    actions = []
+    rewards = []
+    dones = []
+    last_states_actions = []
+    last_states_cam1 = []
+    last_states_cam2 = []
+    last_states_other = []
+
     for exp in batch:
-        states.append(exp.state)
+        action_state, cameras_other = exp.state
+        cam1, cam2, other = cameras_other
+        states_actions.append(action_state)
+        states_cam1.append(cam1)
+        states_cam2.append(cam2)
+        states_other.append(other)
         actions.append(exp.action)
         rewards.append(exp.reward)
         dones.append(exp.last_state is None)
         if exp.last_state is None:
-            last_states.append(exp.state)
+            last_states_actions.append(action_state)
+            last_states_cam1.append(cam1)
+            last_states_cam2.append(cam2)
+            last_states_other.append(other)
         else:
-            last_states.append(exp.last_state)
-    states_actions_tensor = torch.tensor(states[0][0], dtype=torch.float32).to(device)
-    states_cam1_tensor = torch.tensor(states[0][1][0], dtype=torch.float32).to(device)
-    states_cam2_tensor = torch.tensor(states[0][1][1], dtype=torch.float32).to(device)
-    states_other_tensor = torch.tensor(states[0][1][2], dtype=torch.float32).to(device)
+            last_state_action, last_state_cameras_other = exp.last_state
+            last_cam1, last_cam2, last_other = last_state_cameras_other
+            last_states_actions.append(last_state_action)
+            last_states_cam1.append(last_cam1)
+            last_states_cam2.append(last_cam2)
+            last_states_other.append(last_other)
+
+    states_actions = np.array(states_actions)
+    states_cam1 = np.array(states_cam1)
+    states_cam2 = np.array(states_cam2)
+    states_other = np.array(states_other)
+
+    states_actions_tensor = torch.tensor(states_actions, dtype=torch.float32).to(device)
+    states_cam1_tensor = torch.tensor(states_cam1, dtype=torch.float32).to(device)
+    states_cam2_tensor = torch.tensor(states_cam2, dtype=torch.float32).to(device)
+    states_other_tensor = torch.tensor(states_other, dtype=torch.float32).to(device)
     states_v = [states_actions_tensor, states_cam1_tensor, states_cam2_tensor, states_other_tensor]
+
     actions = np.stack(actions)
     actions_v = torch.tensor(actions, dtype=torch.float32).to(device)
     rewards_v = torch.tensor(rewards, dtype=torch.float32).to(device)
-    last_states_actions_tensor = torch.tensor(last_states[0][0], dtype=torch.float32).to(device)
-    last_states_cam1_tensor = torch.tensor(last_states[0][1][0], dtype=torch.float32).to(device)
-    last_states_cam2_tensor = torch.tensor(last_states[0][1][1], dtype=torch.float32).to(device)
-    last_states_other_tensor = torch.tensor(last_states[0][1][2], dtype=torch.float32).to(device)
+    
+    last_states_actions = np.array(last_states_actions)
+    last_states_cam1 = np.array(last_states_cam1)
+    last_states_cam2 = np.array(last_states_cam2)
+    last_states_other = np.array(last_states_other)
+
+    last_states_actions_tensor = torch.tensor(last_states_actions, dtype=torch.float32).to(device)
+    last_states_cam1_tensor = torch.tensor(last_states_cam1, dtype=torch.float32).to(device)
+    last_states_cam2_tensor = torch.tensor(last_states_cam2, dtype=torch.float32).to(device)
+    last_states_other_tensor = torch.tensor(last_states_other, dtype=torch.float32).to(device)
     last_states_v = [last_states_actions_tensor, last_states_cam1_tensor, last_states_cam2_tensor, last_states_other_tensor]
+
     dones_t = torch.BoolTensor(dones).to(device)
     critic_states_a_v = [states_cam1_tensor, states_cam2_tensor, states_other_tensor, actions_v]
+
     return states_v, actions_v, rewards_v, dones_t, last_states_v, critic_states_a_v
+
 
 def distr_projection(next_distr_v, rewards_v, dones_mask_t,
                      gamma, device="cpu"):
@@ -1146,7 +1202,7 @@ def main():
                 #gonna want to implement some kind of saving the of the replay buffer, so that 
                 #I can initialize a session with old data
                 print("987 test")
-                buffer.populate(1)
+                buffer.populate(BATCH_SIZE)
                 rewards_steps = exp_source.pop_rewards_steps()
 
                 if rewards_steps:
@@ -1159,13 +1215,14 @@ def main():
 
                     
                 batch = buffer.sample(BATCH_SIZE)
+                print("batch 1181 length", len(batch))
                 states_v, actions_v, rewards_v, dones_mask, last_states_v, critic_states_a_v= unpack_batch_ddqn(batch, device) 
-
+                #print("1181 critic_states_a_v",critic_states_a_v)
 
                 # train Arthur critic
                 optimizer_critic.zero_grad()
                 crt_distr_v = net_critic(critic_states_a_v)[2]
-                last_act_v = tgt_net_actor.target_model([last_states_v[1], last_states_v[2], last_states_v[3]])
+                #last_act_v = tgt_net_actor.target_model(last_states_v)
                 #last_distr_v = F.softmax(tgt_net_critic.target_model(critic_states_a_v), dim=1)
                 last_distr_v = tgt_net_critic.target_model(critic_states_a_v)[1]
                 proj_distr_v = distr_projection(last_distr_v, rewards_v, dones_mask, gamma=GAMMA**REWARD_STEPS, device=device)
@@ -1177,7 +1234,7 @@ def main():
 
                 # train Arthur actor
                 optimizer_actor.zero_grad()
-                cur_actions_v = net_actor([states_v[1], states_v[2], states_v[3]])
+                #cur_actions_v = net_actor([states_v[1], states_v[2], states_v[3]])
                 crt_distr_v = net_critic(critic_states_a_v)[1]
                 actor_loss_v = -net_critic.distr_to_q(crt_distr_v)
                 actor_loss_v = actor_loss_v.mean()

@@ -1,0 +1,4 @@
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:[m[K In member function ‘[01m[Kvoid ImageServiceServer::service_callback(std::shared_ptr<rl_custom_messages::srv::ImageService_Request_<std::allocator<void> > >, std::shared_ptr<rl_custom_messages::srv::ImageService_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/rlcontrol/jay_ws/jaybot/src/camera_publisher.cpp:39:97:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   39 |     void service_callback([01;35m[Kconst std::shared_ptr<rl_custom_messages::srv::ImageService::Request> request[m[K,
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
