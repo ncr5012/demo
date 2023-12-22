@@ -1,7 +1,0 @@
-/usr/bin/ld: CMakeFiles/rl_server.dir/src/rl_server.cpp.o: in function `ImageSubscriber::topic_callback(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)':
-rl_server.cpp:(.text._ZN15ImageSubscriber14topic_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15ImageSubscriber14topic_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x16b): undefined reference to `cv::imshow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::_InputArray const&)'
-/usr/bin/ld: rl_server.cpp:(.text._ZN15ImageSubscriber14topic_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15ImageSubscriber14topic_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x1a2): undefined reference to `cv::waitKey(int)'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/rl_server.dir/build.make:187: rl_server] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:224: CMakeFiles/rl_server.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

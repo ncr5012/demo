@@ -1,9 +1,0 @@
-/usr/bin/ld: CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o: in function `AudioCapturePublisher::AudioCapturePublisher()':
-microphone_publisher.cpp:(.text._ZN21AudioCapturePublisherC2Ev[_ZN21AudioCapturePublisherC5Ev]+0x321): undefined reference to `snd_pcm_open'
-/usr/bin/ld: microphone_publisher.cpp:(.text._ZN21AudioCapturePublisherC2Ev[_ZN21AudioCapturePublisherC5Ev]+0x35b): undefined reference to `snd_pcm_set_params'
-/usr/bin/ld: CMakeFiles/microphone_publisher.dir/src/microphone_publisher.cpp.o: in function `AudioCapturePublisher::timer_callback()':
-microphone_publisher.cpp:(.text._ZN21AudioCapturePublisher14timer_callbackEv[_ZN21AudioCapturePublisher14timer_callbackEv]+0x81): undefined reference to `snd_pcm_readi'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/microphone_publisher.dir/build.make:175: microphone_publisher] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/microphone_publisher.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

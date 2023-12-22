@@ -1,9 +1,0 @@
-[31mCMake Error at CMakeLists.txt:27 (add_dependencies):
-  add_dependencies called with incorrect number of arguments
-
-[0m
-[31mCMake Error at CMakeLists.txt:31 (add_dependencies):
-  add_dependencies called with incorrect number of arguments
-
-[0m
-gmake: *** [Makefile:829: cmake_check_build_system] Error 1

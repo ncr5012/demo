@@ -1,2 +1,0 @@
-Invoking command in '/home/rlagent/jay_ws/build/jaybot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2
-Invoked command in '/home/rlagent/jay_ws/build/jaybot' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/jaybot -- -j2 -l2

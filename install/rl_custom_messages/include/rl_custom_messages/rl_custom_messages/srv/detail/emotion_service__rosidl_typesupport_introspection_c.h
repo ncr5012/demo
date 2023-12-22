@@ -1,1 +1,0 @@
-/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_typesupport_introspection_c/rl_custom_messages/srv/detail/emotion_service__rosidl_typesupport_introspection_c.h

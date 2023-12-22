@@ -1,4 +1,0 @@
-Invoking command in '/home/rlagent/jay_ws/build/rl_custom_messages': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/rl_custom_messages -- -j2 -l2
-Invoked command in '/home/rlagent/jay_ws/build/rl_custom_messages' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rlagent/jay_ws/build/rl_custom_messages -- -j2 -l2
-Invoking command in '/home/rlagent/jay_ws/build/rl_custom_messages': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rlagent/jay_ws/build/rl_custom_messages
-Invoked command in '/home/rlagent/jay_ws/build/rl_custom_messages' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rlagent/jay_ws/build/rl_custom_messages

@@ -1,1 +1,0 @@
-/home/rlcontrol/jay_ws/build/rl_custom_messages/rosidl_generator_c/rl_custom_messages/srv/detail/image_service__struct.h

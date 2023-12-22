@@ -1,1 +1,0 @@
-/home/rlcontrol/jay_ws/build/jaybot/ament_cmake_environment_hooks/local_setup.sh

@@ -1,5 +1,0 @@
-[31mCMake Error at CMakeLists.txt:23 (add_message_files):
-  Unknown CMake command "add_message_files".
-
-[0m
-gmake: *** [Makefile:308: cmake_check_build_system] Error 1

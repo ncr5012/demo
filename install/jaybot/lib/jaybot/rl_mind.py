@@ -1,1 +1,0 @@
-/home/rlcontrol/jay_ws/jaybot/scripts/rl_mind.py
