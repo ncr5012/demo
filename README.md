@@ -2,12 +2,14 @@
 
 This repository is to serve as a demonstration of Nick Rackley's full-stack robotics development experience. Files include C++ firmware for cameras, ultrasonic sensors, motor controllers, speakers and Python computer vision software that detects faces, analyzes their emotions if a face is detected, and creates popup windows to debug the overall system. 
 
+The hardware platform (mechanical and physical) was designed by Nick Rackley, including a LiPo battery with buck converters to feed a raspberry pi and two motor controller boards/four brushless dc motors connected to mecanum wheels to provide maximum degrees of freedom in movement. 
+
 NOTE: Select files deemed core IP are omitted (the core deep reinforcement learning loop and heavily modified FogROS2 cloud deployment software). A demo could be performed on request. 
 
 
 All relevant source code is in the "jaybot" folder. The /jaybot/src folder has the c++ firmware and /jaybot/scripts has the python reinforcment learning / facial detection software.
 
-All development was conducted by Nick Rackley, aided by chatGPT-4. 
+All development was conducted by Nick Rackley. 
 
 # Demo videos:
 
