@@ -1,17 +1,40 @@
-# Nick Rackley's demo repository
+Nick Rackley's Demo Repository
 
-This repository is to serve as a demonstration of Nick Rackley's full-stack robotics development experience. Files include C++ firmware for cameras, ultrasonic sensors, motor controllers, speakers and Python computer vision software that detects faces, analyzes their emotions if a face is detected, and creates popup windows to debug the overall system. 
+Welcome to the demo repository showcasing the software and hardware development skills of Nick Rackley. This repository contains selected projects that demonstrate my capabilities in developing sophisticated systems integrating both software and hardware components.
 
-The hardware platform (mechanical and physical) was designed, assembled, and tested by Nick Rackley, including a LiPo battery with buck converters to feed a raspberry pi and two motor controller boards/four brushless dc motors connected to mecanum wheels to provide maximum degrees of freedom in movement. 
+Featured Projects
 
-NOTE: Select files deemed core IP are omitted (the core deep reinforcement learning loop and heavily modified FogROS2 cloud deployment software). A demo could be performed on request. This repository serves to demonstrate Nick Rackley's c++/python proficiency. 
+1. Reinforcement Learning Robot
+Project Overview:
 
+An autonomously learning robot powered by a deep reinforcement learning agent.
+Continuously learns from passive human and environmental feedback, adapting its behavior to maximize positive human emotions and navigate its surroundings effectively.
+Designed and assembled all software and hardware components for this project.
+Skills Demonstrated:
 
-All relevant source code is in the "jaybot" folder. The /jaybot/src folder has the c++ firmware and /jaybot/scripts has the python reinforcment learning / facial detection software.
+Software: Python, C++, Deep Reinforcement Learning from Human Feedback (RLHF) in physical environments, Cloud Robotics, ROS2, Computer Vision for facial/emotional detection, Sensor Fusion, Sensor Firmware.
+Hardware: Circuit and power system design and assembly, LiPo battery integration, 3D chassis design and printing (Autodesk Fusion and 3D Printing), custom Mecanum wheel design and 3D printing, Brushless DC Motor and motor controller integration, integration of camera, ultrasonic distance sensor, speaker, and microphone.
+Video Demonstration: Watch here - Demonstrates the robot operating in local mode, starting from scratch and learning about the world, akin to a newborn baby. At approximately 17:45, it begins to show emergent levels of intelligence and curiosity.
 
-All development was conducted by Nick Rackley. 
+Note: Core IP files, including the core deep reinforcement learning loop and modified FogROS2 cloud deployment software, are omitted for proprietary reasons. Demos are available upon request. This project primarily showcases my proficiency in C++ and Python.
 
-# Demo videos:
+2. Financial Transformer
+Project Overview:
 
-1. https://youtu.be/BLXDSJCqv4M - A demo of the robot operating in "local" mode where my macbook pro serves as the server. It's a slow watch, becuase the robot is completely uninitialized and learning about the world from scratch with less knowledge then a new born baby, but keep in mind in about 20 minutes it demonstrates a machine that realizes Alan Turing's dream of “... a machine that can learn from experience”. Around 17:45 is where its starts to demonstrate emergent levels of intelligence (child like curiosity). 
-2.  https://youtu.be/s_h7Naehl7I - Unrelated to the code above, but shown to demonstrate ability to integrate physical sensors with mobile apps - a demo video of a simple "sound alarm on motion detection" home security system I made for a mobile app development final project. (Displays mobile app development - cloud integration - physical sensor integration skills)
+An innovative project aiming to predict the prices of over 70 stocks for the next day using an autoregressive transformer model, not unlike language models (LLMs).
+Skills Demonstrated:
+
+Software: Python, design and training of transformer architecture from scratch, optimization of training loops for RAM and compute constraints.
+Data Science: Python, data structure creation, API utilization for data collection, data partitioning and cleaning, optimization of data structures and algorithms for RAM constraints.
+3. RAG LLM
+Project Overview:
+
+A class project involving a Retrieve and Generate (RAG) Language Model (LLM) system.
+Processes a PDF by chunking it, embedding the chunks, and using the embeddings to recommend relevant content for arbitrary queries through the OpenAI API, enhancing query responses beyond the base GPT 3.5 model capabilities.
+Development: All projects were developed by Nick Rackley, showcasing a broad range of skills in software and hardware integration.
+
+Demo Videos
+
+Reinforcement Learning Robot Demo - Demonstrates the robot learning from scratch in a local environment. It highlights the robot's journey to achieving a level of intelligence and curiosity.
+Sound Alarm on Motion Detection System - Showcases the integration of physical sensors with mobile apps through a home security system project, highlighting skills in mobile app development, cloud integration, and physical sensor integration.
+
