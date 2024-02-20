@@ -2,7 +2,7 @@
 
 This repository is to serve as a demonstration of Nick Rackley's full-stack robotics development experience. Files include C++ firmware for cameras, ultrasonic sensors, motor controllers, speakers and Python computer vision software that detects faces, analyzes their emotions if a face is detected, and creates popup windows to debug the overall system. 
 
-The hardware platform (mechanical and physical) was designed and assembled by Nick Rackley, including a LiPo battery with buck converters to feed a raspberry pi and two motor controller boards/four brushless dc motors connected to mecanum wheels to provide maximum degrees of freedom in movement. 
+The hardware platform (mechanical and physical) was designed, assembled, and tested by Nick Rackley, including a LiPo battery with buck converters to feed a raspberry pi and two motor controller boards/four brushless dc motors connected to mecanum wheels to provide maximum degrees of freedom in movement. 
 
 NOTE: Select files deemed core IP are omitted (the core deep reinforcement learning loop and heavily modified FogROS2 cloud deployment software). A demo could be performed on request. This repository serves to demonstrate Nick Rackley's c++/python proficiency. 
 
