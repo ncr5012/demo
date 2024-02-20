@@ -4,7 +4,7 @@ This repository is to serve as a demonstration of Nick Rackley's full-stack robo
 
 The hardware platform (mechanical and physical) was designed and assembled by Nick Rackley, including a LiPo battery with buck converters to feed a raspberry pi and two motor controller boards/four brushless dc motors connected to mecanum wheels to provide maximum degrees of freedom in movement. 
 
-NOTE: Select files deemed core IP are omitted (the core deep reinforcement learning loop and heavily modified FogROS2 cloud deployment software). A demo could be performed on request. 
+NOTE: Select files deemed core IP are omitted (the core deep reinforcement learning loop and heavily modified FogROS2 cloud deployment software). A demo could be performed on request. This repository serves to demonstrate Nick Rackley's c++/python proficiency. 
 
 
 All relevant source code is in the "jaybot" folder. The /jaybot/src folder has the c++ firmware and /jaybot/scripts has the python reinforcment learning / facial detection software.
