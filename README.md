@@ -28,6 +28,8 @@ Welcome to the demo repository showcasing the software and hardware development 
 - **Software:** Python, design and training of transformer architecture from scratch, optimization of training loops for RAM and compute constraints.
 - **Data Science:** Python, data structure creation, API utilization for data collection, data partitioning and cleaning, optimization of data structures and algorithms for RAM constraints.
 
+**Note:** The code shown will always be an obsolete version of the model with errors I have subsequently fixed, just in case I eventually train a model that effectively predicts stock market data. This is meant to show how I formed a structured approach towards a potentially impossible problem. The fact im applying for a job should tell you it hasn't been successful yet ; ). 
+
 ### 3. RAG LLM
 
 **Project Overview:**
