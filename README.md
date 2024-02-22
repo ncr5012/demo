@@ -39,18 +39,18 @@ Welcome to the demo repository showcasing the software and hardware development 
 ### 4. Multi-Agent Reinforcement Learning (MARL) Auction Game
 
 **Project Overview:**
-- A MARL implementation of an auction game from my MBA's Corporate Strategy class where three players bid on selling a quantity of a commodity (Shrimp), where the end price for all is decided by the collective quantity 
-- This was the project I used to teach myself to code, and also learn about reinforcement learning in depth
+- A MARL implementation of an auction game from my MBA's Corporate Strategy class where three players bid on selling a quantity of a commodity (Shrimp), where the end price for all is decided by the collective quantity. 
+- This was the project I used to teach myself to code, and also learn about reinforcement learning in depth.
 - In hindsight, it probably wasnt the easiest project to learn to code on. It worked out, because I had the insight that if I chose a game that had a known Nash Equilibrium, and I trained agents to converge on the equilibrium, then I would definitively know I not only taught myself to code, but also that the reinforcement learning loop was really working.
-- The game has a Nash Equilibrium of selling a quantity of 30, meaning that you are competitive against other players, the mathematically optimal answer is to always sell 30 shrimp
+- The game has a Nash Equilibrium of selling a quantity of 30, meaning that you are competitive against other players, the mathematically optimal answer is to always sell 30 shrimp.
 - For a long time, the agents kept converging to sell quantities of 45. I could not figure out what my bug was. After extensive debugging, I figured out it wasnt a bug, it was emergent behavior...
-- I had allowed the agents to see each others bids. The agents were quickly learning to encode some form of collusion with each other and signaling what their future bids would be
-- When I referenced materials from my class, they said 45 was the monopoly profits, if everybody were to collude together
+- I had allowed the agents to see each others bids. The agents were quickly learning to encode some form of collusion with each other and signaling what their future bids would be.
+- When I referenced materials from my class, they said 45 was the monopoly profits, if everybody were to collude together.
 - Once I masked the agents actions from each other, they converged to 30. 
 
 **Skills Demonstrated:**
 - **Software:** Python, MARL
-- **Life:** Taking a seemingly impossible problem I had absolutely no requisite skills to solve and structuring it in a way to be successful
+- **Life:** Taking a seemingly impossible problem I had absolutely no requisite skills to solve and structuring it in a way to be successful.
 
 **Note:** This project heavily referenced Lapan, M. (2020). Deep Reinforcement Learning Hands-On: Apply modern RL methods to practical problems of chatbots, robotics, discrete optimization, web automation, and more (2nd ed.). Packt Publishing. NOT aided by ChatGPT! 
 
